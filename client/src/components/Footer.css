@@ -1,0 +1,9 @@
+footer {
+    display: block;
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 3em;
+    grid-column: 1/-1;
+    margin-top: auto;
+}

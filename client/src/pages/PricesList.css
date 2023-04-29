@@ -1,0 +1,23 @@
+.prices-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.price-item{
+    padding: 20px;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1060px;
+}
+.price-title-and-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.prices-list{
+    transition: all 3s linear;
+}
