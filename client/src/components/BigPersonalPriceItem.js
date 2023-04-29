@@ -26,7 +26,7 @@ const PriceItem = ({ priseTitle, priseCategory }) => {
                       })
                     }
                   </ul>
-                  <p className=" ">{price.toLocaleString('cs-CZ')} Kč</p>
+                  <p className="">{price.toLocaleString('cs-CZ')} Kč</p>
                 </div>
               )
             })

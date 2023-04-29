@@ -2,7 +2,7 @@ import "./PricesList.css"
 import PriceItem from "../components/BigPersonalPriceItem"
 import { useState, useEffect } from "react"
 import axios from 'axios';
-const urlProduction = 'https://hana-web.herokuapp.com/api/v1/priceList';
+const urlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/priceList';
 const url = 'http://localhost:3000/api/v1/priceList';
 
 const PricesList = () => {

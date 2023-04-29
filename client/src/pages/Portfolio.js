@@ -4,8 +4,8 @@ import axios from 'axios';
 
 const categoryUrl = 'http://localhost:3000/api/v1/category';
 const imagesUrl = 'http://localhost:3000/api/v1/images';
-const categoryUrlProduction = 'https://hana-web.herokuapp.com/api/v1/category';
-const imagesUrlProduction = 'https://hana-web.herokuapp.com/api/v1/images';
+const categoryUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/category';
+const imagesUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/images';
 
 const Portfolio = () => {
   const [Categ, setCateg] = useState([]);
