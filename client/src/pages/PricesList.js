@@ -7,8 +7,8 @@ import axios from 'axios';
 // const urlBigPriceList = 'http://localhost:3000/api/v1/bigPersonalPriceList';
 // const urlSmallPriceList = 'http://localhost:3000/api/v1/smallPersonalPriceList';
 
-const urlProductionBigPriceList = 'https://beige-crab-coat.cyclic.app/bigPersonalPriceList';
-const urlProductionSmallPriceList = 'https://beige-crab-coat.cyclic.app/smallPersonalPriceList';
+const urlProductionBigPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/bigPersonalPriceList';
+const urlProductionSmallPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/smallPersonalPriceList';
 
 const PricesList = () => {
   const [bigPriceList, setBigPriceList] = useState([]);
