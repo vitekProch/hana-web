@@ -14,6 +14,28 @@
     max-width: 500px;
     margin: 15px auto;
 }
+.opening-text a{
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    position: relative;
+    letter-spacing: .5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: large;
+}
+.opening-text a:after {
+    left: 0;
+    bottom: -1px;
+}
+
+.opening-text a:hover:after, .opening-text a:hover:before{
+    width: 100%;
+}
+.opening-text a:hover{
+    text-decoration: none;
+    color: black;
+}
 
 @media only screen and (max-width: 1360px) {
     .slide-container{
