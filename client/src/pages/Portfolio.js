@@ -2,8 +2,9 @@ import { useState, useEffect } from "react"
 import "./Portfolio.css"
 import axios from 'axios';
 
-const categoryUrl = 'http://localhost:3000/api/v1/category';
-const imagesUrl = 'http://localhost:3000/api/v1/images';
+// const categoryUrl = 'http://localhost:3000/api/v1/category';
+// const imagesUrl = 'http://localhost:3000/api/v1/images';
+
 const categoryUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/category';
 const imagesUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/images';
 
@@ -25,9 +26,12 @@ const Portfolio = () => {
   const fetchData = async () => {
     try {
       const categoryResponse = await axios(categoryUrlProduction);
+      // const categoryResponse = await axios(categoryUrl);
       setCateg(categoryResponse.data.categories);
       
       const imagesResponse = await axios(imagesUrlProduction);
+      // const imagesResponse = await axios(imagesUrl);
+      
       setImages(imagesResponse.data.images);
       setData(imagesResponse.data.images);
     } catch (error) {
@@ -67,7 +71,6 @@ const Portfolio = () => {
       <div className="image-gallery">
         {
           filteredData.map((onePicture) => {
-            console.log(onePicture);
             const {_id, url, alt } = onePicture
             return <div key={_id} className="itemBox">
               <img src={url} alt={alt} />

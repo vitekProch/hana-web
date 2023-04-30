@@ -1,18 +1,32 @@
 import "./PricesList.css"
-import PriceItem from "../components/BigPersonalPriceItem"
+import BigPriceItem from "../components/BigPersonalPriceItem"
+import SmallPriceItem from "../components/SmallPersonalPriceItem"
 import { useState, useEffect } from "react"
 import axios from 'axios';
-const urlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/priceList';
-const url = 'http://localhost:3000/api/v1/priceList';
+
+// const urlBigPriceList = 'http://localhost:3000/api/v1/bigPersonalPriceList';
+// const urlSmallPriceList = 'http://localhost:3000/api/v1/smallPersonalPriceList';
+
+const urlProductionBigPriceList = 'https://beige-crab-coat.cyclic.app/bigPersonalPriceList';
+const urlProductionSmallPriceList = 'https://beige-crab-coat.cyclic.app/smallPersonalPriceList';
 
 const PricesList = () => {
-  const [data, setData] = useState([]);
+  const [bigPriceList, setBigPriceList] = useState([]);
+  const [smallPriceList, setSmallPriceList] = useState([]);
+
   const fetchData = async () => {
     try {
-      const response = await axios(urlProduction);
-      setData(response.data.priceList);
+      const responseBig = await axios(urlProductionBigPriceList);
+      // const responseBig = await axios(urlBigPriceList);
+      setBigPriceList(responseBig.data.priceList);
+
+      const responseSmall = await axios(urlProductionSmallPriceList);
+      // const responseSmall = await axios(urlSmallPriceList);
+      setSmallPriceList(responseSmall.data.priceList);
+
     } catch (error) {
-      console.log(error.response);
+      console.log(error);
+      console.log(error);
     }
   }
   useEffect(() => {
@@ -25,33 +39,15 @@ const PricesList = () => {
     <section className="prices-page">
       <div className="prices-list">
         {
-          data.map((onePrice) => {
-            return <PriceItem key={onePrice._id} {...onePrice}></PriceItem>
+          bigPriceList.map((onePrice) => {
+            return <BigPriceItem key={onePrice._id} {...onePrice}></BigPriceItem>
           })
         }
-      </div>
-      <div className="prices-list">
-        <div className="price-group">
-          <div className="price-item">
-            <div className="price-title-and-btn">
-              <h2 className="price-title">Velky titulek</h2>
-              <button >Ukázat</button>
-            </div>
-
-            <div className="prise-list-container" >
-
-              <div className="info-box">
-                <h4>POdtext</h4>
-                <ul>
-                  <li>Cislo jedna </li>
-
-                </ul>
-                <p className="">2000 Kč</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
+        {
+          smallPriceList.map((onePrice) => {
+            return <SmallPriceItem key={onePrice._id} {...onePrice}></SmallPriceItem>
+          })
+        }
       </div>
     </section>
   )

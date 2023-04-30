@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/src/images
+# /src/images
 
 # misc
 .DS_Store

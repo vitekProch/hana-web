@@ -1,4 +1,4 @@
-const PriceList = require('../models/PriceList');
+const PriceList = require('../models/BigPersonalPriceList');
 const { StatusCodes } = require('http-status-codes');
 const { NotFoundError } = require('../errors');
 

@@ -7,9 +7,9 @@ const Home = () => {
     { url: "http://localhost:3000/img/movie2.png", title: "italy" },
   ];
   const slidesProduction = [
-    { url: "/static/media/03.jpg", title: "italy" },
-    { url: "/static/media/03.jpg", title: "italy" },
-    { url: "/static/media/03.jpg", title: "italy" },
+    { url: "http://localhost:3001/images/03.jpg", title: "italy" },
+    { url: "http://localhost:3001/images/03.jpg", title: "italy" },
+    { url: "http://localhost:3001/images/03.jpg", title: "italy" },
   ];
 
   return <div className="home-page">

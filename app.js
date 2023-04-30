@@ -34,14 +34,16 @@ const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
 // routers
-const priceListRouter = require('./routes/priceList');
+const bigPersonalPriceListRouter = require('./routes/bigPersonalPriceList');
+const smallPersonalPriceListRouter = require('./routes/smallPersonalPriceList');
 const imagesRouter = require('./routes/images');
 const authRouter = require('./routes/auth');
 const categoryRouter = require('./routes/category');
 
 // routes
 app.use(express.static('./client/build'));
-app.use('/api/v1/priceList', priceListRouter);
+app.use('/api/v1/bigPersonalPriceList', bigPersonalPriceListRouter);
+app.use('/api/v1/smallPersonalPriceList', smallPersonalPriceListRouter);
 app.use('/api/v1/images', imagesRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/category', categoryRouter);

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const PriceListSchema = new mongoose.Schema({
+const BigPriceListSchema = new mongoose.Schema({
     priseTitle:{
         type: String,
         required: [true, 'Prosím zadejte titulek.'],
@@ -23,4 +23,4 @@ const PriceListSchema = new mongoose.Schema({
     
 },{timestamps:true});
 
-module.exports = mongoose.model('PriceList', PriceListSchema);
+module.exports = mongoose.model('BigPriceList', BigPriceListSchema);

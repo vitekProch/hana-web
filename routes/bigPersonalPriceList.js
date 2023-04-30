@@ -7,7 +7,7 @@ const {
     updatePriceListTitle,
     updatePriceListCategory,
     deletePriceList,
-} = require('../controllers/priceList');
+} = require('../controllers/bigPersonalPriceList');
 
 router.route('/').get(getAllPriceList).post(createPriceList);
 router.route('/:id').patch(updatePriceListTitle).delete(deletePriceList);
