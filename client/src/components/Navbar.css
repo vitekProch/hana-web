@@ -4,7 +4,7 @@ header{
     margin-bottom: 20px;
 }
 .fixed-top{
-    z-index: 1030;
+    z-index: 100;
     position: fixed;
     background-color: #fff;
     width: 100%;

@@ -1,0 +1,52 @@
+.smallPriceSubmit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.smallPriceSubmit input {
+    border: 1px solid black;
+}
+.send-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.send-btn:hover {
+    background-color: #0069d9;
+}
+.remove-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    line-height: 1;
+    margin-left: 3px;
+  }
+  
+.remove-btn:hover {
+    background-color: #c82333;
+}
+button.add-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.add-btn:hover {
+    background-color: #218838;
+  }

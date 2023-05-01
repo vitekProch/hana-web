@@ -1,6 +1,9 @@
 import "./PricesList.css"
 import BigPriceItem from "../components/BigPersonalPriceItem"
 import SmallPriceItem from "../components/SmallPersonalPriceItem"
+import SmallPersonalItemForm from "../components/SmallPersonalItemForm"
+import Modal from "../components/Modal"
+
 import { useState, useEffect } from "react"
 import axios from 'axios';
 
@@ -13,6 +16,9 @@ const urlProductionSmallPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/s
 const PricesList = () => {
   const [bigPriceList, setBigPriceList] = useState([]);
   const [smallPriceList, setSmallPriceList] = useState([]);
+  const [isOpen, setIsOpen] = useState(false)
+  const [correctSubmit, setCorrectSubmit] = useState(false);
+
 
   const fetchData = async () => {
     try {
@@ -36,20 +42,28 @@ const PricesList = () => {
 
 
   return (
-    <section className="prices-page">
-      <div className="prices-list">
-        {
-          bigPriceList.map((onePrice) => {
-            return <BigPriceItem key={onePrice._id} {...onePrice}></BigPriceItem>
-          })
-        }
-        {
-          smallPriceList.map((onePrice) => {
-            return <SmallPriceItem key={onePrice._id} {...onePrice}></SmallPriceItem>
-          })
-        }
-      </div>
-    </section>
+    <>
+      <section className="prices-page">
+          <button onClick={() => setIsOpen(true)}>Přidat základní balíček</button>
+        <div className="prices-list">
+          {
+            bigPriceList.map((onePrice) => {
+              return <BigPriceItem key={onePrice._id} {...onePrice}></BigPriceItem>
+            })
+          }
+          {
+            smallPriceList.map((onePrice) => {
+              return <SmallPriceItem key={onePrice._id} {...onePrice}></SmallPriceItem>
+            })
+          }
+        </div>
+      </section>
+
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+        <SmallPersonalItemForm fetchData={fetchData} onClose={() => setIsOpen(false)} />
+      </Modal>
+
+    </>
   )
 }
 
