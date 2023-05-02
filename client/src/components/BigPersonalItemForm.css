@@ -1,0 +1,25 @@
+.smallPriceSubmit{
+    display: flex;
+    flex-direction: column;   
+}
+.packages{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: flex-start;
+}
+.title-and-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+.big-form-delete-specific{
+    border: 0 !important;
+    background-color: #dc3545;
+    cursor: pointer;
+    color: #fff;
+}
+
+.big-form-delete-specific:hover{
+    background-color: #c82333;
+}

@@ -1,7 +1,10 @@
 import "./PricesList.css"
 import BigPriceItem from "../components/BigPersonalPriceItem"
+import BigPersonalItemForm from "../components/BigPersonalItemForm"
+
 import SmallPriceItem from "../components/SmallPersonalPriceItem"
 import SmallPersonalItemForm from "../components/SmallPersonalItemForm"
+
 import Modal from "../components/Modal"
 
 import { useState, useEffect } from "react"
@@ -16,8 +19,8 @@ const urlProductionSmallPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/s
 const PricesList = () => {
   const [bigPriceList, setBigPriceList] = useState([]);
   const [smallPriceList, setSmallPriceList] = useState([]);
-  const [isOpen, setIsOpen] = useState(false)
-  const [correctSubmit, setCorrectSubmit] = useState(false);
+  const [isSmallOpen, setIsSmallOpen] = useState(false);
+  const [isBigOpen, setIsBigOpen] = useState(false);
 
 
   const fetchData = async () => {
@@ -44,23 +47,32 @@ const PricesList = () => {
   return (
     <>
       <section className="prices-page">
-          <button onClick={() => setIsOpen(true)}>Přidat základní balíček</button>
-        <div className="prices-list">
-          {
-            bigPriceList.map((onePrice) => {
-              return <BigPriceItem key={onePrice._id} {...onePrice}></BigPriceItem>
-            })
-          }
-          {
-            smallPriceList.map((onePrice) => {
-              return <SmallPriceItem key={onePrice._id} {...onePrice}></SmallPriceItem>
-            })
-          }
+        <div className="prices-lists">
+          <div className="add-buttons-group">
+            <button onClick={() => setIsSmallOpen(true)}>Přidat standartní balíček</button>
+            <button onClick={() => setIsBigOpen(true)}>Přidat rozsáhlejší balíček</button>
+          </div>
+          <div className="prices-list">
+            {
+              bigPriceList.map((onePrice) => {
+                return <BigPriceItem key={onePrice._id} {...onePrice}></BigPriceItem>
+              })
+            }
+            {
+              smallPriceList.map((onePrice) => {
+                return <SmallPriceItem key={onePrice._id} {...onePrice}></SmallPriceItem>
+              })
+            }
+          </div>
         </div>
       </section>
 
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        <SmallPersonalItemForm fetchData={fetchData} onClose={() => setIsOpen(false)} />
+      <Modal open={isSmallOpen} onClose={() => setIsSmallOpen(false)}>
+        <SmallPersonalItemForm fetchData={fetchData} onClose={() => setIsSmallOpen(false)} />
+      </Modal>
+
+      <Modal open={isBigOpen} onClose={() => setIsBigOpen(false)}>
+        <BigPersonalItemForm fetchData={fetchData} onClose={() => setIsBigOpen(false)} />
       </Modal>
 
     </>

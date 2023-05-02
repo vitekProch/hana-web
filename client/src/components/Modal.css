@@ -1,5 +1,5 @@
 .modal-style{
-    width: 900px;
+    max-width: 1800px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -22,8 +22,9 @@
 .modal-content{
     
 }
-.close-btn{
+button.close-btn{
     margin-left: auto;
     padding: 10px 20px;
     border: 1px solid black;
+    background-color: gray;
 }

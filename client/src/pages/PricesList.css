@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 1600px;
 }
 .price-item{
     padding: 20px;
@@ -20,4 +21,13 @@
 }
 .prices-list{
     transition: all 3s linear;
+}
+.add-buttons-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.add-buttons-group button{
+    border-radius: 0 !important;
 }
