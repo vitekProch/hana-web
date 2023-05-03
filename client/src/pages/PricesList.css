@@ -5,23 +5,6 @@
     align-items: center;
     max-width: 1600px;
 }
-.price-item{
-    padding: 20px;
-    border: solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 1060px;
-}
-.price-title-and-btn{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.prices-list{
-    transition: all 3s linear;
-}
 .add-buttons-group{
     display: flex;
     align-items: center;
@@ -30,4 +13,7 @@
 }
 .add-buttons-group button{
     border-radius: 0 !important;
+}
+.prices-lists{
+    transition: all 3s linear;
 }

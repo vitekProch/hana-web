@@ -1,12 +1,8 @@
-import "./Home.css"
+import "./Home.css";
 import ImageSlider from "../components/ImageSlider";
 import { Link } from "react-router-dom";
+
 const Home = () => {
-  // const slides = [
-  //   { url: "http://localhost:3000/img/03.jpg", title: "italy" },
-  //   { url: "http://localhost:3000/img/03.jpg", title: "italy" },
-  //   { url: "http://localhost:3000/img/movie2.png", title: "italy" },
-  // ];
   const slidesProduction = [
     { url: "https://beige-crab-coat.cyclic.app/images/03.jpg", title: "italy" },
     { url: "https://beige-crab-coat.cyclic.app/images/03.jpg", title: "italy" },
@@ -25,4 +21,4 @@ const Home = () => {
 </div>
 }
 
-export default Home
+export default Home;

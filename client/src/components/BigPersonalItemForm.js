@@ -1,7 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import "./BigPersonalItemForm.css"
-import axios from "axios"
+import "./BigPersonalItemForm.css";
+import axios from "axios";
 import { useState } from "react";
 const urlProductionBigPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/bigPersonalPriceList';
 
@@ -28,7 +28,7 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
     const handleChangeSpecifications = (e, index, i) => {
         const { value } = e.target;
         const list = [...inputList];
-        list[index].text[i] = value
+        list[index].text[i] = value;
         setInputList(list);
     };
 
@@ -57,8 +57,8 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
             console.log(resp);
         } catch (error) {
             console.log(error.response);
-        }
-    }
+        };
+    };
 
     return (
         <form className="smallPriceSubmit">
@@ -125,4 +125,4 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
     )
 }
 
-export default BigPersonalItemForm
+export default BigPersonalItemForm;

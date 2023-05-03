@@ -1,9 +1,9 @@
-import "./SpecialOffer.css"
+import "./SpecialOffer.css";
 
 const SpecialOffer = () => {
   return (
     <div>SpecialOffer</div>
   )
-}
+};
 
-export default SpecialOffer
+export default SpecialOffer;

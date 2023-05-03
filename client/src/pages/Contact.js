@@ -1,11 +1,11 @@
-import Mapycz from "../components/Mapycz"
-import "./Contact.css"
+import Mapycz from "../components/Mapycz";
+import "./Contact.css";
 
 
 const Contact = () => {
 
   return (
-    <section className="mt-5 contact-page">
+    <section className="contact-page mt-5">
       <div className="map">
         <Mapycz/>
       </div>
@@ -38,4 +38,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;

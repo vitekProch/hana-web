@@ -1,56 +1,62 @@
-import { useState, useEffect } from "react"
-import "./Portfolio.css"
+import { useState, useEffect } from "react";
+import "./Portfolio.css";
 import axios from 'axios';
 
 // const categoryUrl = 'http://localhost:3000/api/v1/category';
-// const imagesUrl = 'http://localhost:3000/api/v1/images';
+// const portfolioImagesUrl = 'http://localhost:3000/api/v1/images';
 
 const categoryUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/category';
-const imagesUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/images';
+const portfolioImagesUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/images';
 
 const Portfolio = () => {
-  const [Categ, setCateg] = useState([]);
-  const [images, setImages] = useState([]);
-  const [filteredData, setData] = useState([]);
+  const [portfolioCategory, setPortfolioCategory] = useState([]);
+  const [portfolioImages, setPortfolioImages] = useState([]);
+  const [filteredPortfolioImages, setFilteredPortfolioImages] = useState([]);
   
   
-  const updateValues = (textCat) => {
-    const addedSpaces = textCat.replace(/-+/g,' ');
+  const updateValues = (categoryName) => {
+    const addedSpaces = categoryName.replace(/-+/g,' ');
     
     const capitalized =
-    addedSpaces.charAt(0).toUpperCase()
-    + addedSpaces.slice(1)
+    addedSpaces.charAt(0).toUpperCase() + addedSpaces.slice(1);
     return capitalized;
   }
   
-  const fetchData = async () => {
+  const fetchCategoryData = async () => {
     try {
       const categoryResponse = await axios(categoryUrlProduction);
       // const categoryResponse = await axios(categoryUrl);
-      setCateg(categoryResponse.data.categories);
-      
-      const imagesResponse = await axios(imagesUrlProduction);
-      // const imagesResponse = await axios(imagesUrl);
-      
-      setImages(imagesResponse.data.images);
-      setData(imagesResponse.data.images);
+      setPortfolioCategory(categoryResponse.data.categories);
     } catch (error) {
-      console.log(error.categoryResponse);
-      console.log(error.imagesResponse);
-    }
-  }
+      console.log(error.response);
+    };
+  };
+
+  const fetchPortfolioImagesData = async () => {
+    try {
+      const portfolioImagesResponse = await axios(portfolioImagesUrlProduction);
+      // const portfolioImagesResponse = await axios(portfolioImagesUrl);
+      setPortfolioImages(portfolioImagesResponse.data.images);
+      setFilteredPortfolioImages(portfolioImagesResponse.data.images);
+      
+    } catch (error) {
+      console.log(error.response);
+    };
+  };
+
   useEffect(() => {
-    fetchData();
+    fetchCategoryData();
+    fetchPortfolioImagesData();
   }, []);
   
   const filterCategory = (category) => {
-    const filtered = images.filter((onePicture) => {
+    const filtered = portfolioImages.filter((onePicture) => {
       return updateValues(onePicture.category) === category;
     })
     if (category === "Vše") {
-      return setData(images)
+      return setFilteredPortfolioImages(portfolioImages);
     }
-    setData(filtered)
+    setFilteredPortfolioImages(filtered);
   }
   
   return (
@@ -58,8 +64,8 @@ const Portfolio = () => {
       <div className="category-box mt-5">
         <div className="category-list mt-5">
           {
-            Categ.map((oneCateg) => {
-              const { _id, categoryName } = oneCateg;
+            portfolioCategory.map((onePortfolioCategory) => {
+              const { _id, categoryName } = onePortfolioCategory;
               const categoryNorme = updateValues(categoryName);
                 return <div key={_id} className="category-name" onClick={() => filterCategory(categoryNorme)}>
                   <p>{categoryNorme}</p>
@@ -70,9 +76,9 @@ const Portfolio = () => {
       </div>
       <div className="image-gallery">
         {
-          filteredData.map((onePicture) => {
+          filteredPortfolioImages.map((onePicture) => {
             const {_id, url, alt } = onePicture
-            return <div key={_id} className="itemBox">
+            return <div key={_id} className="item-box">
               <img src={url} alt={alt} />
             </div>
           })
@@ -80,6 +86,6 @@ const Portfolio = () => {
       </div>
     </div>
   )
-}
+};
 
-export default Portfolio
+export default Portfolio;

@@ -36,11 +36,3 @@
     text-decoration: none;
     color: black;
 }
-
-@media only screen and (max-width: 1360px) {
-    /* .slide-container{
-        width: 500px;
-        height: 70vh;
-        margin: 0 auto;
-    } */
-}

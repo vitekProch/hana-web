@@ -16,10 +16,7 @@ html{
     flex-direction: column;
     justify-content: space-between;
 }
-.slider {
-    width: 100%;
-    height: 100vh;
-}
+
 button {
     background-color: #28a745;
     border-radius: 50% !important;
@@ -32,4 +29,4 @@ button {
 }
 button:hover {
     background-color: #218838;
-  }
+}

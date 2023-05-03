@@ -1,13 +1,13 @@
-import "./PricesList.css"
-import BigPriceItem from "../components/BigPersonalPriceItem"
-import BigPersonalItemForm from "../components/BigPersonalItemForm"
+import "./PricesList.css";
+import BigPriceItem from "../components/BigPersonalPriceItem";
+import BigPersonalItemForm from "../components/BigPersonalItemForm";
 
-import SmallPriceItem from "../components/SmallPersonalPriceItem"
-import SmallPersonalItemForm from "../components/SmallPersonalItemForm"
+import SmallPriceItem from "../components/SmallPersonalPriceItem";
+import SmallPersonalItemForm from "../components/SmallPersonalItemForm";
 
-import Modal from "../components/Modal"
+import Modal from "../components/Modal";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import axios from 'axios';
 
 // const urlBigPriceList = 'http://localhost:3000/api/v1/bigPersonalPriceList';
@@ -23,23 +23,29 @@ const PricesList = () => {
   const [isBigOpen, setIsBigOpen] = useState(false);
 
 
-  const fetchData = async () => {
+  const fetchBigPriceListData = async () => {
     try {
-      const responseBig = await axios(urlProductionBigPriceList);
+      const responseBigPriceList = await axios(urlProductionBigPriceList);
       // const responseBig = await axios(urlBigPriceList);
-      setBigPriceList(responseBig.data.priceList);
-
-      const responseSmall = await axios(urlProductionSmallPriceList);
-      // const responseSmall = await axios(urlSmallPriceList);
-      setSmallPriceList(responseSmall.data.priceList);
+      setBigPriceList(responseBigPriceList.data.priceList);
 
     } catch (error) {
-      console.log(error);
-      console.log(error);
-    }
-  }
+      console.log(error.response);
+    };
+  };
+  const fetchSmallPriceList = async () => {
+    try {
+      const responseSmallPriceList = await axios(urlProductionSmallPriceList);
+      // const responseSmall = await axios(urlSmallPriceList);
+      setSmallPriceList(responseSmallPriceList.data.priceList);
+
+    } catch (error) {
+      console.log(error.response);
+    };
+  };
   useEffect(() => {
-    fetchData();
+    fetchBigPriceListData();
+    fetchSmallPriceList();
   }, []);
 
 
@@ -47,12 +53,12 @@ const PricesList = () => {
   return (
     <>
       <section className="prices-page">
-        <div className="prices-lists">
+        <div className="prices-list-and-buttons">
           <div className="add-buttons-group">
             <button onClick={() => setIsSmallOpen(true)}>Přidat standartní balíček</button>
             <button onClick={() => setIsBigOpen(true)}>Přidat rozsáhlejší balíček</button>
           </div>
-          <div className="prices-list">
+          <div className="prices-lists">
             {
               bigPriceList.map((onePrice) => {
                 return <BigPriceItem key={onePrice._id} {...onePrice}></BigPriceItem>
@@ -68,15 +74,15 @@ const PricesList = () => {
       </section>
 
       <Modal open={isSmallOpen} onClose={() => setIsSmallOpen(false)}>
-        <SmallPersonalItemForm fetchData={fetchData} onClose={() => setIsSmallOpen(false)} />
+        <SmallPersonalItemForm fetchSmallPriceList={fetchSmallPriceList} onClose={() => setIsSmallOpen(false)} />
       </Modal>
 
       <Modal open={isBigOpen} onClose={() => setIsBigOpen(false)}>
-        <BigPersonalItemForm fetchData={fetchData} onClose={() => setIsBigOpen(false)} />
+        <BigPersonalItemForm fetchBigPriceListData={fetchBigPriceListData} onClose={() => setIsBigOpen(false)} />
       </Modal>
 
     </>
   )
-}
+};
 
-export default PricesList
+export default PricesList;

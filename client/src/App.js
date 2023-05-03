@@ -1,15 +1,15 @@
 
-import { BrowserRouter, Routes, Route} from "react-router-dom"
-import AboutMe from "./pages/AboutMe"
-import Contact from "./pages/Contact"
-import Portfolio from "./pages/Portfolio"
-import PricesList from "./pages/PricesList"
-import SpecialOffer from "./pages/SpecialOffer"
-import Home from "./pages/Home"
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import AboutMe from "./pages/AboutMe";
+import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
+import PricesList from "./pages/PricesList";
+import SpecialOffer from "./pages/SpecialOffer";
+import Home from "./pages/Home";
 
 
-import Error from "./pages/Error"
-import SharedLayout from "./pages/SharedLayout"
+import Error from "./pages/Error";
+import SharedLayout from "./pages/SharedLayout";
 
 const App = () => {
   const pages = <Portfolio />;
@@ -27,6 +27,6 @@ const App = () => {
       </Route>
     </Routes>
   </BrowserRouter>
-}
+};
 
-export default App
+export default App;
