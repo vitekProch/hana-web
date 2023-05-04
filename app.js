@@ -45,16 +45,16 @@ const categoryRouter = require('./routes/category');
 // routes
 app.use(express.static('./client/build'));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-})
-
 
 app.use('/api/v1/bigPersonalPriceList', bigPersonalPriceListRouter);
 app.use('/api/v1/smallPersonalPriceList', smallPersonalPriceListRouter);
 app.use('/api/v1/images', imagesRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/category', categoryRouter);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+})
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
