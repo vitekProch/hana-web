@@ -1,6 +1,8 @@
 require('dotenv').config();
 require('express-async-errors');
 
+const path = require('path');
+
 // extra security packages
 // const helmet = require('helmet');
 const cors = require('cors');
@@ -42,6 +44,12 @@ const categoryRouter = require('./routes/category');
 
 // routes
 app.use(express.static('./client/build'));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+})
+
+
 app.use('/api/v1/bigPersonalPriceList', bigPersonalPriceListRouter);
 app.use('/api/v1/smallPersonalPriceList', smallPersonalPriceListRouter);
 app.use('/api/v1/images', imagesRouter);
@@ -55,14 +63,14 @@ app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 3000;
 
-const start = async () => { 
-    try {
-        await connectDB(process.env.MONGO_URI)
-        app.listen(port, () => { 
-            console.log(`Server is listening on port ${port}...`);
-         })
-    } catch (error) {
-        console.log(error);
-    }
- }
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URI)
+    app.listen(port, () => {
+      console.log(`Server is listening on port ${port}...`);
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
 start()
