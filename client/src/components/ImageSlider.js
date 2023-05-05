@@ -1,4 +1,4 @@
-import "./ImageSlider.css"
+import "./ImageSlider.scss"
 import { useState } from "react";
 
 const slideStyles = {

@@ -1,4 +1,4 @@
-import "./SpecialOffer.css";
+import "./SpecialOffer.scss";
 
 const SpecialOffer = () => {
   return (

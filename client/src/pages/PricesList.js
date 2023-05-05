@@ -1,4 +1,4 @@
-import "./PricesList.css";
+import "./PricesList.scss";
 import BigPriceItem from "../components/BigPersonalPriceItem";
 import BigPersonalItemForm from "../components/BigPersonalItemForm";
 

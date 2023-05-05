@@ -1,4 +1,4 @@
-import "./SmallPersonalPriceItem.css"
+import "./SmallPersonalPriceItem.scss"
 import { useState } from "react"
 
 const PriceItem = ({ _id, priseTitle, pricePackage }) => {

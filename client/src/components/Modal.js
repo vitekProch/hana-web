@@ -1,4 +1,4 @@
-import "./Modal.css"
+import "./Modal.scss"
 import ReactDom from "react-dom"
 import React from 'react'
 

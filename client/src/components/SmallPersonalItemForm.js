@@ -1,4 +1,4 @@
-import "./SmallPersonalItemForm.css"
+import "./SmallPersonalItemForm.scss"
 import axios from "axios"
 import { useState } from "react";
 const urlProductionSmallPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/smallPersonalPriceList';
@@ -41,6 +41,7 @@ const SmallPersonalItemForm = ({ fetchData, onClose }) => {
                 priseTitle: smallPriceTitle,
                 pricePackage: values
             })
+            console.log(resp);
             fetchData();
             onClose();
         } catch (error) {

@@ -1,6 +1,6 @@
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import "./BigPersonalItemForm.css";
+import "./BigPersonalItemForm.scss";
 import axios from "axios";
 import { useState } from "react";
 const urlProductionBigPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/bigPersonalPriceList';
@@ -45,7 +45,7 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
         setInputList([...inputList]);
     };
 
-    const smallPriceSubmit = async (e) => {
+    const bigPriceSubmit = async (e) => {
         e.preventDefault();
         try {
             const resp = await axios.post(urlProductionBigPriceList, {
@@ -61,28 +61,28 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
     };
 
     return (
-        <form className="smallPriceSubmit">
-            <div className="title-and-btn">
+        <form className="big-price-form">
+            <div className="big-price-title-and-btn">
                 <button className="add-btn" onClick={(e) => handleAddPackage(e)}>Přidat Balíček</button>
                 <input
                     type="text"
                     placeholder="Zadejte titulek"
-                    className="smallPriceListTitle"
+                    className="big-price-title"
                     value={bigPriceTitle}
                     onChange={e => setBigPriceTitle(e.target.value)}
                 />
             </div>
-            <div className="packages">
+            <div className="big-price-packages">
                 {
                     inputList.map((data, index) => {
                         return (
-                            <div className="one-package" key={index}>
+                            <div className="big-price-one-package" key={index}>
                                 <p>Balíček číslo {index + 1}</p>
                                 <input
                                     type="text"
                                     placeholder="Zadejte podtitulek"
                                     value={data.subTitle}
-                                    className="subTitle"
+                                    className="big-price-subtitle"
                                     onChange={e => handleChangePackage(e, index)}
                                 />
                                 <input
@@ -92,7 +92,7 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
                                     value={data.price}
                                     onChange={e => handleChangePackage(e, index)}
                                 />
-                                <button className="add-btn" onClick={(e) => handleAddSpecifications(e, data, index)}>Přidat Specifikaci</button>
+                                <button className="big-price-add-specific" onClick={(e) => handleAddSpecifications(e, data, index)}>Přidat Specifikaci</button>
                                 {
                                     data.text.map((dataa, i) => {
 
@@ -106,7 +106,7 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
                                                     value={dataa}
                                                     onChange={e => handleChangeSpecifications(e, index, i)}
                                                     />
-                                                    <InputGroup.Text className="big-form-delete-specific" onClick={(e) => handleRemoveSpecifications(e, index, i)}>X</InputGroup.Text>
+                                                    <InputGroup.Text className="big-price-delete-specific" onClick={(e) => handleRemoveSpecifications(e, index, i)}>X</InputGroup.Text>
                                                 </InputGroup>
                                                 
                                             </div>
@@ -120,7 +120,7 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
                     })
                 }
             </div>
-            <input className="send-btn" type="submit" onClick={(e) => smallPriceSubmit(e)} />
+            <input className="send-btn" type="submit" onClick={(e) => bigPriceSubmit(e)} />
         </form>
     )
 }

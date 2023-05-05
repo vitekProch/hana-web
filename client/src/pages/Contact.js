@@ -1,5 +1,5 @@
 import Mapycz from "../components/Mapycz";
-import "./Contact.css";
+import "./Contact.scss";
 
 
 const Contact = () => {

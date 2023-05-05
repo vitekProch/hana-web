@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Portfolio.css";
+import "./Portfolio.scss";
 import axios from 'axios';
 
 // const categoryUrl = 'http://localhost:3000/api/v1/category';

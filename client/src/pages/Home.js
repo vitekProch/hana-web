@@ -1,4 +1,4 @@
-import "./Home.css";
+import "./Home.scss";
 import ImageSlider from "../components/ImageSlider";
 import { Link } from "react-router-dom";
 
