@@ -49,3 +49,15 @@
 .big-price-delete-specific:hover{
     background-color: #c82333;
 }
+.remove-btn {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 0!important;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    margin-left: 3px;
+    padding: 5px;
+    transition: background-color .3s ease;
+}
