@@ -74,11 +74,11 @@ const PricesList = () => {
       </section>
 
       <Modal open={isSmallOpen} onClose={() => setIsSmallOpen(false)}>
-        <SmallPersonalItemForm fetchSmallPriceList={fetchSmallPriceList} onClose={() => setIsSmallOpen(false)} />
+        <SmallPersonalItemForm fetchSmallPriceList={fetchSmallPriceList} smallOnClose={() => setIsSmallOpen(false)} />
       </Modal>
 
       <Modal open={isBigOpen} onClose={() => setIsBigOpen(false)}>
-        <BigPersonalItemForm fetchBigPriceListData={fetchBigPriceListData} onClose={() => setIsBigOpen(false)} />
+        <BigPersonalItemForm fetchBigPriceListData={fetchBigPriceListData} bigOnClose={() => setIsBigOpen(false)} />
       </Modal>
 
     </>

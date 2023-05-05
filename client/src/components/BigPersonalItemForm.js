@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 const urlProductionBigPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/bigPersonalPriceList';
 
-const BigPersonalItemForm = ({ fetchData, onClose }) => {
+const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
     const [bigPriceTitle, setBigPriceTitle] = useState('');
     const [inputList, setInputList] = useState([{ subTitle: '', text: [[]], price: '' }]);
 
@@ -20,9 +20,9 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
         setInputList([...inputList]);
     };
     const handleChangePackage = (e, index) => {
-        const { className, value } = e.target;
+        const { name, value } = e.target;
         const list = [...inputList];
-        list[index][className] = value;
+        list[index][name] = value;
         setInputList(list);
     };
     const handleChangeSpecifications = (e, index, i) => {
@@ -52,8 +52,8 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
                 priseTitle: bigPriceTitle,
                 priseCategory: inputList
             })
-            fetchData();
-            onClose();
+            fetchBigPriceListData();
+            bigOnClose();
             console.log(resp);
         } catch (error) {
             console.log(error.response);
@@ -82,13 +82,13 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
                                     type="text"
                                     placeholder="Zadejte podtitulek"
                                     value={data.subTitle}
-                                    className="big-price-subtitle"
+                                    name="subTitle"
                                     onChange={e => handleChangePackage(e, index)}
                                 />
                                 <input
                                     type="number"
                                     placeholder="Zadejte cenu"
-                                    className="price"
+                                    name="price"
                                     value={data.price}
                                     onChange={e => handleChangePackage(e, index)}
                                 />
@@ -100,15 +100,14 @@ const BigPersonalItemForm = ({ fetchData, onClose }) => {
                                             <div key={i} className="specific-and-btn">
                                                 <InputGroup className="mb-3">
                                                     <Form.Control
-                                                    type="text"
-                                                    placeholder="Zadejte specifikaci"
-                                                    className=""
-                                                    value={dataa}
-                                                    onChange={e => handleChangeSpecifications(e, index, i)}
+                                                        type="text"
+                                                        placeholder="Zadejte specifikaci"
+                                                        value={dataa}
+                                                        onChange={e => handleChangeSpecifications(e, index, i)}
                                                     />
                                                     <InputGroup.Text className="big-price-delete-specific" onClick={(e) => handleRemoveSpecifications(e, index, i)}>X</InputGroup.Text>
                                                 </InputGroup>
-                                                
+
                                             </div>
                                         )
                                     })
