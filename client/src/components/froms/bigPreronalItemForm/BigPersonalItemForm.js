@@ -47,7 +47,6 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
 
     const bigPriceSubmit = async (e) => {
         e.preventDefault();
-        console.log(inputList);
         if (!inputList.length) {
             return console.log("Nejdříve přidejte balíček!");
         }

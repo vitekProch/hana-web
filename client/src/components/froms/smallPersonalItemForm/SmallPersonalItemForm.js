@@ -28,6 +28,9 @@ const SmallPersonalItemForm = ({ fetchSmallPriceList, smallOnClose }) => {
 
     const smallPriceSubmit = async (e) => {
         e.preventDefault();
+        if (!inputList.length) {
+            return console.log("Nejdříve přidejte balíček!");
+        }
         const values = inputList.map((one) => {
             const { smallPriceListSubtitle, smallPriceListQuantity, smallPriceListPrice } = one;
             return (
