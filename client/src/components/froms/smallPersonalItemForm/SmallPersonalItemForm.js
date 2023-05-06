@@ -1,13 +1,19 @@
+import { useState } from "react";
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+
 import "./SmallPersonalItemForm.scss"
-import axios from "axios"
-import { useState } from "react";
+
+import Notification from "../../notification/Notification";
+
+import axios from "axios";
 const urlProductionSmallPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/smallPersonalPriceList';
 
 const SmallPersonalItemForm = ({ fetchSmallPriceList, smallOnClose }) => {
     const [smallPriceTitle, setSmallPriceTitle] = useState('');
     const [inputList, setInputList] = useState([{ smallPriceListSubtitle: '', smallPriceListQuantity: '', smallPriceListPrice: '' }]);
+    const [showNotification, setShowNotification] = useState(false);
+    const [notificationContent, setNotificationContent] = useState(false);
 
     const handleAdd = (e) => {
         e.preventDefault();
@@ -29,7 +35,9 @@ const SmallPersonalItemForm = ({ fetchSmallPriceList, smallOnClose }) => {
     const smallPriceSubmit = async (e) => {
         e.preventDefault();
         if (!inputList.length) {
-            return console.log("Nejdříve přidejte balíček!");
+            setShowNotification(true);
+            setNotificationContent("Nejdříve přidejte balíček!");
+            return
         }
         const values = inputList.map((one) => {
             const { smallPriceListSubtitle, smallPriceListQuantity, smallPriceListPrice } = one;
@@ -50,53 +58,60 @@ const SmallPersonalItemForm = ({ fetchSmallPriceList, smallOnClose }) => {
             fetchSmallPriceList();
             smallOnClose();
         } catch (error) {
-            console.log(error.response);
+            console.log(error.response.data);
+            setShowNotification(true);
+            setNotificationContent(error.response.data.msg);
         }
     }
 
 
     return (
-        <form className="small-price-submit">
-            <button className="add-btn" onClick={(e) => handleAdd(e)}>Přidat Balíček</button>
-            <input
-                type="text"
-                placeholder="Zadejte titulek"
-                name="smallPriceListTitle"
-                value={smallPriceTitle}
-                onChange={e => setSmallPriceTitle(e.target.value)}
-            />
-            {
-                inputList.map((data, index) => {
-                    return (
-                        <InputGroup key={index} className="mb-3">
-                            <Form.Control 
-                                type="text"
-                                placeholder="Zadejte podtitulek"
-                                name="smallPriceListSubtitle"
-                                value={data.smallPriceListSubtitle}
-                                onChange={e => handleChange(e, index)}
-                            />
-                            <Form.Control
-                                type="number"
-                                placeholder="Zadejte počet kusů"
-                                name="smallPriceListQuantity"
-                                value={data.smallPriceListQuantity}
-                                onChange={e => handleChange(e, index)}
-                            />
-                            <Form.Control
-                                type="number"
-                                placeholder="Zadejte cenu"
-                                name="smallPriceListPrice"
-                                value={data.smallPriceListPrice}
-                                onChange={e => handleChange(e, index)}
-                            />
-                            <InputGroup.Text className="small-price-delete-specific" onClick={(e) => handleRemove(e, index)}>X</InputGroup.Text>
-                        </InputGroup>
-                    )
-                })
-            }
-            <input className="send-btn" type="submit" onClick={(e) => smallPriceSubmit(e)} />
-        </form>
+        <>
+            {showNotification && <Notification notificationContent={notificationContent} closeNotif={() => setShowNotification(false)} />}
+            <form className="small-price-submit">
+                <button className="add-btn" onClick={(e) => handleAdd(e)}>Přidat Balíček</button>
+                <input
+                    type="text"
+                    className="small-price-title"
+                    placeholder="Zadejte titulek"
+                    name="smallPriceListTitle"
+                    value={smallPriceTitle}
+                    onChange={e => setSmallPriceTitle(e.target.value)}
+                />
+                {
+                    inputList.map((data, index) => {
+                        return (
+                            <InputGroup key={index} className="mb-3">
+                                <p className="small-package-number">Balíček č. {index + 1}</p>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Název balíčku"
+                                    name="smallPriceListSubtitle"
+                                    value={data.smallPriceListSubtitle}
+                                    onChange={e => handleChange(e, index)}
+                                />
+                                <Form.Control
+                                    type="number"
+                                    placeholder="Počet kusů"
+                                    name="smallPriceListQuantity"
+                                    value={data.smallPriceListQuantity}
+                                    onChange={e => handleChange(e, index)}
+                                />
+                                <Form.Control
+                                    type="number"
+                                    placeholder="Cena"
+                                    name="smallPriceListPrice"
+                                    value={data.smallPriceListPrice}
+                                    onChange={e => handleChange(e, index)}
+                                />
+                                <InputGroup.Text className="small-price-delete-specific" onClick={(e) => handleRemove(e, index)}>X</InputGroup.Text>
+                            </InputGroup>
+                        )
+                    })
+                }
+                <input className="send-btn" type="submit" onClick={(e) => smallPriceSubmit(e)} />
+            </form>
+        </>
     )
 }
 
