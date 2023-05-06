@@ -1,6 +1,6 @@
 import {Link, NavLink} from 'react-router-dom'
 import "./Navbar.scss"
-import brand from "../images/brand.png"
+import brand from "../../images/brand.png"
 import { useState } from 'react'
 
 const Navbar = () => {

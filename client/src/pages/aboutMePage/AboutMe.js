@@ -1,8 +1,8 @@
 
 import "./AboutMe.scss";
 import { Container, Row, Col } from 'react-bootstrap';
-import picture1 from "../images/selfPhoto.jpg";
-import picture2 from "../images/selfPhoto2.jpg";
+import picture1 from "../../images/selfPhoto.jpg";
+import picture2 from "../../images/selfPhoto2.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AboutMe = () => {

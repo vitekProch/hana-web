@@ -1,14 +1,14 @@
 
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import AboutMe from "./pages/AboutMe";
-import Contact from "./pages/Contact";
-import Portfolio from "./pages/Portfolio";
-import PricesList from "./pages/PricesList";
-import SpecialOffer from "./pages/SpecialOffer";
-import Home from "./pages/Home";
+import AboutMe from "./pages/aboutMePage/AboutMe";
+import Contact from "./pages/contactPage/Contact";
+import Portfolio from "./pages/portfolioPage/Portfolio";
+import PricesList from "./pages/priceListPage/PricesList";
+import SpecialOffer from "./pages/SpecialOfferPage/SpecialOffer";
+import Home from "./pages/homePage/Home";
 
 
-import Error from "./pages/Error";
+import Error from "./pages/errorPage/Error";
 import SharedLayout from "./pages/SharedLayout";
 
 const App = () => {

@@ -1,11 +1,11 @@
 import "./PricesList.scss";
-import BigPriceItem from "../components/BigPersonalPriceItem";
-import BigPersonalItemForm from "../components/BigPersonalItemForm";
+import BigPriceItem from "../../components/bigPersonalPriceItem/BigPersonalPriceItem";
+import BigPersonalItemForm from "../../components/froms/bigPreronalItemForm/BigPersonalItemForm";
 
-import SmallPriceItem from "../components/SmallPersonalPriceItem";
-import SmallPersonalItemForm from "../components/SmallPersonalItemForm";
+import SmallPriceItem from "../../components/smallPersonalPriceItem/SmallPersonalPriceItem";
+import SmallPersonalItemForm from "../../components/froms/smallPersonalItemForm/SmallPersonalItemForm";
 
-import Modal from "../components/Modal";
+import Modal from "../../components/modal/Modal";
 
 import { useState, useEffect } from "react";
 import axios from 'axios';
