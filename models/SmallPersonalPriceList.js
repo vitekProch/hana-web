@@ -8,11 +8,11 @@ const SmallPriceListSchema = new mongoose.Schema({
     pricePackage: [{
         subTitle: {
             type: String,
-            required: [true, 'Prosím zadejte podtitulek.'],
+            required: [true, 'Prosím zadejte název balíčku.'],
         },
         quantity: {
             type: Number,
-            required: [true, 'Prosím zadejte počet fotek.']
+            required: [true, 'Prosím zadejte počet kusů.']
         },
         price: {
             type: Number,

@@ -8,10 +8,10 @@ const BigPriceListSchema = new mongoose.Schema({
     priseCategory:[{
         subTitle:{
             type: String,
-            required: [true, 'Prosím zadejte podtitulek.'],
+            required: [true, 'Prosím zadejte název balíčku.'],
         }, 
         text:{
-            type: Array,
+            type: arra,
             required: [true, 'Prosím zadejte popis.']
         }, 
         price:{
@@ -23,4 +23,10 @@ const BigPriceListSchema = new mongoose.Schema({
     
 },{timestamps:true});
 
+BigPriceListSchema.pre('save', function (next) {
+    if (this.text && 0 === this.foos.length) {
+      this.foos = undefined;                                                                                                                                   
+    }
+    next();
+  })
 module.exports = mongoose.model('BigPriceList', BigPriceListSchema);
