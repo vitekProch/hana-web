@@ -3,11 +3,15 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import "./BigPersonalItemForm.scss";
 import axios from "axios";
 import { useState } from "react";
-const urlProductionBigPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/bigPersonalPriceList';
+import Notification from "../../notification/Notification";
+
+const urlProductionBigPriceList = 'http://localhost:3000/api/v1/bigPersonalPriceList';
 
 const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
     const [bigPriceTitle, setBigPriceTitle] = useState('');
     const [inputList, setInputList] = useState([{ subTitle: '', text: [[]], price: '' }]);
+    const [showNotification, setShowNotification] = useState(false);
+    const [notificationContent, setNotificationContent] = useState(false);
 
     const handleAddPackage = (e) => {
         e.preventDefault();
@@ -48,7 +52,9 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
     const bigPriceSubmit = async (e) => {
         e.preventDefault();
         if (!inputList.length) {
-            return console.log("Nejdříve přidejte balíček!");
+            setShowNotification(true);
+            setNotificationContent("Nejdříve přidejte balíček!");
+            return
         }
         try {
             const resp = await axios.post(urlProductionBigPriceList, {
@@ -59,71 +65,77 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
             bigOnClose();
             console.log(resp);
         } catch (error) {
-            console.log(error.response);
+            console.log(error);
+            setShowNotification(true);
+            setNotificationContent(error.response.data.msg);
         };
     };
 
     return (
-        <form className="big-price-form">
-            <div className="big-price-title-and-btn">
-                <button className="add-btn" onClick={(e) => handleAddPackage(e)}>Přidat Balíček</button>
-                <input
-                    type="text"
-                    placeholder="Zadejte titulek"
-                    className="big-price-title"
-                    value={bigPriceTitle}
-                    onChange={e => setBigPriceTitle(e.target.value)}
-                />
-            </div>
-            <div className="big-price-packages">
-                {
-                    inputList.map((data, index) => {
-                        return (
-                            <div className="big-price-one-package" key={index}>
-                                <p>Balíček číslo {index + 1}</p>
-                                <input
-                                    type="text"
-                                    placeholder="Zadejte podtitulek"
-                                    value={data.subTitle}
-                                    name="subTitle"
-                                    onChange={e => handleChangePackage(e, index)}
-                                />
-                                <input
-                                    type="number"
-                                    placeholder="Zadejte cenu"
-                                    name="price"
-                                    value={data.price}
-                                    onChange={e => handleChangePackage(e, index)}
-                                />
-                                <button className="big-price-add-specific" onClick={(e) => handleAddSpecifications(e, data, index)}>Přidat Specifikaci</button>
-                                {
-                                    data.text.map((dataa, i) => {
+        <>
+            {showNotification && <Notification notificationContent={notificationContent} closeNotif={() => setShowNotification(false)} />}
+            <form className="big-price-form" onSubmit={(e) => bigPriceSubmit(e)}>
+                <div className="big-price-title-and-btn">
+                    <button className="add-btn" onClick={(e) => handleAddPackage(e)}>Přidat Balíček</button>
+                    <input
+                        type="text"
+                        placeholder="Zadejte titulek"
+                        className="big-price-title"
+                        value={bigPriceTitle}
+                        onChange={e => setBigPriceTitle(e.target.value)}
+                    />
+                </div>
+                <div className="big-price-packages">
+                    {
+                        inputList.map((data, index) => {
+                            return (
+                                <div className="big-price-one-package" key={index}>
+                                    <p>Balíček číslo {index + 1}</p>
+                                    <input
+                                        type="text"
+                                        placeholder="Zadejte podtitulek"
+                                        value={data.subTitle}
+                                        name="subTitle"
+                                        onChange={e => handleChangePackage(e, index)}
+                                    />
+                                    <input
+                                        type="number"
+                                        placeholder="Zadejte cenu"
+                                        name="price"
+                                        value={data.price}
+                                        onChange={e => handleChangePackage(e, index)}
+                                    />
+                                    <button className="big-price-add-specific" onClick={(e) => handleAddSpecifications(e, data, index)}>Přidat Specifikaci</button>
+                                    {
+                                        data.text.map((dataa, i) => {
 
-                                        return (
-                                            <div key={i} className="specific-and-btn">
-                                                <InputGroup className="mb-3">
-                                                    <Form.Control
-                                                        type="text"
-                                                        placeholder="Zadejte specifikaci"
-                                                        value={dataa}
-                                                        onChange={e => handleChangeSpecifications(e, index, i)}
-                                                    />
-                                                    <InputGroup.Text className="big-price-delete-specific" onClick={(e) => handleRemoveSpecifications(e, index, i)}>X</InputGroup.Text>
-                                                </InputGroup>
+                                            return (
+                                                <div key={i} className="specific-and-btn">
+                                                    <InputGroup className="mb-3">
+                                                        <Form.Control
+                                                            type="text"
+                                                            required
+                                                            placeholder="Zadejte specifikaci"
+                                                            value={dataa}
+                                                            onChange={e => handleChangeSpecifications(e, index, i)}
+                                                        />
+                                                        <InputGroup.Text className="big-price-delete-specific" onClick={(e) => handleRemoveSpecifications(e, index, i)}>X</InputGroup.Text>
+                                                    </InputGroup>
 
-                                            </div>
-                                        )
-                                    })
-                                }
-                                <button className="remove-btn" onClick={(e) => handleRemovePackage(e, index)}>Odstranit balíček č. {index + 1}</button>
-                            </div>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                    <button className="remove-btn" onClick={(e) => handleRemovePackage(e, index)}>Odstranit balíček č. {index + 1}</button>
+                                </div>
 
-                        )
-                    })
-                }
-            </div>
-            <input className="send-btn" type="submit" onClick={(e) => bigPriceSubmit(e)} />
-        </form>
+                            )
+                        })
+                    }
+                </div>
+                <input className="send-btn" type="submit" />
+            </form>
+        </>
     )
 }
 
