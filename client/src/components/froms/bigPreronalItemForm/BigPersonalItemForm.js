@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 import Notification from "../../notification/Notification";
 
-const urlProductionBigPriceList = 'http://localhost:3000/api/v1/bigPersonalPriceList';
+const urlProductionBigPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/bigPersonalPriceList';
 
 const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
     const [bigPriceTitle, setBigPriceTitle] = useState('');
