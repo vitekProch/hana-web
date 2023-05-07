@@ -11,7 +11,7 @@ const BigPriceListSchema = new mongoose.Schema({
             required: [true, 'Prosím zadejte název balíčku.'],
         }, 
         text:{
-            type: arra,
+            type: Array,
             required: [true, 'Prosím zadejte popis.']
         }, 
         price:{
