@@ -75,21 +75,21 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
         <>
             {showNotification && <Notification notificationContent={notificationContent} closeNotif={() => setShowNotification(false)} />}
             <form className="big-price-form" onSubmit={(e) => bigPriceSubmit(e)}>
-                <div className="big-price-title-and-btn">
+                <div className="big-price-title-and-btn-form">
                     <button className="add-btn" onClick={(e) => handleAddPackage(e)}>Přidat Balíček</button>
                     <input
                         type="text"
                         placeholder="Zadejte titulek"
-                        className="big-price-title"
+                        className="big-price-title-form"
                         value={bigPriceTitle}
                         onChange={e => setBigPriceTitle(e.target.value)}
                     />
                 </div>
-                <div className="big-price-packages">
+                <div className="big-price-packages-form">
                     {
                         inputList.map((data, index) => {
                             return (
-                                <div className="big-price-one-package" key={index}>
+                                <div className="big-price-one-package-form" key={index}>
                                     <p>Balíček číslo {index + 1}</p>
                                     <input
                                         type="text"
@@ -105,12 +105,12 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
                                         value={data.price}
                                         onChange={e => handleChangePackage(e, index)}
                                     />
-                                    <button className="big-price-add-specific" onClick={(e) => handleAddSpecifications(e, data, index)}>Přidat Specifikaci</button>
+                                    <button className="big-price-add-specific-form" onClick={(e) => handleAddSpecifications(e, data, index)}>Přidat Specifikaci</button>
                                     {
                                         data.text.map((dataa, i) => {
 
                                             return (
-                                                <div key={i} className="specific-and-btn">
+                                                <div key={i} className="specific-and-btn-form">
                                                     <InputGroup className="mb-3">
                                                         <Form.Control
                                                             type="text"
@@ -119,14 +119,14 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
                                                             value={dataa}
                                                             onChange={e => handleChangeSpecifications(e, index, i)}
                                                         />
-                                                        <InputGroup.Text className="big-price-delete-specific" onClick={(e) => handleRemoveSpecifications(e, index, i)}>X</InputGroup.Text>
+                                                        <InputGroup.Text className="big-price-delete-specific-form" onClick={(e) => handleRemoveSpecifications(e, index, i)}>X</InputGroup.Text>
                                                     </InputGroup>
 
                                                 </div>
                                             )
                                         })
                                     }
-                                    <button className="remove-btn" onClick={(e) => handleRemovePackage(e, index)}>Odstranit balíček č. {index + 1}</button>
+                                    <button className="remove-btn-form" onClick={(e) => handleRemovePackage(e, index)}>Odstranit balíček č. {index + 1}</button>
                                 </div>
 
                             )

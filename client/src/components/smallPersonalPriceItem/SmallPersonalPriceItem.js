@@ -1,5 +1,6 @@
 import "./SmallPersonalPriceItem.scss"
 import { useState } from "react"
+import { BsPencilSquare } from "react-icons/bs";
 
 const PriceItem = ({ _id, priseTitle, pricePackage }) => {
 
@@ -8,7 +9,10 @@ const PriceItem = ({ _id, priseTitle, pricePackage }) => {
     <div className="price-group">
       <div className="price-item">
         <div className="price-title-and-btn">
-          <h2 className="price-title">{priseTitle}</h2>
+          <h2 className="price-title">
+            {priseTitle}
+            <BsPencilSquare className="small-price-item-update-pencil" />
+          </h2>
           <button onClick={() => setShow(!show)}>{show ? "Schovat" : "Ukázat"}</button>
         </div>
 

@@ -36,3 +36,14 @@
     align-items: center;
     justify-content: center;
 }
+.big-price-item-update-pencil{
+    color: green;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.big-price-title-and-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

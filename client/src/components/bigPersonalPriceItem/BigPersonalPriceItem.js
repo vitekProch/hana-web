@@ -1,13 +1,18 @@
 import "./BigPersonalPriceItem.scss"
 import { useState } from "react"
+import { BsPencilSquare } from "react-icons/bs";
 
 const PriceItem = ({ priseTitle, priseCategory }) => {
   const [show, setShow] = useState(false)
   return (
     <div className="price-group">
       <div className="price-item">
-        <div className="price-title-and-btn">
-          <h2 className="price-title">{priseTitle}</h2>
+        <div className="big-price-title-and-btn">
+          <h2 className="price-title">
+            {priseTitle}
+            <BsPencilSquare className="big-price-item-update-pencil" />
+          </h2>
+          
           <button onClick={() => setShow(!show)}>{show ? "Schovat" : "Ukázat"}</button>
         </div>
 
