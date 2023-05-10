@@ -1,9 +1,9 @@
 import "./Home.scss";
 import imageOne from "../../images/1 (13).jpeg";
-import imageTwo from "../../images/1 (15)-03-02.jpeg";
+import imageTwo from "../../images/zmena.jpeg";
 import imageThree from "../../images/oriznute.jpg";
 import recenze from "../../images/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg";
-import svatba from "../../images/svatba.jpg";
+import svatba from "../../images/svatby.jpg";
 import rodinna from "../../images/rodinna.jpeg";
 import portrety from "../../images/portrety-oriznuyo.jpeg";
 
