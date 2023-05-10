@@ -11,19 +11,13 @@ const createPriceList = async (req, res) => {
     const priceList = await PriceList.create(req.body);
     res.status(StatusCodes.CREATED).json({priceList});
 };
-const updatePriceListTitle = async (req, res) => {
+const updatePriceList = async (req, res) => {
     const {id : priceId} = req.params;
-    const {priseTitle} = req.body;
-    console.log(req.body);
-    const priceList = await PriceList.findByIdAndUpdate(priceId, {priseTitle}, { new: true, runValidators: true });
+    const priceList = await PriceList.findByIdAndUpdate(priceId, req.body, { new: true, runValidators: true });
     res.status(StatusCodes.OK).json({priceList});
 };
-const updatePriceListCategory = async (req, res) => {
-    const {id : priceId, subTitle} = req.params;
-    console.log(req.body);
-    const priceList = await PriceList.updateOne({_id: priceId, subTitle}, {"priseCategory.$.price": 1234567}, { new: true, runValidators: true });
-    res.status(StatusCodes.OK).json({priceList});
-};
+
+
 const deletePriceList = async (req, res) => {
     const { id: priceListId } = req.params;
 
@@ -37,7 +31,6 @@ const deletePriceList = async (req, res) => {
 module.exports = {
     getAllPriceList,
     createPriceList,
-    updatePriceListTitle,
-    updatePriceListCategory,
     deletePriceList,
+    updatePriceList,
 }

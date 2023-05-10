@@ -1,6 +1,6 @@
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import "./BigPersonalItemForm.scss";
+import "./CreatePackage.scss";
 import axios from "axios";
 import { useState } from "react";
 import Notification from "../../notification/Notification";
@@ -36,7 +36,6 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
         setInputList(list);
     };
 
-
     const handleRemovePackage = (e, index) => {
         e.preventDefault();
         const list = [...inputList];
@@ -65,7 +64,6 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
             bigOnClose();
             console.log(resp);
         } catch (error) {
-            console.log(error);
             setShowNotification(true);
             setNotificationContent(error.response.data.msg);
         };
@@ -88,7 +86,7 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
                 <div className="big-price-packages-form">
                     {
                         inputList.map((data, index) => {
-                            return (
+                            return  ( 
                                 <div className="big-price-one-package-form" key={index}>
                                     <p>Balíček číslo {index + 1}</p>
                                     <input
@@ -121,14 +119,12 @@ const BigPersonalItemForm = ({ fetchBigPriceListData, bigOnClose }) => {
                                                         />
                                                         <InputGroup.Text className="big-price-delete-specific-form" onClick={(e) => handleRemoveSpecifications(e, index, i)}>X</InputGroup.Text>
                                                     </InputGroup>
-
                                                 </div>
                                             )
                                         })
                                     }
                                     <button className="remove-btn-form" onClick={(e) => handleRemovePackage(e, index)}>Odstranit balíček č. {index + 1}</button>
                                 </div>
-
                             )
                         })
                     }

@@ -1,18 +1,30 @@
 import "./SmallPersonalPriceItem.scss"
 import { useState } from "react"
 import { BsPencilSquare } from "react-icons/bs";
+import TitleEditForm from "../froms/perosnalItemFormBoth/TitleEditForm";
 
-const PriceItem = ({ _id, priseTitle, pricePackage }) => {
-
+const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
+  const [priceTitleState, setPriceTitle] = useState(priseTitle)
+  const [editTitle, setEditTitle] = useState(false)
   const [show, setShow] = useState(false)
   return (
     <div className="price-group">
       <div className="price-item">
         <div className="price-title-and-btn">
-          <h2 className="price-title">
-            {priseTitle}
-            <BsPencilSquare className="small-price-item-update-pencil" />
-          </h2>
+          {editTitle ?
+            <TitleEditForm
+              id={_id} priceTitleUpdate={setPriceTitle}
+              priceTitle={priceTitleState}
+              closeUpdate={() => setEditTitle(false)}
+              url="https://beige-crab-coat.cyclic.app/api/v1/smallPersonalPriceList/" 
+            /> :
+            <h2 className="price-title">
+              {priceTitleState}
+              <BsPencilSquare
+                onClick={() => setEditTitle(true)}
+                className="small-price-item-update-pencil"
+              />
+            </h2>}
           <button onClick={() => setShow(!show)}>{show ? "Schovat" : "Ukázat"}</button>
         </div>
 
@@ -39,4 +51,4 @@ const PriceItem = ({ _id, priseTitle, pricePackage }) => {
   )
 }
 
-export default PriceItem
+export default SmallPersonalPriceItem

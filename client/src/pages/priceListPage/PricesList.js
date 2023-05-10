@@ -1,6 +1,6 @@
 import "./PricesList.scss";
 import BigPriceItem from "../../components/bigPersonalPriceItem/BigPersonalPriceItem";
-import BigPersonalItemForm from "../../components/froms/bigPreronalItemForm/BigPersonalItemForm";
+import BigPersonalItemForm from "../../components/froms/bigPreronalItemForm/CreatePackage";
 
 import SmallPriceItem from "../../components/smallPersonalPriceItem/SmallPersonalPriceItem";
 import SmallPersonalItemForm from "../../components/froms/smallPersonalItemForm/SmallPersonalItemForm";

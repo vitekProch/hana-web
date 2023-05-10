@@ -4,13 +4,12 @@ const router = express.Router();
 const {
     getAllPriceList,
     createPriceList,
-    updatePriceListTitle,
-    updatePriceListCategory,
     deletePriceList,
+    updatePriceList,
 } = require('../controllers/bigPersonalPriceList');
 
 router.route('/').get(getAllPriceList).post(createPriceList);
-router.route('/:id').patch(updatePriceListTitle).delete(deletePriceList);
-router.route('/:id/:subTitle').patch(updatePriceListCategory).delete(deletePriceList);
+router.route('/:id').delete(deletePriceList).patch(updatePriceList);
+router.route('/:id/:subTitle').delete(deletePriceList);
 
 module.exports = router;
