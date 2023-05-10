@@ -34,9 +34,11 @@ header{
     font-size: 23px;
 }
 
-.nav-branding img{
-    width: 100%;
-    transition: 0.3s ease;
+.nav-branding {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 40px;
+    color: black;
 }
 .nav-link{
     transition: 0.3s ease;

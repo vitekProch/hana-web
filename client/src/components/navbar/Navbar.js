@@ -1,6 +1,5 @@
 import {Link, NavLink} from 'react-router-dom'
 import "./Navbar.scss"
-import brand from "../../images/brand.png"
 import { useState } from 'react'
 
 const Navbar = () => {
@@ -10,7 +9,7 @@ const Navbar = () => {
   <header>
     <div className="fixed-top">
       <div className="items-align">
-      <Link to="/" id="brand" className="nav-branding"><img src={brand} alt=''/></Link>
+      <Link to="/" id="brand" className="nav-branding">Fotografie od Hanky</Link>
         <nav className="navbar">
           
           <ul className={toggleMenu ? "nav-menu active"  : "nav-menu"} >

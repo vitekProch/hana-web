@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.6178d20f.css",
-    "main.js": "./static/js/main.d2779164.js",
+    "main.css": "./static/css/main.5aaa0192.css",
+    "main.js": "./static/js/main.63a7e194.js",
+    "static/media/1 (15)-03-02.jpeg": "./static/media/1 (15)-03-02.edbb4bed1fa8a438ebca.jpeg",
+    "static/media/svatba.jpg": "./static/media/svatba.a34bb69183227d28a8d1.jpg",
+    "static/media/1 (13).jpeg": "./static/media/1 (13).b034890b1381ad673515.jpeg",
+    "static/media/portrety-oriznuyo.jpeg": "./static/media/portrety-oriznuyo.7cc977d622c2c6d78f77.jpeg",
+    "static/media/rodinna.jpeg": "./static/media/rodinna.61841a560ded9b5203e8.jpeg",
+    "static/media/oriznute.jpg": "./static/media/oriznute.2e31cee2696dab570c78.jpg",
     "static/media/selfPhoto2.jpg": "./static/media/selfPhoto2.16a39f01fce90283cd95.jpg",
     "static/media/selfPhoto.jpg": "./static/media/selfPhoto.611170c7ddbe2bbab298.jpg",
+    "static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg": "./static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.2dccf144cb42c2693dac.jpg",
     "index.html": "./index.html",
-    "main.6178d20f.css.map": "./static/css/main.6178d20f.css.map",
-    "main.d2779164.js.map": "./static/js/main.d2779164.js.map"
+    "main.5aaa0192.css.map": "./static/css/main.5aaa0192.css.map",
+    "main.63a7e194.js.map": "./static/js/main.63a7e194.js.map"
   },
   "entrypoints": [
-    "static/css/main.6178d20f.css",
-    "static/js/main.d2779164.js"
+    "static/css/main.5aaa0192.css",
+    "static/js/main.63a7e194.js"
   ]
 }
