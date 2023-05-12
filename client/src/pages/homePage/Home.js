@@ -1,12 +1,12 @@
 import "./Home.scss";
-import imageOne from "../../images/1 (13).jpeg";
-import imageTwo from "../../images/zmena.jpeg";
-import imageThree from "../../images/oriznute.jpg";
+import imageOne from "../../images/uvodni_foto_mensi.jpeg";
+import imageTwo from "../../images/uvodni_foto_vetsi.jpeg";
+import imageThree from "../../images/uvodni_foto_hanka.jpg";
 import recenze from "../../images/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg";
 import svatba from "../../images/svatby.jpg";
 import rodinna from "../../images/rodinna.jpeg";
 import portrety from "../../images/portrety.jpeg";
-import socialSiteImg from "../../images/03.jpg";
+import socialSiteImg from "../../images/pozadi_sicialnich_siti.jpg";
 
 
 import { Link } from "react-router-dom";

@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "./static/css/main.7454a644.css",
-    "main.js": "./static/js/main.3994ca0d.js",
-    "static/media/zmena.jpeg": "./static/media/zmena.edbb4bed1fa8a438ebca.jpeg",
-    "static/media/svatby.jpg": "./static/media/svatby.a34bb69183227d28a8d1.jpg",
-    "static/media/portrety.jpeg": "./static/media/portrety.40b32cf2e3c8bb7940ba.jpeg",
-    "static/media/1 (13).jpeg": "./static/media/1 (13).b034890b1381ad673515.jpeg",
-    "static/media/rodinna.jpeg": "./static/media/rodinna.61841a560ded9b5203e8.jpeg",
-    "static/media/oriznute.jpg": "./static/media/oriznute.2e31cee2696dab570c78.jpg",
-    "static/media/selfPhoto2.jpg": "./static/media/selfPhoto2.16a39f01fce90283cd95.jpg",
-    "static/media/selfPhoto.jpg": "./static/media/selfPhoto.611170c7ddbe2bbab298.jpg",
-    "static/media/03.jpg": "./static/media/03.a30dea948b093f24b833.jpg",
-    "static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg": "./static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.2dccf144cb42c2693dac.jpg",
+    "main.css": "./static/css/main.21bc336d.css",
+    "main.js": "./static/js/main.dca9cfbb.js",
+    "static/media/portrety.jpeg": "./static/media/portrety.ed35a156f611ac73bc40.jpeg",
+    "static/media/svatby.jpg": "./static/media/svatby.14890c19e76fa191122d.jpg",
+    "static/media/uvodni_foto_vetsi.jpeg": "./static/media/uvodni_foto_vetsi.3338572ceb73eafcbd0d.jpeg",
+    "static/media/uvodni_foto_mensi.jpeg": "./static/media/uvodni_foto_mensi.987953dc70b1eab012b6.jpeg",
+    "static/media/rodinna.jpeg": "./static/media/rodinna.9a843af26f2ead4e4bee.jpeg",
+    "static/media/uvodni_foto_hanka.jpg": "./static/media/uvodni_foto_hanka.c997a0bb18e83bda0916.jpg",
+    "static/media/selfPhoto2.jpg": "./static/media/selfPhoto2.b4625ebfae7f288ffa4f.jpg",
+    "static/media/pozadi_sicialnich_siti.jpg": "./static/media/pozadi_sicialnich_siti.0cb0393f290af9372479.jpg",
+    "static/media/selfPhoto.jpg": "./static/media/selfPhoto.14a6cc03e233e32f937b.jpg",
+    "static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg": "./static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.f9789ef5b22eb6bc0805.jpg",
     "index.html": "./index.html",
-    "main.7454a644.css.map": "./static/css/main.7454a644.css.map",
-    "main.3994ca0d.js.map": "./static/js/main.3994ca0d.js.map"
+    "main.21bc336d.css.map": "./static/css/main.21bc336d.css.map",
+    "main.dca9cfbb.js.map": "./static/js/main.dca9cfbb.js.map"
   },
   "entrypoints": [
-    "static/css/main.7454a644.css",
-    "static/js/main.3994ca0d.js"
+    "static/css/main.21bc336d.css",
+    "static/js/main.dca9cfbb.js"
   ]
 }
