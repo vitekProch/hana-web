@@ -1,4 +1,4 @@
-import Mapycz from "../../components/mapy-cz/Mapycz";
+import Mapycz from "../../components/mapyCz/Mapycz";
 import "./Contact.scss";
 
 

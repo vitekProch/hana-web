@@ -6,7 +6,9 @@ import Portfolio from "./pages/portfolioPage/Portfolio";
 import PricesList from "./pages/priceListPage/PricesList";
 import SpecialOffer from "./pages/SpecialOfferPage/SpecialOffer";
 import Home from "./pages/homePage/Home";
-
+import BusinessConditions from "./pages/businessConditionsPage/BusinessConditions";
+import PhotographyInfo from "./pages/photographyInfoPage/PhotographyInfo";
+import Blog from "./pages/blogPage/Blog";
 
 import Error from "./pages/errorPage/Error";
 import SharedLayout from "./pages/SharedLayout";
@@ -23,6 +25,9 @@ const App = () => {
         <Route path="/cenik" element={<PricesList />} />
         <Route path="/o-mne" element={<AboutMe />} />
         <Route path="/kontakt" element={<Contact />} />
+        <Route path="/obchodni-podminky" element={<BusinessConditions />} />
+        <Route path="/informace-k-foceni" element={<PhotographyInfo />} />
+        <Route path="/clanky" element={<Blog />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

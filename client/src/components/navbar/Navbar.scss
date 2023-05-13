@@ -1,13 +1,10 @@
 header{
     width: 100%;
-    height: 79px;
-    margin-bottom: 20px;
-}
-.fixed-top{
     z-index: 100;
     position: fixed;
     background-color: #fff;
     width: 100%;
+    top: 0;
 }
 .items-align{
     display: flex;
@@ -21,9 +18,10 @@ header{
     display: flex;
     flex-direction: row;
     gap: 15px;
+    margin: 0;
 }
 
-.nav-menu li a {
+.navbar-link {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.55);
     display: inline-block;
@@ -32,6 +30,7 @@ header{
     padding: 5px 10px;
     cursor: pointer;
     font-size: 23px;
+    transition: 0.1s ease;
 }
 
 .nav-branding {
@@ -40,9 +39,7 @@ header{
     font-size: 40px;
     color: black;
 }
-.nav-link{
-    transition: 0.3s ease;
-}
+
 .hamburger{
     display: none;
     cursor: pointer;
@@ -57,7 +54,7 @@ header{
 }
 
 
-nav ul li a:before, a:after {
+.navbar-link:before, a:after {
     content: "";
     position: absolute;
     height: 3px;
@@ -65,18 +62,18 @@ nav ul li a:before, a:after {
     background: black;
     transition: .5s;
 }
-nav ul li a:after {
+.navbar-link:after {
     left: 0;
     bottom: -1px;
 }
-nav ul li a:before {
+.navbar-link:before {
     right: 0;
     top: -1px;
 }
-nav ul li a:hover:after, a:hover:before{
+.navbar-link:hover:after, a:hover:before{
     width: 100%;
 }
-nav ul li a:hover{
+.navbar-link:hover{
     text-decoration: none;
     color: black;
 }
@@ -100,7 +97,71 @@ nav ul li .active:after{
 nav ul li .active{
     color: black;
 }
-@media only screen and (max-width:930px) {
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu, .drop-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    color: rgba(0, 0, 0, 0.55);
+    transition: 0.3s ease;
+}
+.menu-item:hover {
+    color: black;
+}
+
+.menu-item a {
+    text-decoration: none;
+    padding: 6px 10px;
+    color: #fff;
+    display: block;
+}
+
+.drop-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 100px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.drop-menu-item {
+    width: 100%;
+}
+
+.drop-menu-item:hover {
+    background-color: #eee;
+}
+
+.drop-menu-item a {
+    color: #555;
+}
+
+.menu-item:hover .drop-menu {
+    display: block;
+}
+@media only screen and (max-width:1370px) {
+    .nav-branding{
+        font-size: 30px;
+    }
+    .navbar-link{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:1205px) {
+    .nav-branding{
+        font-size: 25px;
+    }
+    .navbar-link{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width:1106px) {
     .hamburger{
         display: block;
         overflow: hidden;
@@ -124,6 +185,7 @@ nav ul li .active{
         flex-direction: column;
         background-color: white;
         width: 100%;
+        height: 100vh;
         text-align: center;
         transition: 0.3s;
     }
