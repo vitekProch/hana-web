@@ -1,0 +1,12 @@
+.photography-info-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.photography-info-content{
+    width: 65%;
+}
+.photography-info-content ul li{
+    list-style: disc;
+}   
