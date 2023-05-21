@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.629f1c06.css",
-    "main.js": "./static/js/main.f99513c9.js",
+    "main.css": "./static/css/main.e99e640e.css",
+    "main.js": "./static/js/main.eddf99b4.js",
     "static/media/portrety.jpeg": "./static/media/portrety.ed35a156f611ac73bc40.jpeg",
     "static/media/svatby.jpg": "./static/media/svatby.14890c19e76fa191122d.jpg",
     "static/media/uvodni_foto_vetsi.jpeg": "./static/media/uvodni_foto_vetsi.3338572ceb73eafcbd0d.jpeg",
@@ -13,11 +13,11 @@
     "static/media/selfPhoto.jpg": "./static/media/selfPhoto.14a6cc03e233e32f937b.jpg",
     "static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg": "./static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.f9789ef5b22eb6bc0805.jpg",
     "index.html": "./index.html",
-    "main.629f1c06.css.map": "./static/css/main.629f1c06.css.map",
-    "main.f99513c9.js.map": "./static/js/main.f99513c9.js.map"
+    "main.e99e640e.css.map": "./static/css/main.e99e640e.css.map",
+    "main.eddf99b4.js.map": "./static/js/main.eddf99b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.629f1c06.css",
-    "static/js/main.f99513c9.js"
+    "static/css/main.e99e640e.css",
+    "static/js/main.eddf99b4.js"
   ]
 }
