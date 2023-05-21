@@ -1,0 +1,15 @@
+.business-conditions-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.business-conditions-title{
+    text-align: center;
+}
+.business-conditions-content{
+    width: 65%;
+}
+.business-conditions-content  ul li{
+    list-style: disc;
+}   
