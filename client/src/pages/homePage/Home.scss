@@ -22,9 +22,14 @@
 .img2{
     flex: 1;
 }
-.contact-section{
-    text-align: right;
-    padding: 20px;
+.hero-section{
+    height: 100vh;
+}
+.contact-link-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 10%;
 }
 .contact-link-homepage{
     text-decoration: none;

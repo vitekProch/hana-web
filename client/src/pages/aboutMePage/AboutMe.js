@@ -93,15 +93,12 @@ const AboutMe = () => {
                     </p>
                     <p>
                         Často se setkávám s tím, že především ženy odmítají focení i přesto, že je to jejich sen, a to jen z toho důvodu, že si nepřijdou fotogenické anebo mají strach z pózování. Od toho tady jsem a celým
+                        focením vás budu s radostí provázet. Poradím s myšlenkou, s tím, co na sebe, a dokonce i přijdeme na vhodné pózy a výrazy přímo pro vás. Je důležité vnímat jedinečnost a originalitu každého člověka. Během focení můžete počítat s tím, že vám ukážu náhledy fotografií a vše budeme průběžně konzultovat, abychom fotografie vyladili k dokonalosti. Stačí vykročit ze své komfortní zóny a dát sobě šanci.
+                    </p>
+                    <p>
+                        Jak vždy říkám, dokud to člověk nezkusí, nikdy nezjistí, co v sobě ukrývá.
+                    </p>
 
-                        focením vás budu s radostí provázet. Poradím s myšlenkou, s tím, co na sebe, a dokonce i přijdeme na vhodné pózy a výrazy přímo pro vás. Je důležité vnímat jedinečnost a originalitu každého člověka.
-                    </p>
-                    <p>
-                        konzultovat, abychom fotografie vyladili k dokonalosti. Stačí vykročit ze své komfortní zóny a dát sobě šanci.
-                    </p>
-                    <p>
-                        k vždy říkám, dokud to člověk nezkusí, nikdy nezjistí, co v sobě ukrývá.
-                    </p>
                 </Col>
             </Row>
             <Row>

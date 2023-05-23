@@ -15,12 +15,14 @@ const Home = () => {
 
 
   return <div className="home-page">
-    <section className="tile-images-container">
-      <div className="img1"><img src={imageOne} alt="" /></div>
-      <div className="img2"><img src={imageTwo} alt="" /></div>
-    </section>
-    <section className="contact-section">
-      <Link className="contact-link-homepage" to="/kontakt">Kontaktuj mě!</Link>
+    <section className="hero-section">
+      <div className="tile-images-container">
+        <div className="img1"><img src={imageOne} alt="" /></div>
+        <div className="img2"><img src={imageTwo} alt="" /></div>
+      </div>
+      <div className="contact-link-container">
+        <Link className="contact-link-homepage" to="/kontakt">Kontaktuj mě!</Link>
+      </div>
     </section>
     <section className="opening-text-section">
       <div className="opening-text-image">
@@ -46,7 +48,7 @@ const Home = () => {
       <div><img src={recenze} alt="" /></div>
     </section>
     <section className="homepage-portfolio">
-      <h2 className="home-page-title">Portfólio</h2>
+      <h2 className="home-page-title">Portflio</h2>
       <div className="transparent-images">
         <div style={{
           backgroundImage: `url(${rodinna})`,
