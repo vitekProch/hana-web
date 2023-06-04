@@ -8,13 +8,14 @@ const getAllCategory = async (req, res) => {
 
 
 const createCategory = async (req, res) => {
-    let { categoryName } = req.body;
+    let { categoryName, categoryImage } = req.body;
+    
     categoryName = categoryName
         .toLowerCase()
         .split(' ')
         .join('-');
 
-    const category = await Category.create({categoryName});
+    const category = await Category.create({categoryName, categoryImage});
     res.status(StatusCodes.CREATED).json({ category });
     res.send();
 }

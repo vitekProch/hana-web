@@ -1,7 +1,7 @@
 import "./UpdatePackage.scss"
 
 const UpdatePackage = ({ id, packageData }) => {
-    console.log(packageData);
+    console.log(id, packageData);
     return (
         <div>UpdatePackage</div>
     )

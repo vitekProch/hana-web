@@ -46,7 +46,6 @@ const BigPersonalPriceItem = ({ _id, priseTitle, priseCategory }) => {
             <UpdatePackage id={_id} packageData={packageData}/>
             :
             priseCategory.map((data, index) => {
-
               const { price, subTitle, text } = data
               return (
                 <div key={index} className="info-box">

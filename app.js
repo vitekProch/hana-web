@@ -1,6 +1,6 @@
 require('dotenv').config();
 require('express-async-errors');
-
+const multer = require('multer');
 const path = require('path');
 
 // extra security packages

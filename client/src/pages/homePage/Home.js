@@ -3,24 +3,85 @@ import imageOne from "../../images/uvodni_foto_mensi.jpeg";
 import imageTwo from "../../images/uvodni_foto_vetsi.jpeg";
 import imageThree from "../../images/uvodni_foto_hanka.jpg";
 import recenze from "../../images/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg";
-import svatba from "../../images/svatby.jpg";
-import rodinna from "../../images/rodinna.jpeg";
-import portrety from "../../images/portrety.jpeg";
 import socialSiteImg from "../../images/pozadi_sicialnich_siti.jpg";
-
-
+import axios from "axios";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
+
+const settings = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+};
 const Home = () => {
+  const categoryUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/category';
+  const [portfolioCategory, setPortfolioCategory] = useState([]);
+
+  const fetchCategoryData = async () => {
+    try {
+      const categoryResponse = await axios(categoryUrlProduction);
+      // const categoryResponse = await axios(categoryUrl);
+      setPortfolioCategory(categoryResponse.data.categories);
+    } catch (error) {
+      console.log(error.response);
+    };
+  };
+  const updateValues = (categoryName) => {
+    const addedSpaces = categoryName.replace(/-+/g, ' ');
+
+    const capitalized =
+      addedSpaces.charAt(0).toUpperCase() + addedSpaces.slice(1);
+    return capitalized;
+  }
+
+  useEffect(() => {
+    fetchCategoryData();
+  }, []);
+
 
 
   return <div className="home-page">
-    <section className="tile-images-container">
-      <div className="img1"><img src={imageOne} alt="" /></div>
-      <div className="img2"><img src={imageTwo} alt="" /></div>
-    </section>
-    <section className="contact-section">
-      <Link className="contact-link-homepage" to="/kontakt">Kontaktuj mě!</Link>
+    <section className="hero-section">
+      <div className="tile-images-container">
+        <div className="img1"><img src={imageOne} alt="" /></div>
+        <div className="img2"><img src={imageTwo} alt="" /></div>
+      </div>
+      <div className="contact-link-container">
+        <Link className="contact-link-homepage" to="/kontakt">Kontaktuj mě!</Link>
+      </div>
     </section>
     <section className="opening-text-section">
       <div className="opening-text-image">
@@ -46,31 +107,24 @@ const Home = () => {
       <div><img src={recenze} alt="" /></div>
     </section>
     <section className="homepage-portfolio">
-      <h2 className="home-page-title">Portfólio</h2>
-      <div className="transparent-images">
-        <div style={{
-          backgroundImage: `url(${rodinna})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }} className="transparent-images-svatby">
-          <button>Rodinná</button>
-        </div>
-        <div style={{
-          backgroundImage: `url(${svatba})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }} className="transparent-images-portrety">
-          <button>Svatby</button>
-        </div>
-        <div style={{
-          backgroundImage: `url(${portrety})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }} className="transparent-images-rodinna">
-          <button>Portréty</button>
-        </div>
-      </div>
-    </section>
+      <h2 className="home-page-title">Portflio</h2>
+      <Slider {...settings}>
+        {
+          portfolioCategory.map((onePortfolioCategory) => {
+            const { _id, categoryName, categoryImage } = onePortfolioCategory;
+            const categoryNorme = updateValues(categoryName);
+            return (
+            <div key={_id} className="card">
+              <div className="card-top">
+                <img src={categoryImage} alt={categoryNorme} />
+                <Link to={`/portfolio/${categoryName}`}>{categoryNorme}</Link>
+              </div>
+            </div>
+            )
+          })
+        }
+      </Slider>
+    </section >
     <section className="social-sites-section">
       <div className="social-sites-title">
         <h2 className="home-page-title">Sleduj mě na sociálních sítích</h2>
@@ -86,7 +140,7 @@ const Home = () => {
         </div>
       </div>
     </section>
-  </div>
+  </div >
 }
 
 export default Home;
