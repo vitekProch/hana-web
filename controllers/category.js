@@ -9,6 +9,7 @@ const getAllCategory = async (req, res) => {
 
 const createCategory = async (req, res) => {
     let { categoryName, categoryImage } = req.body;
+    
     categoryName = categoryName
         .toLowerCase()
         .split(' ')

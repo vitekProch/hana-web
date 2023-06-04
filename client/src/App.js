@@ -9,18 +9,19 @@ import Home from "./pages/homePage/Home";
 import BusinessConditions from "./pages/businessConditionsPage/BusinessConditions";
 import PhotographyInfo from "./pages/photographyInfoPage/PhotographyInfo";
 import Blog from "./pages/blogPage/Blog";
+import PortfolioCategory from "./components/portfolioCategory"
 
 import Error from "./pages/errorPage/Error";
 import SharedLayout from "./pages/SharedLayout";
 
 const App = () => {
-  const pages = <Portfolio />;
 
   return <BrowserRouter>
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />}/>
-        <Route path="/portfolio" element={pages} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:categoryName" element={<PortfolioCategory />} />
         <Route path="/noviky" element={<SpecialOffer />} />
         <Route path="/cenik" element={<PricesList />} />
         <Route path="/o-mne" element={<AboutMe />} />

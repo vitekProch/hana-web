@@ -1,12 +1,49 @@
 .photography-info-page{
+
+}
+.photography-info-page-container{
+    width: 80%;
+}
+.photography-info-title{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.photography-info-title h1{
+    background-color: rgb(246,203,82);
+    padding: 80px 40px;
+    text-align: center;
+    margin: 0;
+}
+.photography-info-title h2{
+    background-color: rgb(165,165,165);
+    padding: 80px 40px;
+    margin: 0;
+    text-align: center;
+}
+.photography-info-page{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.photography-info-content{
-    width: 65%;
-}
-.photography-info-content ul li{
-    list-style: disc;
-}   
+// .photography-info-content{
+    
+// }
+// .photography-info-content ul li{
+//     list-style: disc;
+// }
+// .photography-info-content div:nth-child(even){
+//     display: grid;
+//     grid-template-columns: 1fr 2fr;
+// }
+// .photography-info-content div:nth-child(even) .photography-info-content-text{
+//     background-color: rgb(246,203,82);
+// }
+
+// .photography-info-content div:nth-child(odd){
+//     display: grid;
+//     grid-template-columns: 2fr 1fr;
+// }
+// .photography-info-content div:nth-child(odd) .photography-info-content-text{
+//     background-color: rgb(246,203,82);
+// }
