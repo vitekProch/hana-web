@@ -80,7 +80,7 @@ const AboutMe = () => {
                     <img className="about-me-photo" src={picture2} alt="Hanka" />
                 </Col>
             </Row>
-            <Row className="align-items-center flex-column-reverse flex-md-row">
+            <Row className="flex-column-reverse flex-md-row">
                 <Col xs={12} md={6} align="center">
                     <img className="about-me-photo" src={picture1} alt="Hanka" />
                 </Col>

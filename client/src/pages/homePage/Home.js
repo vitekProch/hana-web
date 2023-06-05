@@ -1,4 +1,5 @@
 import "./Home.scss";
+import testUvodky from "../../images/hlavní strana.jpg"
 import imageOne from "../../images/uvodni_foto_mensi.jpeg";
 import imageTwo from "../../images/uvodni_foto_vetsi.jpeg";
 import imageThree from "../../images/uvodni_foto_hanka.jpg";
@@ -76,7 +77,7 @@ const Home = () => {
   return <div className="home-page">
     <section className="hero-section">
       <div className="tile-images-container">
-        <div className="img1"><img src={imageOne} alt="" /></div>
+        <div className="img1"><img src={testUvodky} alt="" /></div>
         <div className="img2"><img src={imageTwo} alt="" /></div>
       </div>
       <div className="contact-link-container">
@@ -107,7 +108,7 @@ const Home = () => {
       <div><img src={recenze} alt="" /></div>
     </section>
     <section className="homepage-portfolio">
-      <h2 className="home-page-title">Portflio</h2>
+      <h2 className="home-page-title">Portfolio</h2>
       <Slider {...settings}>
         {
           portfolioCategory.map((onePortfolioCategory) => {

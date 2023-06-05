@@ -20,7 +20,7 @@ const Navbar = () => {
               <NavLink className="navbar-link" to="/portfolio" onClick={() => setToggleMenu(false)}>Portfolio</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="navbar-link" to="/noviky" onClick={() => setToggleMenu(false)}>Noviky</NavLink>
+              <NavLink className="navbar-link" to="/noviky" onClick={() => setToggleMenu(false)}>Novinky</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="navbar-link" to="/cenik" onClick={() => setToggleMenu(false)}>Ceník</NavLink>
