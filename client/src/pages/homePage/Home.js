@@ -146,24 +146,31 @@ const Home = () => {
         </div>
       </div> */}
       <div className="social-site">
-        <div className="tst" style={{
+        <div className="social-site-img" style={{
           backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_1.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-        }}></div>
-        <div className="tst" style={{
+        }}>
+           <div className="overlay">
+           <div className="social-site-links">
+          <a href="https://www.facebook.com/Fotografieodhanky" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+          <a href="https://www.instagram.com/fotografie_od_hanky/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+        </div>
+           </div>
+        </div>
+        <div className="social-site-img" style={{
           backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_2.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
         </div>
-        <div className="tst" style={{
+        <div className="social-site-img" style={{
           backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_3.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
         </div>
-        <div className="tst" style={{
+        <div className="social-site-img" style={{
           backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_4.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'top',
