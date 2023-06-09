@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.0a41f396.css",
-    "main.js": "./static/js/main.a917089c.js",
+    "main.js": "./static/js/main.2b0c1bfb.js",
     "static/media/uvodni_foto_hanka.jpg": "./static/media/uvodni_foto_hanka.c997a0bb18e83bda0916.jpg",
     "static/media/pozadi_sicialnich_siti.jpg": "./static/media/pozadi_sicialnich_siti.0cb0393f290af9372479.jpg",
     "static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg": "./static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.f9789ef5b22eb6bc0805.jpg",
@@ -11,10 +11,10 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
     "main.0a41f396.css.map": "./static/css/main.0a41f396.css.map",
-    "main.a917089c.js.map": "./static/js/main.a917089c.js.map"
+    "main.2b0c1bfb.js.map": "./static/js/main.2b0c1bfb.js.map"
   },
   "entrypoints": [
     "static/css/main.0a41f396.css",
-    "static/js/main.a917089c.js"
+    "static/js/main.2b0c1bfb.js"
   ]
 }

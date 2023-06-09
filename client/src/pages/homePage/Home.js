@@ -147,30 +147,24 @@ const Home = () => {
       </div> */}
       <div className="social-site">
         <div className="tst" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/rodina-%C5%A0-(64).jpg)",
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_1.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}></div>
         <div className="tst" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/L%20(3).jpg)",
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_2.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
         </div>
         <div className="tst" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/D%20(38).jpg)",
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_3.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
         </div>
         <div className="tst" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/rodina-%C5%A0-(64).jpg",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}>
-        </div>
-        <div className="tst" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/628A9687-01.jpg",
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_4.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
