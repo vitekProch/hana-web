@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.0a41f396.css",
-    "main.js": "./static/js/main.354bf54d.js",
+    "main.css": "./static/css/main.ce3beb1d.css",
+    "main.js": "./static/js/main.0401bc1d.js",
     "static/media/uvodni_foto_hanka.jpg": "./static/media/uvodni_foto_hanka.c997a0bb18e83bda0916.jpg",
     "static/media/pozadi_sicialnich_siti.jpg": "./static/media/pozadi_sicialnich_siti.0cb0393f290af9372479.jpg",
     "static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg": "./static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.f9789ef5b22eb6bc0805.jpg",
@@ -10,11 +10,11 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
-    "main.0a41f396.css.map": "./static/css/main.0a41f396.css.map",
-    "main.354bf54d.js.map": "./static/js/main.354bf54d.js.map"
+    "main.ce3beb1d.css.map": "./static/css/main.ce3beb1d.css.map",
+    "main.0401bc1d.js.map": "./static/js/main.0401bc1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a41f396.css",
-    "static/js/main.354bf54d.js"
+    "static/css/main.ce3beb1d.css",
+    "static/js/main.0401bc1d.js"
   ]
 }
