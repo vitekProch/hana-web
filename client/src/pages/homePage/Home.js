@@ -166,7 +166,7 @@ const Home = () => {
         <div className="tst" style={{
           backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_4.jpg)",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'top',
         }}>
         </div>
       </div>

@@ -24,13 +24,13 @@ const AboutMe = () => {
                 </Col>
 
                 <Col xs={12} md={12} lg={6} align="end" className="al">
-                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o-mn%C4%9B-1.jpg" alt="Hanka" />
+                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o_mne_1.jpg" alt="Hanka" />
                 </Col>
             </Row>
 
             <Row className="flex-column-reverse flex-lg-row">
                 <Col xs={12} md={12} lg={6} align="">
-                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o-mn%C4%9B-2.jpg" alt="Hanka" />
+                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o_mne_2.jpg" alt="Hanka" />
                 </Col>
                 <Col xs={12} md={12} lg={6}>
                     <h4>
@@ -76,12 +76,12 @@ const AboutMe = () => {
                 </Col>
 
                 <Col xs={12} md={12} lg={6} align="end" className="al">
-                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o-mn%C4%9B-3.jpg" alt="Hanka" />
+                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o_mne_3.jpg" alt="Hanka" />
                 </Col>
             </Row>
             <Row className="flex-column-reverse flex-lg-row">
                 <Col xs={12} md={12} lg={6} align="">
-                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o-mn%C4%9B-4.jpeg" alt="Hanka" />
+                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o_mne_4.jpeg" alt="Hanka" />
                 </Col>
                 <Col xs={12} md={12} lg={6}>
                     <h4>
@@ -101,7 +101,7 @@ const AboutMe = () => {
                 </Col>
             </Row>
             <Row>
-                <Col className="text-align-">
+                <Col>
                     <h4>
                         Pár slov na závěr.
                     </h4>
