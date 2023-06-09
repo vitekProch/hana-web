@@ -78,12 +78,12 @@ const Home = () => {
     <section className="hero-section">
       <div className="tile-images-container">
         <div className="img1" style={{
-        backgroundImage: "url(https://beige-crab-coat.cyclic.app/static/media/hlavn%C3%AD%20strana.3b6982f7079b72163900.jpg",
+        backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/uvodni_foto_mensi.jpeg",
         backgroundSize: 'cover',
-        backgroundPosition: 'bottom',
+        backgroundPosition: 'center',
       }}></div>
         <div className="img2" style={{
-        backgroundImage: "url(https://beige-crab-coat.cyclic.app/static/media/uvodni_foto_vetsi.3338572ceb73eafcbd0d.jpeg",
+        backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/uvodni_foto_vetsi.jpeg",
         backgroundSize: 'cover',
         backgroundPosition: 'bottom',
       }}></div>
