@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.ae7d169d.css",
-    "main.js": "./static/js/main.bf6acebd.js",
+    "main.js": "./static/js/main.0556d631.js",
     "static/media/hlavní strana.jpg": "./static/media/hlavní strana.3b6982f7079b72163900.jpg",
     "static/media/uvodni_foto_vetsi.jpeg": "./static/media/uvodni_foto_vetsi.3338572ceb73eafcbd0d.jpeg",
     "static/media/uvodni_foto_mensi.jpeg": "./static/media/uvodni_foto_mensi.987953dc70b1eab012b6.jpeg",
@@ -14,10 +14,10 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
     "main.ae7d169d.css.map": "./static/css/main.ae7d169d.css.map",
-    "main.bf6acebd.js.map": "./static/js/main.bf6acebd.js.map"
+    "main.0556d631.js.map": "./static/js/main.0556d631.js.map"
   },
   "entrypoints": [
     "static/css/main.ae7d169d.css",
-    "static/js/main.bf6acebd.js"
+    "static/js/main.0556d631.js"
   ]
 }
