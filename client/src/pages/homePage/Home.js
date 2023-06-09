@@ -77,8 +77,16 @@ const Home = () => {
   return <div className="home-page">
     <section className="hero-section">
       <div className="tile-images-container">
-        <div className="img1"><img src={testUvodky} alt="" /></div>
-        <div className="img2"><img src={imageTwo} alt="" /></div>
+        <div className="img1" style={{
+        backgroundImage: "url(https://beige-crab-coat.cyclic.app/static/media/hlavn%C3%AD%20strana.3b6982f7079b72163900.jpg",
+        backgroundSize: 'cover',
+        backgroundPosition: 'bottom',
+      }}></div>
+        <div className="img2" style={{
+        backgroundImage: "url(https://beige-crab-coat.cyclic.app/static/media/uvodni_foto_vetsi.3338572ceb73eafcbd0d.jpeg",
+        backgroundSize: 'cover',
+        backgroundPosition: 'bottom',
+      }}></div>
       </div>
       <div className="contact-link-container">
         <Link className="contact-link-homepage" to="/kontakt">Kontaktuj mě!</Link>
