@@ -41,6 +41,7 @@ const smallPersonalPriceListRouter = require('./routes/smallPersonalPriceList');
 const imagesRouter = require('./routes/images');
 const authRouter = require('./routes/auth');
 const categoryRouter = require('./routes/category');
+const peopleReviewRouter = require('./routes/peopleReview');
 
 // routes
 app.use(express.static('./client/build'));
@@ -51,6 +52,7 @@ app.use('/api/v1/smallPersonalPriceList', smallPersonalPriceListRouter);
 app.use('/api/v1/images', imagesRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/category', categoryRouter);
+app.use('/api/v1/peopleReview', peopleReviewRouter);
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
