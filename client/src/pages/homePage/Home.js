@@ -1,7 +1,4 @@
 import "./Home.scss";
-import testUvodky from "../../images/hlavní strana.jpg"
-import imageOne from "../../images/uvodni_foto_mensi.jpeg";
-import imageTwo from "../../images/uvodni_foto_vetsi.jpeg";
 import imageThree from "../../images/uvodni_foto_hanka.jpg";
 import recenze from "../../images/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg";
 import socialSiteImg from "../../images/pozadi_sicialnich_siti.jpg";
@@ -78,15 +75,15 @@ const Home = () => {
     <section className="hero-section">
       <div className="tile-images-container">
         <div className="img1" style={{
-        backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/uvodni_foto_mensi.jpeg",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}></div>
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/uvodni_foto_mensi.jpeg",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}></div>
         <div className="img2" style={{
-        backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/uvodni_foto_vetsi.jpeg",
-        backgroundSize: 'cover',
-        backgroundPosition: 'bottom',
-      }}></div>
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/uvodni_foto_vetsi.jpeg",
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom',
+        }}></div>
       </div>
       <div className="contact-link-container">
         <Link className="contact-link-homepage" to="/kontakt">Kontaktuj mě!</Link>
@@ -123,12 +120,12 @@ const Home = () => {
             const { _id, categoryName, categoryImage } = onePortfolioCategory;
             const categoryNorme = updateValues(categoryName);
             return (
-            <div key={_id} className="card">
-              <div className="card-top">
-                <img src={categoryImage} alt={categoryNorme} />
-                <Link to={`/portfolio/${categoryName}`}>{categoryNorme}</Link>
+              <div key={_id} className="card">
+                <div className="card-top">
+                  <img src={categoryImage} alt={categoryNorme} />
+                  <Link to={`/portfolio/${categoryName}`}>{categoryNorme}</Link>
+                </div>
               </div>
-            </div>
             )
           })
         }
@@ -138,7 +135,7 @@ const Home = () => {
       <div className="social-sites-title">
         <h2 className="home-page-title">Sleduj mě na sociálních sítích</h2>
       </div>
-      <div style={{
+      {/* <div style={{
         backgroundImage: `url(${socialSiteImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -147,7 +144,39 @@ const Home = () => {
           <a href="https://www.facebook.com/Fotografieodhanky" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
           <a href="https://www.instagram.com/fotografie_od_hanky/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
         </div>
+      </div> */}
+      <div className="social-site">
+        <div className="tst" style={{
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/rodina-%C5%A0-(64).jpg)",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}></div>
+        <div className="tst" style={{
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/L%20(3).jpg)",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}>
+        </div>
+        <div className="tst" style={{
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/D%20(38).jpg)",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}>
+        </div>
+        <div className="tst" style={{
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/rodina-%C5%A0-(64).jpg",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}>
+        </div>
+        <div className="tst" style={{
+          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/628A9687-01.jpg",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}>
+        </div>
       </div>
+
     </section>
   </div >
 }
