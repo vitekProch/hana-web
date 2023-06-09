@@ -1,14 +1,12 @@
 {
   "files": {
     "main.css": "./static/css/main.ae7d169d.css",
-    "main.js": "./static/js/main.a8612edf.js",
+    "main.js": "./static/js/main.bf6acebd.js",
     "static/media/hlavní strana.jpg": "./static/media/hlavní strana.3b6982f7079b72163900.jpg",
     "static/media/uvodni_foto_vetsi.jpeg": "./static/media/uvodni_foto_vetsi.3338572ceb73eafcbd0d.jpeg",
     "static/media/uvodni_foto_mensi.jpeg": "./static/media/uvodni_foto_mensi.987953dc70b1eab012b6.jpeg",
     "static/media/uvodni_foto_hanka.jpg": "./static/media/uvodni_foto_hanka.c997a0bb18e83bda0916.jpg",
-    "static/media/selfPhoto2.jpg": "./static/media/selfPhoto2.b4625ebfae7f288ffa4f.jpg",
     "static/media/pozadi_sicialnich_siti.jpg": "./static/media/pozadi_sicialnich_siti.0cb0393f290af9372479.jpg",
-    "static/media/selfPhoto.jpg": "./static/media/selfPhoto.14a6cc03e233e32f937b.jpg",
     "static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg": "./static/media/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.f9789ef5b22eb6bc0805.jpg",
     "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "./static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -16,10 +14,10 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
     "main.ae7d169d.css.map": "./static/css/main.ae7d169d.css.map",
-    "main.a8612edf.js.map": "./static/js/main.a8612edf.js.map"
+    "main.bf6acebd.js.map": "./static/js/main.bf6acebd.js.map"
   },
   "entrypoints": [
     "static/css/main.ae7d169d.css",
-    "static/js/main.a8612edf.js"
+    "static/js/main.bf6acebd.js"
   ]
 }
