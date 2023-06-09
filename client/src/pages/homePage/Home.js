@@ -1,52 +1,21 @@
 import "./Home.scss";
 import imageThree from "../../images/uvodni_foto_hanka.jpg";
 import recenze from "../../images/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg";
-import socialSiteImg from "../../images/pozadi_sicialnich_siti.jpg";
 import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import sliderSettings from "../../components/sliderSettings/settings";
+
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 
-const settings = {
-  dots: true,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  initialSlide: 0,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-};
+
 const Home = () => {
   const categoryUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/category';
   const [portfolioCategory, setPortfolioCategory] = useState([]);
+  const {portfolioSettings, reactionSettings} = sliderSettings;
 
   const fetchCategoryData = async () => {
     try {
@@ -114,7 +83,7 @@ const Home = () => {
     </section>
     <section className="homepage-portfolio">
       <h2 className="home-page-title">Portfolio</h2>
-      <Slider {...settings}>
+      <Slider  {...portfolioSettings}>
         {
           portfolioCategory.map((onePortfolioCategory) => {
             const { _id, categoryName, categoryImage } = onePortfolioCategory;
@@ -135,16 +104,6 @@ const Home = () => {
       <div className="social-sites-title">
         <h2 className="home-page-title">Sleduj mě na sociálních sítích</h2>
       </div>
-      {/* <div style={{
-        backgroundImage: `url(${socialSiteImg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }} className="social-site-img">
-        <div className="social-site-links">
-          <a href="https://www.facebook.com/Fotografieodhanky" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
-          <a href="https://www.instagram.com/fotografie_od_hanky/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-        </div>
-      </div> */}
       <div className="social-site">
         <div className="social-site-img" style={{
           backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_1.jpg)",
