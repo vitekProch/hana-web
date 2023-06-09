@@ -1,8 +1,7 @@
 
 import "./AboutMe.scss";
 import { Container, Row, Col } from 'react-bootstrap';
-import picture1 from "../../images/selfPhoto.jpg";
-import picture2 from "../../images/selfPhoto2.jpg";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AboutMe = () => {
@@ -25,13 +24,13 @@ const AboutMe = () => {
                 </Col>
 
                 <Col xs={12} md={6} align="center" className="al">
-                    <img className="about-me-photo" src={picture2} alt="Hanka" />
+                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o-mn%C4%9B1.jpg" alt="Hanka" />
                 </Col>
             </Row>
 
             <Row className="align-items-center flex-column-reverse flex-md-row">
                 <Col xs={12} md={6} align="center">
-                    <img className="about-me-photo" src={picture1} alt="Hanka" />
+                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o-mn%C4%9B-2.jpg" alt="Hanka" />
                 </Col>
                 <Col xs={12} md={6}>
                     <h4>
@@ -77,12 +76,12 @@ const AboutMe = () => {
                 </Col>
 
                 <Col xs={12} md={6} align="center" className="al">
-                    <img className="about-me-photo" src={picture2} alt="Hanka" />
+                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o-mn%C4%9B-3.jpg" alt="Hanka" />
                 </Col>
             </Row>
             <Row className="flex-column-reverse flex-md-row">
                 <Col xs={12} md={6} align="center">
-                    <img className="about-me-photo" src={picture1} alt="Hanka" />
+                    <img className="about-me-photo" src="https://beige-crab-coat.cyclic.app/images/o-mn%C4%9B-4.jpeg" alt="Hanka" />
                 </Col>
                 <Col xs={12} md={6}>
                     <h4>
