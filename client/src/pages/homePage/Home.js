@@ -15,13 +15,16 @@ import { useEffect, useState } from "react";
 const Home = () => {
   const categoryUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/category';
   const [portfolioCategory, setPortfolioCategory] = useState([]);
-  const {portfolioSettings, reactionSettings} = sliderSettings;
+  const [peopleReviewCategory, setPeopleReviewCategory] = useState([]);
+  const { portfolioSettings, reactionSettings } = sliderSettings;
 
   const fetchCategoryData = async () => {
     try {
       const categoryResponse = await axios(categoryUrlProduction);
+      const peopleReviewResponse = await axios('https://beige-crab-coat.cyclic.app/api/v1/peopleReview');
       // const categoryResponse = await axios(categoryUrl);
       setPortfolioCategory(categoryResponse.data.categories);
+      setPeopleReviewCategory(peopleReviewResponse.data.peopleReview);
     } catch (error) {
       console.log(error.response);
     };
@@ -77,9 +80,22 @@ const Home = () => {
         </div>
       </div>
     </section>
-    <section className="recenze">
+    <section className="review">
       <h2 className="home-page-title">Vaše reakce</h2>
-      <div><img src={recenze} alt="" /></div>
+      <div className="review-slider">
+        <Slider  {...reactionSettings}>
+          {
+            peopleReviewCategory.map((onePeopleReview) => {
+              const { _id, url, alt } = onePeopleReview;
+              return (
+                <div key={_id} className="review-img">
+                  <img src={url} alt={alt} />
+                </div>
+              )
+            })
+          }
+        </Slider>
+      </div>
     </section>
     <section className="homepage-portfolio">
       <h2 className="home-page-title">Portfolio</h2>
@@ -110,12 +126,12 @@ const Home = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
-           <div className="overlay">
-           <div className="social-site-links">
-          <a href="https://www.facebook.com/Fotografieodhanky" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
-          <a href="https://www.instagram.com/fotografie_od_hanky/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-        </div>
-           </div>
+          <div className="overlay">
+            <div className="social-site-links">
+              <a href="https://www.facebook.com/Fotografieodhanky" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+              <a href="https://www.instagram.com/fotografie_od_hanky/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+            </div>
+          </div>
         </div>
         <div className="social-site-img" style={{
           backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_2.jpg)",
