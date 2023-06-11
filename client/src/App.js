@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutMe from "./pages/aboutMePage/AboutMe";
 import Contact from "./pages/contactPage/Contact";
 import Portfolio from "./pages/portfolioPage/Portfolio";
@@ -9,7 +9,7 @@ import Home from "./pages/homePage/Home";
 import BusinessConditions from "./pages/businessConditionsPage/BusinessConditions";
 import PhotographyInfo from "./pages/photographyInfoPage/PhotographyInfo";
 import Blog from "./pages/blogPage/Blog";
-import PortfolioCategory from "./components/portfolioCategory"
+import PortfolioPictures from "./components/portfolioPictures/Pictures";
 
 import Error from "./pages/errorPage/Error";
 import SharedLayout from "./pages/SharedLayout";
@@ -19,9 +19,10 @@ const App = () => {
   return <BrowserRouter>
     <Routes>
       <Route path="/" element={<SharedLayout />}>
-        <Route index element={<Home />}/>
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/:categoryName" element={<PortfolioCategory />} />
+        <Route index element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} >
+          <Route path=":categoryName" element={<PortfolioPictures />} />
+        </Route>
         <Route path="/noviky" element={<SpecialOffer />} />
         <Route path="/cenik" element={<PricesList />} />
         <Route path="/o-mne" element={<AboutMe />} />
