@@ -32,25 +32,34 @@ const Navbar = () => {
               <NavLink className="navbar-link" to="/kontakt" onClick={() => setToggleMenu(false)}>Kontakt</NavLink>
             </li>
             <li className="menu-wrap nav-item">
-              <div >
-                <ul className="menu">
-                  <li className="menu-item">
-                    <div className='navbar-link'>Další</div>
-                    <ul className="drop-menu">
-                      <li className="nav-item drop-menu-item">
-                        <NavLink className="navbar-link" to="/clanky" onClick={() => setToggleMenu(false)}>Články</NavLink>
-                      </li>
-                      <li className="nav-item drop-menu-item">
-                        <NavLink className="navbar-link" to="/obchodni-podminky" onClick={() => setToggleMenu(false)}>Obchodní podmínky</NavLink>
-                      </li>
-                      <li className="nav-item drop-menu-item">
-                        <NavLink className="navbar-link" to="/informace-k-foceni" onClick={() => setToggleMenu(false)}>Informace k focení</NavLink>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+              <ul className="menu">
+                <li className="menu-item">
+                  <div className='navbar-link navbar-toggle'>Další</div>
+                  <ul className="drop-menu">
+                    <li className="nav-item drop-menu-item">
+                      <NavLink className="navbar-link" to="/clanky" onClick={() => setToggleMenu(false)}>Články</NavLink>
+                    </li>
+                    <li className="nav-item drop-menu-item">
+                      <NavLink className="navbar-link" to="/obchodni-podminky" onClick={() => setToggleMenu(false)}>Obchodní podmínky</NavLink>
+                    </li>
+                    <li className="nav-item drop-menu-item">
+                      <NavLink className="navbar-link" to="/informace-k-foceni" onClick={() => setToggleMenu(false)}>Informace k focení</NavLink>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
+            <div className="small-size-menu">
+              <li className="nav-item drop-menu-item">
+                <NavLink className="navbar-link" to="/clanky" onClick={() => setToggleMenu(false)}>Články</NavLink>
+              </li>
+              <li className="nav-item drop-menu-item">
+                <NavLink className="navbar-link" to="/obchodni-podminky" onClick={() => setToggleMenu(false)}>Obchodní podmínky</NavLink>
+              </li>
+              <li className="nav-item drop-menu-item">
+                <NavLink className="navbar-link" to="/informace-k-foceni" onClick={() => setToggleMenu(false)}>Informace k focení</NavLink>
+              </li>
+            </div>
           </ul>
           <div className={toggleMenu ? "hamburger active" : "hamburger"} onClick={() => setToggleMenu(!toggleMenu)}>
             <span className="bar"></span>

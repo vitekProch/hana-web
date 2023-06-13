@@ -134,16 +134,15 @@ body {
     width: 100%;
 }
 
-.drop-menu-item:hover {
-    background-color: #eee;
-}
-
 .drop-menu-item a {
-    color: #555;
+    color: rgba(0, 0, 0, 0.55);
 }
 
 .menu-item:hover .drop-menu {
     display: block;
+}
+.small-size-menu{
+    display: none;
 }
 @media only screen and (max-width:1370px) {
     .nav-branding{
@@ -180,7 +179,7 @@ body {
     .nav-menu{
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 65px;
         gap: 0;
         flex-direction: column;
         background-color: white;
@@ -196,6 +195,13 @@ body {
 
     .nav-menu.active{
         left: 0;
+    }
+    .menu-wrap{
+        display: none;
+    }
+    .small-size-menu{
+        display: flex;
+        flex-direction: column;
     }
 
 }
