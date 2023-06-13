@@ -9,76 +9,58 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-left: 60px;
-    gap: 90px;
+    gap: 20px;
 }
 
 .contact-inf-box{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-.adress{
-    flex: 1;
-}
-.email{
-    flex: 1;
-    position: relative;
-    left: 35px;
-}
-
-.contact_form{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
-.contact_form input[type=text]{
-    border: 1px solid black;
-}
-.contact_form input[type=submit]{
+.adress{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     margin-top: 10px;
+    text-align: center;
 }
-
-@media only screen and (max-width: 1190px){
-    .contact-inf-box{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .map{
-        flex:1.5;
-    }
-    .contact{
-        margin-left: 0;
-    }
+.contact-title{
+    text-align: center;
 }
+.contact-link-with-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contact-form-container{
+    width: 450px;
+    margin: 0 auto;
+}
+.contact-form-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-@media only screen and (max-width: 1190px){
+}
+.contact-form-container form input[type=text], .contact-form-container form textarea{
+    border: 1px solid black;
+    padding: 10px 10px;
+}
+.contact-form-container form input[type=submit]{
+    background-color: transparent;
+    font-size: 20px;
+}
+.contact-form-container form textarea{
+    height: 200px;
+}
+.contact-social-icon{
+    font-size: 40px;
+    margin-right: 20px;
+}
+@media only screen and (max-width: 930px){
     .contact-page{
         flex-direction: column;
-    }
-    .contact-inf-box{
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .contact{
-        justify-content: center;
-        align-items: center;
-    }
-    .adress{
-        position: relative;
-        right: 30px;
-    }
-}
-@media only screen and (max-width: 500px){
-    .contact-inf-box{
-        flex-direction: column;
-    }
-    .email{
-        left: 10px;
     }
 }

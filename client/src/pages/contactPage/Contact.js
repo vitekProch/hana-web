@@ -1,6 +1,6 @@
 import Mapycz from "../../components/mapyCz/Mapycz";
 import "./Contact.scss";
-
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Contact = () => {
 
@@ -15,24 +15,29 @@ const Contact = () => {
         </div>
         <div className="contact-inf-box">
           <div className="adress">
-            <h4>Adresa ateliéru:</h4>
             <strong>
               Smetanova 49<br />
               33701 Rokycany<br />
               Střed, Česko<br />
             </strong>
-          </div>
-          <div className="email">
-            <h4>Email</h4>
-            <strong><a href="mailto:fotografieodhanky@seznam.cz">fotografieodhanky@seznam.cz</a></strong>
+            <a href="mailto:fotografieodhanky@seznam.cz"><strong>fotografieodhanky@seznam.cz</strong></a>
+            <p>IČO: <strong>00000000</strong></p>
           </div>
         </div>
-        <form className="contact_form">
-          <input type="text" placeholder="Vaše jméno" />
-          <input type="text" placeholder="Váš e-mail" />
-          <input type="text" placeholder="Vaše zpráva" />
-          <input type="submit" />
-        </form>
+        <div className="contact-form-container">
+          <form>
+            <input required type="text" placeholder="Vaše jméno" />
+            <input required type="text" placeholder="Váš e-mail" />
+            <textarea required placeholder="Vaše zpráva"></textarea>
+            <div className="contact-link-with-button">
+              <div className="contact-social-links">
+                <a href="https://www.facebook.com/Fotografieodhanky" target="_blank" rel="noopener noreferrer"><FaFacebook className="contact-social-icon" /></a>
+                <a href="https://www.instagram.com/fotografie_od_hanky/" target="_blank" rel="noopener noreferrer"><FaInstagram className="contact-social-icon" /></a>
+              </div>
+              <input type="submit" />
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   )
