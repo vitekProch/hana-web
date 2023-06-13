@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Outlet, useParams, Link } from "react-router-dom";
 import "./Portfolio.scss";
 import axios from 'axios';
-
-import AddCategoryForm from "../../components/froms/portfolioForms/addCategoryForm";
-
-// const categoryUrl = 'http://localhost:3000/api/v1/category';
-// const portfolioImagesUrl = 'http://localhost:3000/api/v1/images';
+import PortfolioNav from "../../components/portfolioNav/Index";
+//import AddCategoryForm from "../../components/froms/portfolioForms/addCategoryForm";
 
 const categoryUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/category';
 
 
 const Portfolio = () => {
+  const { categoryName } = useParams();
+
+
   const [portfolioCategory, setPortfolioCategory] = useState([]);
 
   const updateValues = (categoryName) => {
@@ -38,22 +38,22 @@ const Portfolio = () => {
 
   return (
     <section className="portfolio-page">
-      <div className="category-list">
+      <PortfolioNav />
         {
-          portfolioCategory.map((onePortfolioCategory) => {
-            const { _id, categoryName, categoryImage } = onePortfolioCategory;
-            const categoryNorme = updateValues(categoryName);
-            return <div key={_id} className="">
-              <Link to={`/portfolio/${categoryName}`}>{categoryNorme}</Link>
-              <div className="category-menu-picture">
-                <div className="category-menu-picture-box">
-                  <img src={categoryImage} alt={categoryNorme} />
+          categoryName ? <Outlet></Outlet> : 
+          <div className="category-list">
+            {
+              portfolioCategory.map((onePortfolioCategory) => {
+                const { _id, categoryName, categoryImage } = onePortfolioCategory;
+                const categoryNorme = updateValues(categoryName);
+                return <div key={_id} className="category-menu-picture-box stacked">
+                  <Link to={categoryName}><img className="category-menu-picture" src={categoryImage} alt={categoryNorme} /></Link>
+                  <div className="category-label">{categoryNorme}</div>
                 </div>
-              </div>
-            </div>
-          })
+              })
+            }
+          </div>
         }
-      </div>
     </section>
   )
 };
