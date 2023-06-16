@@ -47,3 +47,11 @@
     justify-content: space-between;
     align-items: center;
 }
+@media screen and (max-width:1300px) {
+    .prise-list-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 15px;
+    }
+}

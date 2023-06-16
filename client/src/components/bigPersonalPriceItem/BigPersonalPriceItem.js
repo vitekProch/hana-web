@@ -3,6 +3,7 @@ import { useState } from "react";
 import { BsPencilSquare } from "react-icons/bs";
 import TitleEditForm from "../froms/perosnalItemFormBoth/TitleEditForm";
 import UpdatePackage from "../froms/bigPreronalItemForm/UpdatePackage";
+import PriceListSign from "../priceListSigns";
 
 const BigPersonalPriceItem = ({ _id, priseTitle, priseCategory }) => {
   const [priceTitleState, setPriceTitle] = useState(priseTitle);
@@ -15,7 +16,7 @@ const BigPersonalPriceItem = ({ _id, priseTitle, priseCategory }) => {
       subTitle: subTitle,
       text: text,
       price: price,
-    } 
+    }
     setPackageData(newPackageData);
     setShowEditPackage(true);
   }
@@ -38,12 +39,12 @@ const BigPersonalPriceItem = ({ _id, priseTitle, priseCategory }) => {
               />
             </h2>}
 
-          <button onClick={() => setShow(!show)}>{show ? "Schovat" : "Ukázat"}</button>
+          <PriceListSign showInfo={setShow} />
         </div>
 
         {show && <div className="prise-list-container" >
           {showEditPackage ?
-            <UpdatePackage id={_id} packageData={packageData}/>
+            <UpdatePackage id={_id} packageData={packageData} />
             :
             priseCategory.map((data, index) => {
               const { price, subTitle, text } = data

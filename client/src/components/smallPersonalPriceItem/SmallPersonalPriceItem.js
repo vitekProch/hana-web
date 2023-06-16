@@ -2,6 +2,7 @@ import "./SmallPersonalPriceItem.scss"
 import { useState } from "react"
 import { BsPencilSquare } from "react-icons/bs";
 import TitleEditForm from "../froms/perosnalItemFormBoth/TitleEditForm";
+import PriceListSign from "../priceListSigns";
 
 const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
   const [priceTitleState, setPriceTitle] = useState(priseTitle)
@@ -16,7 +17,7 @@ const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
               id={_id} priceTitleUpdate={setPriceTitle}
               priceTitle={priceTitleState}
               closeUpdate={() => setEditTitle(false)}
-              url="https://beige-crab-coat.cyclic.app/api/v1/smallPersonalPriceList/" 
+              url="https://beige-crab-coat.cyclic.app/api/v1/smallPersonalPriceList/"
             /> :
             <h2 className="price-title">
               {priceTitleState}
@@ -25,7 +26,8 @@ const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
                 className="small-price-item-update-pencil"
               />
             </h2>}
-          <button onClick={() => setShow(!show)}>{show ? "Schovat" : "Ukázat"}</button>
+            <PriceListSign showInfo={setShow} />
+            
         </div>
 
         {show && <div className="small-prise-list-container" >
