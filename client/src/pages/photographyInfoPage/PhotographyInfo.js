@@ -61,7 +61,7 @@ const PhotographyInfo = () => {
               </ul>
             </div>
           </Col>
-          <Col sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
+          <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
               <img src="https://beige-crab-coat.cyclic.app/images/portret_v_atelieru.jpeg" alt="" />
             </div>

@@ -1,21 +1,15 @@
 $info-text-color-frst: #fdd154;
 $info-text-color-second: #fff5ef;
 
-.photography-info-title{
-    text-align: center;
-}
 .photography-info-container{
     gap: 0;
 }
+
 .photography-info-container .col{
     margin: 0;
     padding: 0 !important;
 }
-.photography-info-page-container{
-    max-width: 1000px;
-    margin: 0 auto;
-}
-.photography-info-page-grid ul li{
+.photography-info-container ul li{
     list-style: disc;
 }
 .photography-info-page img{
