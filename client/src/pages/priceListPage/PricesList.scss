@@ -21,27 +21,6 @@
     gap: 3px;
 }
 
-.price-list-signs{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    border: 5px solid steelblue;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.price-list-signs .sign-bar{
-    position: absolute;
-    width: 30px;
-    height: 5px;
-    background-color: steelblue;
-}
-.price-list-signs .sign-bar:nth-child(2){
-    transform: rotate(90deg);
-}
 .price-group{
     width: 100%;
 }
