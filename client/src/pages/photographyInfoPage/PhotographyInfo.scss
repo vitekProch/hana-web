@@ -1,49 +1,35 @@
-.photography-info-page{
+$info-text-color-frst: #fdd154;
+$info-text-color-second: #fff5ef;
 
+.photography-info-title{
+    text-align: center;
+}
+.photography-info-container{
+    gap: 0;
+}
+.photography-info-container .col{
+    margin: 0;
+    padding: 0 !important;
 }
 .photography-info-page-container{
-    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-.photography-info-title{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+.photography-info-page-grid ul li{
+    list-style: disc;
 }
-.photography-info-title h1{
-    background-color: rgb(246,203,82);
-    padding: 80px 40px;
-    text-align: center;
-    margin: 0;
+.photography-info-page img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
-.photography-info-title h2{
-    background-color: rgb(165,165,165);
-    padding: 80px 40px;
-    margin: 0;
-    text-align: center;
+.photography-info-content-text{
+    padding: 10px;
 }
-.photography-info-page{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-// .photography-info-content{
-    
-// }
-// .photography-info-content ul li{
-//     list-style: disc;
-// }
-// .photography-info-content div:nth-child(even){
-//     display: grid;
-//     grid-template-columns: 1fr 2fr;
-// }
-// .photography-info-content div:nth-child(even) .photography-info-content-text{
-//     background-color: rgb(246,203,82);
-// }
 
-// .photography-info-content div:nth-child(odd){
-//     display: grid;
-//     grid-template-columns: 2fr 1fr;
-// }
-// .photography-info-content div:nth-child(odd) .photography-info-content-text{
-//     background-color: rgb(246,203,82);
-// }
+.photo-inf-color-bcg-fst{
+    background-color: $info-text-color-frst;
+}
+.photo-inf-color-bcg-second{
+    background-color: $info-text-color-second;
+}

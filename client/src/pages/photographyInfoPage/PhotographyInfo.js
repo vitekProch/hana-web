@@ -1,26 +1,38 @@
 import "./PhotographyInfo.scss";
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from 'react-bootstrap';
+
 const PhotographyInfo = () => {
   return (
     <section className="photography-info-page">
-      <div className="photography-info-page-container">
-        <div className="photography-info-title">
-          <h1>Informace k focení</h1>
-          <h2>Jak focení probíhá a co sebou?</h2>
-        </div>
-        <div className="photography-info-content">
-          <div className="photography-info-content">
-            <div className="photography-info-content-image">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati eius unde porro ullam reiciendis placeat architecto officiis et suscipit? Sed saepe animi quia quod quasi maxime qui voluptatibus ratione.
-            </div>
+      <Container className="photography-info-container">
+        <Row>
+          <Col align="center" className="photo-inf-color-bcg-fst">
+            <h1>Informace k focení</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} sm={12} md={12}  lg={7} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-text">
               <h4>Jak si domluvit focení?</h4>
               <ul>
                 <li>Objednat si svůj termín na focení můžete zde vyplněním formuláře v kategorii <Link className="" to="/kontakt">kontakt</Link>. Můžete mě ale také kontaktovat do zprávy na sociálních sítích, jako je <a href="https://www.facebook.com/Fotografieodhanky" target="_blank" rel="noopener noreferrer">Facebook</a> nebo <a href="https://www.instagram.com/fotografie_od_hanky/" target="_blank" rel="noopener noreferrer">Instagram</a>.</li>
               </ul>
             </div>
-          </div>
-          <div className="photography-info-content">
+          </Col>
+          <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
+            <div className="photography-info-content-image">
+              <img src="https://beige-crab-coat.cyclic.app/images/rodiny.jpeg" alt="" />
+            </div>
+          </Col>
+        </Row>
+        <Row className="flex-column-reverse flex-lg-row">
+          <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-fst">
+            <div className="photography-info-content-image">
+              <img src="https://beige-crab-coat.cyclic.app/images/portret_venku.jpg" alt="" />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-fst">
             <div className="photography-info-content-text">
               <h4>Jak takové focení probíhá?</h4>
               <ul>
@@ -32,11 +44,10 @@ const PhotographyInfo = () => {
                 <li>Záleží mi na tom, aby pro vás váš foto den byl největším zážitkem a vzpomínkou!</li>
               </ul>
             </div>
-            <div className="photography-info-content-image">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati eius unde porro ullam reiciendis placeat architecto officiis et suscipit? Sed saepe animi quia quod quasi maxime qui voluptatibus ratione.
-            </div>
-          </div>
-          <div className="photography-info-content">
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-text">
               <h4>Co s sebou?</h4>
               <ul>
@@ -49,11 +60,20 @@ const PhotographyInfo = () => {
                 <li>Chybět nesmí dobrá nálada a úsměv, který sluší každému! :)</li>
               </ul>
             </div>
+          </Col>
+          <Col sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati eius unde porro ullam reiciendis placeat architecto officiis et suscipit? Sed saepe animi quia quod quasi maxime qui voluptatibus ratione.
+              <img src="https://beige-crab-coat.cyclic.app/images/portret_v_atelieru.jpeg" alt="" />
             </div>
-          </div>
-          <div className="photography-info-content">
+          </Col>
+        </Row>
+        <Row className="flex-column-reverse flex-lg-row">
+          <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-fst">
+            <div className="photography-info-content-image">
+              <img src="https://beige-crab-coat.cyclic.app/images/svatby.jpg" alt="" />
+            </div>
+          </Col>
+          <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-fst">
             <div className="photography-info-content-text">
               <h4>Co následuje po focení?</h4>
               <ul>
@@ -64,23 +84,24 @@ const PhotographyInfo = () => {
                 <li>Neupravené fotografie neposkytuji.</li>
               </ul>
             </div>
-            <div className="photography-info-content-image">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati eius unde porro ullam reiciendis placeat architecto officiis et suscipit? Sed saepe animi quia quod quasi maxime qui voluptatibus ratione.
-            </div>
-          </div>
-          <div className="photography-info-content">
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-text">
               <h4>Nevíte si rady?</h4>
               <ul>
                 <li>Pokud vám něco nebude jasné, <Link className="" to="/kontakt">kontaktujte mě</Link>. Ráda vám s čímkoliv poradím a pomohu.</li>
               </ul>
             </div>
+          </Col>
+          <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati eius unde porro ullam reiciendis placeat architecto officiis et suscipit? Sed saepe animi quia quod quasi maxime qui voluptatibus ratione.
+              <img src="https://beige-crab-coat.cyclic.app/images/uvodni_foto_vetsi.jpeg" alt="" />
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   )
 };
