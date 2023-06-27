@@ -7,7 +7,7 @@ import "./SmallPersonalItemForm.scss"
 import Notification from "../../notification/Notification";
 
 import axios from "axios";
-const urlProductionSmallPriceList = 'https://beige-crab-coat.cyclic.app/api/v1/smallPersonalPriceList';
+const urlProductionSmallPriceList = 'https://fluffy-eel-waistcoat.cyclic.app/api/v1/smallPersonalPriceList';
 
 const SmallPersonalItemForm = ({ fetchSmallPriceList, smallOnClose }) => {
     const [smallPriceTitle, setSmallPriceTitle] = useState('');

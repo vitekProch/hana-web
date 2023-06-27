@@ -17,7 +17,7 @@ const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
               id={_id} priceTitleUpdate={setPriceTitle}
               priceTitle={priceTitleState}
               closeUpdate={() => setEditTitle(false)}
-              url="https://beige-crab-coat.cyclic.app/api/v1/smallPersonalPriceList/"
+              url="https://fluffy-eel-waistcoat.cyclic.app/api/v1/smallPersonalPriceList/"
             /> :
             <h2 className="price-title">
               {priceTitleState}
@@ -26,8 +26,8 @@ const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
                 className="small-price-item-update-pencil"
               />
             </h2>}
-            <PriceListSign showInfo={setShow} />
-            
+          <PriceListSign showInfo={setShow} />
+
         </div>
 
         {show && <div className="small-prise-list-container" >
@@ -43,7 +43,21 @@ const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
                   </li>
                 })
               }
-
+              <li>
+                <h4>Cesta do Prahy</h4>
+                <p>.</p>
+                <p>+340 Kč</p>
+              </li>
+              <li>
+                <h4>Příplatek za víkend</h4>
+                <p>.</p>
+                <p>+300 Kč</p>
+              </li>
+              <li>
+                <h4>Fotka nad rámec balíčku</h4>
+                <p>.</p>
+                <p>150 Kč</p>
+              </li>
             </ul>
           </div>
         </div>

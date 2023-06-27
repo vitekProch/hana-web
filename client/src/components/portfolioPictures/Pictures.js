@@ -11,7 +11,7 @@ const Picures = () => {
 
   const fetchCategoryData = async () => {
     try {
-      const categoryUrlProduction = `https://beige-crab-coat.cyclic.app/api/v1/images/${categoryName}`
+      const categoryUrlProduction = `https://fluffy-eel-waistcoat.cyclic.app/api/v1/images/${categoryName}`
       const categoryResponse = await axios(categoryUrlProduction);
       setImageData(categoryResponse.data.images);
     } catch (error) {

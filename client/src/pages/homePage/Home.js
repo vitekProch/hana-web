@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 
 
 const Home = () => {
-  const categoryUrlProduction = 'https://beige-crab-coat.cyclic.app/api/v1/category';
+  const categoryUrlProduction = 'https://fluffy-eel-waistcoat.cyclic.app/api/v1/category';
   const [portfolioCategory, setPortfolioCategory] = useState([]);
   const [peopleReviewCategory, setPeopleReviewCategory] = useState([]);
   const { portfolioSettings, reactionSettings } = sliderSettings;
@@ -21,7 +21,7 @@ const Home = () => {
   const fetchCategoryData = async () => {
     try {
       const categoryResponse = await axios(categoryUrlProduction);
-      const peopleReviewResponse = await axios('https://beige-crab-coat.cyclic.app/api/v1/peopleReview');
+      const peopleReviewResponse = await axios('https://fluffy-eel-waistcoat.cyclic.app/api/v1/peopleReview');
       // const categoryResponse = await axios(categoryUrl);
       setPortfolioCategory(categoryResponse.data.categories);
       setPeopleReviewCategory(peopleReviewResponse.data.peopleReview);
@@ -47,12 +47,12 @@ const Home = () => {
     <section className="hero-section">
       <div className="tile-images-container">
         <div className="img1" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/uvodni_foto_mensi.jpeg",
+          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/uvodni_foto_mensi.jpeg",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}></div>
         <div className="img2" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/uvodni_foto_vetsi.jpeg",
+          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/uvodni_foto_vetsi.jpeg",
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
         }}></div>
@@ -122,7 +122,7 @@ const Home = () => {
       </div>
       <div className="social-site">
         <div className="social-site-img" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_1.jpg)",
+          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/social_media_1.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
@@ -134,19 +134,19 @@ const Home = () => {
           </div>
         </div>
         <div className="social-site-img" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_2.jpg)",
+          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/social_media_2.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
         </div>
         <div className="social-site-img" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_3.jpg)",
+          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/social_media_3.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
         </div>
         <div className="social-site-img" style={{
-          backgroundImage: "url(https://beige-crab-coat.cyclic.app/images/social_media_4.jpg)",
+          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/social_media_4.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'top',
         }}>

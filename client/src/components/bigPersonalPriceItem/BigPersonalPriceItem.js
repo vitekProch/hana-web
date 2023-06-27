@@ -29,7 +29,7 @@ const BigPersonalPriceItem = ({ _id, priseTitle, priseCategory }) => {
               id={_id} priceTitleUpdate={setPriceTitle}
               priceTitle={priceTitleState}
               closeUpdate={() => setEditTitle(false)}
-              url="https://beige-crab-coat.cyclic.app/api/v1/bigPersonalPriceList/"
+              url="https://fluffy-eel-waistcoat.cyclic.app/api/v1/bigPersonalPriceList/"
             /> :
             <h2 className="price-title">
               {priceTitleState}
