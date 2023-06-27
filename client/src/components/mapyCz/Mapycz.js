@@ -4,7 +4,7 @@ import { Map, MarkerLayer, Marker, KeyboardControl, ZoomControl, MouseControl, S
 const Mapycz = () => {
 
   return (
-    <Map zoom={16} loaderApiConfig={{poi: true}} height="75vh" center={{lat: 49.7436828, lng: 13.5949517}}>
+    <Map zoom={16} loaderApiConfig={{poi: true}} height="690px" center={{lat: 49.7436828, lng: 13.5949517}}>
       <KeyboardControl/>
       <ZoomControl/>
       <MouseControl zoom={true} pan={true} />
