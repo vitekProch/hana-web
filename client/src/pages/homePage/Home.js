@@ -47,12 +47,12 @@ const Home = () => {
     <section className="hero-section">
       <div className="tile-images-container">
         <div className="img1" style={{
-          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/uvodni_foto_mensi.jpeg",
+          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/uvodni_foto_mensi.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}></div>
         <div className="img2" style={{
-          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/uvodni_foto_vetsi.jpeg",
+          backgroundImage: "url(https://fluffy-eel-waistcoat.cyclic.app/images/uvodni_foto_vetsi.jpeg)",
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
         }}></div>
