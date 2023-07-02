@@ -1,6 +1,6 @@
 import "./Home.scss";
 import imageThree from "../../images/uvodni_foto_hanka.jpg";
-import recenze from "../../images/Screenshot_20230510_172917_com.instagram.android_edit_93504492621669.jpg";
+import { Container, Row, Col } from 'react-bootstrap';
 import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
@@ -61,22 +61,17 @@ const Home = () => {
         <Link className="contact-link-homepage" to="/kontakt">Kontaktuj mě!</Link>
       </div>
     </section>
+
     <section className="opening-text-section">
-      <div className="opening-text-image">
-        <img src={imageThree} alt="" />
+      <div className="opening-text-image"> 
+          <img src={imageThree} alt="" />
       </div>
       <div className="opening-text">
         <div className="opening-text-container">
           <p><strong>BcA. Hana Jedličková</strong></p>
-
           <p>Vítám tě na svých stránkách. Líbí se ti moje práce a chceš také takové fotografie? Mrkni na to, kdo tě bude fotit.</p>
-
-          <p><em>Kdo jsem?</em><br />
-
-            Jmenuji se Hana Jedličková a v oboru fotografie se pohybuji už od dětství. Vše začalo, už když mi bylo 11 let a já dostala svůj první fotoaparát. Od té doby se fotografie stala moji životní cestou.
-
-            Není to pro mě pouze koníček či práce. Je to dalo by se říci můj životní směr, ve kterém jsem se rozhodla zdokonalovat a vložit do toho kus sebe. Své znalosti v oboru jsem rozvíjela jak na střední, tak i na vysoké škole.</p>
-          <p className="home-page-about-me-link"><Link to="/o-mne">Čti dále...</Link></p>
+          <p><em>Kdo jsem?</em><br />Jmenuji se Hana Jedličková a v oboru fotografie se pohybuji už od dětství. Vše začalo, už když mi bylo 11 let a já dostala svůj první fotoaparát. Od té doby se fotografie stala moji životní cestou. Není to pro mě pouze koníček či práce. Je to dalo by se říci můj životní směr, ve kterém jsem se rozhodla zdokonalovat a vložit do toho kus sebe. Své znalosti v oboru jsem rozvíjela jak na střední, tak i na vysoké škole.</p>
+          <p className="home-page-about-me-link"><a href="/o-mne">Čti dále...</a></p>
         </div>
       </div>
     </section>
