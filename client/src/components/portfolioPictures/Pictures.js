@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
-
+import "./portfolioPictures.scss";
 
 import axios from 'axios';
 
@@ -23,18 +23,18 @@ const Picures = () => {
     fetchCategoryData();
   }, [categoryName]);
   return (
-      <div className="category-list">
-        {
-          imageData.map((one) => {
-            const { _id, url, alt } = one;
-            return (
-              <div key={_id} className="category-menu-picture-box stacked">
-                    <img src={url} alt={alt} />
-              </div>
-            )
-          })
-        }
-      </div>
+    <div className="category-list">
+      {
+        imageData.map((one) => {
+          const { _id, url, alt } = one;
+          return (
+            <div key={_id} className="category-menu-picture-box stacked">
+              <img src={url} alt={alt} />
+            </div>
+          )
+        })
+      }
+    </div>
   )
 }
 

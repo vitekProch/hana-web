@@ -38,23 +38,27 @@ const Portfolio = () => {
 
   return (
     <section className="portfolio-page">
-      <PortfolioNav />
-        {
-          categoryName ? <Outlet></Outlet> : 
-          <div className="category-list">
+      <div className="fixed">
+        <PortfolioNav />
+      </div>
+      {
+        categoryName ? <Outlet></Outlet> :
+          <div className="category-list-menu">
             {
               portfolioCategory.map((onePortfolioCategory) => {
                 const { _id, categoryName, categoryImage } = onePortfolioCategory;
                 const categoryNorme = updateValues(categoryName);
-                return <div key={_id} className="category-menu-picture-box stacked">
-                  <Link to={categoryName}><img className="category-menu-picture" src={categoryImage} alt={categoryNorme} /></Link>
+                return <div key={_id} className="category-picture-box-menu">
+                  <Link to={categoryName}><img className="category-picture-menu" src={categoryImage} alt={categoryNorme} /></Link>
                   <div className="category-label">{categoryNorme}</div>
                 </div>
               })
             }
+            <div className="category-picture-menu-extra"></div>
+            <div className="category-picture-menu-extra"></div>
           </div>
-        }
-    </section>
+      }
+    </section >
   )
 };
 
