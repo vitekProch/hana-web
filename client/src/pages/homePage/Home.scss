@@ -254,10 +254,16 @@
     .opening-text p:first-child{
         font-size: 7vw;
     }
-    .home-page-titles{
-        font-size: 25px;
-    }
+
     .review{
         height: auto;
+    }
+    .home-page-titles{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .home-page-titles{
+        font-size: 28px;
     }
 }
