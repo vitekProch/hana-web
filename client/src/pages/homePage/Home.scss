@@ -159,9 +159,11 @@
     align-items: center;
     min-height: 140px;
 }
-.home-page-title{
+
+.home-page-titles{
     font-size: 70px;
     margin: 80px 0;
+    text-align: center;
 }
 .social-site{
     display: flex;
@@ -239,5 +241,20 @@
     }
     .opening-text-image{
         min-width: 100%;
+    }
+    .opening-text p:first-child{
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .social-site-links a{
+        font-size: 6vw;
+    }
+    .opening-text p:first-child{
+        font-size: 7vw;
+    }
+    .home-page-titles{
+        font-size: 25px;
     }
 }

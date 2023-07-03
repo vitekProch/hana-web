@@ -76,7 +76,7 @@ const Home = () => {
       </div>
     </section>
     <section className="review">
-      <h2 className="home-page-title">Vaše reakce</h2>
+      <h2 className="home-page-titles">Vaše reakce</h2>
       <div className="review-slider">
         <Slider  {...reactionSettings}>
           {
@@ -93,7 +93,7 @@ const Home = () => {
       </div>
     </section>
     <section className="homepage-portfolio">
-      <h2 className="home-page-title">Portfolio</h2>
+      <h2 className="home-page-titles">Portfolio</h2>
       <Slider  {...portfolioSettings}>
         {
           portfolioCategory.map((onePortfolioCategory) => {
@@ -113,7 +113,7 @@ const Home = () => {
     </section >
     <section className="social-sites-section">
       <div className="social-sites-title">
-        <h2 className="home-page-title">Sleduj mě na sociálních sítích</h2>
+        <h2 className="home-page-titles">Sleduj mě na sociálních sítích</h2>
       </div>
       <div className="social-site">
         <div className="social-site-img" style={{
