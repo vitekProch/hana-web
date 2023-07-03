@@ -12,7 +12,7 @@ const PhotographyInfo = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={12} md={12}  lg={7} className="col photo-inf-color-bcg-second">
+          <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-text">
               <h4>Jak si domluvit focení?</h4>
               <ul>
@@ -22,14 +22,14 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/rodiny.jpeg" alt="" />
+              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/snow.jpg" alt="" />
             </div>
           </Col>
         </Row>
         <Row className="flex-column-reverse flex-lg-row">
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-fst">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/portret_venku.jpg" alt="" />
+              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/child.jpg" alt="" />
             </div>
           </Col>
           <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-fst">
@@ -63,14 +63,14 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/portret_v_atelieru.jpeg" alt="" />
+              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/waterfall.jpg" alt="" />
             </div>
           </Col>
         </Row>
         <Row className="flex-column-reverse flex-lg-row">
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-fst">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/svatby.jpg" alt="" />
+              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/flower.jpg" alt="" />
             </div>
           </Col>
           <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-fst">
@@ -97,7 +97,7 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/uvodni_foto_vetsi.jpeg" alt="" />
+              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/wedding.jpg" alt="" />
             </div>
           </Col>
         </Row>
