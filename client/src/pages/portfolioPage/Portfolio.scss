@@ -25,6 +25,7 @@
 }
 .category-picture-menu:hover{
     opacity: 50%;
+    transition: opacity 0.5s;
 }
 .category-label{
     transform: translate(-50%, -50%);
@@ -50,10 +51,11 @@
     }
     .category-picture-menu-extra{
         width: 350px;
-        height: 350px;
+        height: 0;
+        overflow: hidden;
     }
-    .category-picture-menu-extra:first-child, .category-picture-menu-extra:last-child{
-        display: none;
+    .category-label{
+        font-size: 20px;
     }
 }
 @media only screen and (max-width: 1070px) {
