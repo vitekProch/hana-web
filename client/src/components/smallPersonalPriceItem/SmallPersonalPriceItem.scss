@@ -20,15 +20,16 @@
 .small-info-box ul li{
     display: flex;
     align-items: center;
-
+    margin-top: 20px;
+    border-bottom: 0.1px solid black;
 }
 .small-info-box ul li p, .small-info-box ul li h4{
     flex:1  
 }
-.small-info-box ul li p:nth-child(2){
+.small-price-quantity{
     text-align: center;
 }
-.small-info-box ul li p:nth-child(3){
+.small-price-price{
     text-align: right;
     font-weight: bold
 }

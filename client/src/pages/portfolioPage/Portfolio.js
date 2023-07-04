@@ -3,7 +3,6 @@ import { Outlet, useParams, Link } from "react-router-dom";
 import "./Portfolio.scss";
 import axios from 'axios';
 import PortfolioNav from "../../components/portfolioNav/Index";
-//import AddCategoryForm from "../../components/froms/portfolioForms/addCategoryForm";
 
 const categoryUrlProduction = 'https://fluffy-eel-waistcoat.cyclic.app/api/v1/category';
 
@@ -25,7 +24,6 @@ const Portfolio = () => {
   const fetchCategoryData = async () => {
     try {
       const categoryResponse = await axios(categoryUrlProduction);
-      // const categoryResponse = await axios(categoryUrl);
       setPortfolioCategory(categoryResponse.data.categories);
     } catch (error) {
       console.log(error.response);

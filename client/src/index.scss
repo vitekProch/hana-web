@@ -16,17 +16,3 @@ html{
     flex-direction: column;
     justify-content: space-between;
 }
-
-button {
-    background-color: #28a745;
-    border-radius: 50% !important;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-button:hover {
-    background-color: #218838;
-}

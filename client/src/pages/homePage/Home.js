@@ -1,15 +1,15 @@
 import "./Home.scss";
-import imageThree from "../../images/uvodni_foto_hanka.jpg";
-import { Container, Row, Col } from 'react-bootstrap';
-import axios from "axios";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import sliderSettings from "../../components/sliderSettings/settings";
-
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import imageThree from "../../images/uvodni_foto_hanka.jpg";
+
+import axios from "axios";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import sliderSettings from "../../components/sliderSettings/settings";
 
 
 const Home = () => {
@@ -22,7 +22,6 @@ const Home = () => {
     try {
       const categoryResponse = await axios(categoryUrlProduction);
       const peopleReviewResponse = await axios('https://fluffy-eel-waistcoat.cyclic.app/api/v1/peopleReview');
-      // const categoryResponse = await axios(categoryUrl);
       setPortfolioCategory(categoryResponse.data.categories);
       setPeopleReviewCategory(peopleReviewResponse.data.peopleReview);
     } catch (error) {

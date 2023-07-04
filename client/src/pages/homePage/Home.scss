@@ -128,12 +128,10 @@
     right: 0 !important;
     width: 50px !important;
 }
-.slick-next::before{
+.slick-next::before, .slick-prev::before{
     font-size: 40px !important;
 }
-.slick-prev::before{
-    font-size: 40px !important;
-}
+
 .card-top a {
     position: absolute;
     right: 5%;

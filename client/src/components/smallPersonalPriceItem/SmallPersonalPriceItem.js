@@ -1,6 +1,7 @@
 import "./SmallPersonalPriceItem.scss"
 import { useState } from "react"
 import { BsPencilSquare } from "react-icons/bs";
+
 import TitleEditForm from "../froms/perosnalItemFormBoth/TitleEditForm";
 import PriceListSign from "../priceListSigns";
 
@@ -37,26 +38,23 @@ const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
                 pricePackage.map((oneList, index) => {
                   const { subTitle, quantity, price } = oneList;
                   return <li key={index}>
-                    <h4>{subTitle}</h4>
-                    <p>{quantity} Ks</p>
-                    <p>{price.toLocaleString('cs-CZ')} Kč</p>
+                    <h4 className="small-price-subTitle">{subTitle}</h4>
+                    <p className="small-price-quantity">{quantity} Ks</p>
+                    <p className="small-price-price">{price.toLocaleString('cs-CZ')} Kč</p>
                   </li>
                 })
               }
               <li>
                 <h4>Cesta do Prahy</h4>
-                <p>.</p>
-                <p>+340 Kč</p>
+                <p className="small-price-price">+340 Kč</p>
               </li>
               <li>
                 <h4>Příplatek za víkend</h4>
-                <p>.</p>
-                <p>+300 Kč</p>
+                <p className="small-price-price">+300 Kč</p>
               </li>
               <li>
                 <h4>Fotka nad rámec balíčku</h4>
-                <p>.</p>
-                <p>150 Kč</p>
+                <p className="small-price-price">150 Kč</p>
               </li>
             </ul>
           </div>

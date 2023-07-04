@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import "./PricesList.scss";
+
 import BigPriceItem from "../../components/bigPersonalPriceItem/BigPersonalPriceItem";
 import BigPersonalItemForm from "../../components/froms/bigPreronalItemForm/CreatePackage";
 
@@ -7,11 +9,8 @@ import SmallPersonalItemForm from "../../components/froms/smallPersonalItemForm/
 
 import Modal from "../../components/modal/Modal";
 
-import { useState, useEffect } from "react";
 import axios from 'axios';
 
-// const urlBigPriceList = 'http://localhost:3000/api/v1/bigPersonalPriceList';
-// const urlSmallPriceList = 'http://localhost:3000/api/v1/smallPersonalPriceList';
 
 const urlProductionBigPriceList = 'https://fluffy-eel-waistcoat.cyclic.app/api/v1/bigPersonalPriceList';
 const urlProductionSmallPriceList = 'https://fluffy-eel-waistcoat.cyclic.app/api/v1/smallPersonalPriceList';
@@ -26,7 +25,6 @@ const PricesList = () => {
   const fetchBigPriceListData = async () => {
     try {
       const responseBigPriceList = await axios(urlProductionBigPriceList);
-      // const responseBig = await axios(urlBigPriceList);
       setBigPriceList(responseBigPriceList.data.priceList);
 
     } catch (error) {
@@ -36,7 +34,6 @@ const PricesList = () => {
   const fetchSmallPriceList = async () => {
     try {
       const responseSmallPriceList = await axios(urlProductionSmallPriceList);
-      // const responseSmall = await axios(urlSmallPriceList);
       setSmallPriceList(responseSmallPriceList.data.priceList);
 
     } catch (error) {
