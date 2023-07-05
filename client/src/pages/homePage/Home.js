@@ -71,7 +71,7 @@ const Home = () => {
         </div>
       </div>
     </section>
-    <section className="review">
+    <section className="review-section">
       <h2 className="home-page-titles">Vaše reakce</h2>
       <div className="review-slider">
         <Slider  {...reactionSettings}>
@@ -88,7 +88,7 @@ const Home = () => {
         </Slider>
       </div>
     </section>
-    <section className="homepage-portfolio">
+    <section className="homepage-portfolio-section">
       <h2 className="home-page-titles">Portfolio</h2>
       <Slider  {...portfolioSettings}>
         {

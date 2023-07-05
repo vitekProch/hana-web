@@ -59,7 +59,7 @@ const SliderSettings = {
         ]
     },
     reactionSettings: {
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 500,
         slidesToShow: 1,
@@ -72,7 +72,7 @@ const SliderSettings = {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: false
                 }
             },
             {
