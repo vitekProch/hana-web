@@ -56,9 +56,6 @@ const Home = () => {
           backgroundPosition: 'bottom',
         }}></div>
       </div>
-      <div className="contact-link-container">
-        <Link className="contact-link-homepage" to="/kontakt">Kontaktuj mě!</Link>
-      </div>
     </section>
 
     <section className="opening-text-section">

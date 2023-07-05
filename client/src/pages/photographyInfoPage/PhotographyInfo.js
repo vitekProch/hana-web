@@ -8,7 +8,7 @@ const PhotographyInfo = () => {
       <Container className="photography-info-container">
         <Row>
           <Col align="center" className="photo-inf-color-bcg-fst">
-            <h1>Informace k focení</h1>
+            <h1 className="home-page-titles">Informace k focení</h1>
           </Col>
         </Row>
         <Row>
