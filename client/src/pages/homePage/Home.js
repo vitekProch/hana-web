@@ -9,8 +9,7 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import sliderSettings from "../../components/sliderSettings/settings";
-
+import sliderSettings from "../../components/sliderSettings/settings";                
 
 const Home = () => {
   const categoryUrlProduction = 'https://fluffy-eel-waistcoat.cyclic.app/api/v1/category';
@@ -59,8 +58,9 @@ const Home = () => {
     </section>
 
     <section className="opening-text-section">
-      <div className="opening-text-image"> 
-          <img src={imageThree} alt="" />
+      <h2 className="home-page-titles">O mně</h2>
+      <div className="opening-text-image">
+        <img src={imageThree} alt="" />
       </div>
       <div className="opening-text">
         <div className="opening-text-container">

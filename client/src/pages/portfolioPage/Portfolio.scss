@@ -91,6 +91,12 @@
         display: none;
     }
 }
+@media only screen and (max-width: 645px) {
+    // Dve fotky vedle sebe
+}
+@media only screen and (max-width: 645px) {
+    // Jedna fotka
+}
 @media only screen and (max-width: 407px) {
     .category-picture-box-menu img {
         width: 100%;
