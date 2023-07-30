@@ -22,14 +22,14 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/snow.jpg" alt="" />
+              <img src="https://good-puce-llama-yoke.cyclic.app/images/snow.jpg" alt="" />
             </div>
           </Col>
         </Row>
         <Row className="flex-column-reverse flex-lg-row">
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-fst">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/child.jpg" alt="" />
+              <img src="https://good-puce-llama-yoke.cyclic.app/images/child.jpg" alt="" />
             </div>
           </Col>
           <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-fst">
@@ -63,14 +63,14 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/waterfall.jpg" alt="" />
+              <img src="https://good-puce-llama-yoke.cyclic.app/images/waterfall.jpg" alt="" />
             </div>
           </Col>
         </Row>
         <Row className="flex-column-reverse flex-lg-row">
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-fst">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/flower.jpg" alt="" />
+              <img src="https://good-puce-llama-yoke.cyclic.app/images/flower.jpg" alt="" />
             </div>
           </Col>
           <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-fst">
@@ -97,7 +97,7 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              <img src="https://fluffy-eel-waistcoat.cyclic.app/images/wedding.jpg" alt="" />
+              <img src="https://good-puce-llama-yoke.cyclic.app/images/wedding.jpg" alt="" />
             </div>
           </Col>
         </Row>

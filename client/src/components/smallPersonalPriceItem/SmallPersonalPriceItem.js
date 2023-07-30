@@ -18,7 +18,7 @@ const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
               id={_id} priceTitleUpdate={setPriceTitle}
               priceTitle={priceTitleState}
               closeUpdate={() => setEditTitle(false)}
-              url="https://fluffy-eel-waistcoat.cyclic.app/api/v1/smallPersonalPriceList/"
+              url="https://good-puce-llama-yoke.cyclic.app/api/v1/smallPersonalPriceList/"
             /> :
             <h2 className="price-title">
               {priceTitleState}

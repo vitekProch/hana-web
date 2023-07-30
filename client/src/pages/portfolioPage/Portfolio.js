@@ -4,7 +4,7 @@ import "./Portfolio.scss";
 import axios from 'axios';
 import PortfolioNav from "../../components/portfolioNav/Index";
 
-const categoryUrlProduction = 'https://fluffy-eel-waistcoat.cyclic.app/api/v1/category';
+const categoryUrlProduction = 'https://good-puce-llama-yoke.cyclic.app/api/v1/category';
 
 
 const Portfolio = () => {

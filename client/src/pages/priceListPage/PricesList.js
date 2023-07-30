@@ -12,8 +12,8 @@ import Modal from "../../components/modal/Modal";
 import axios from 'axios';
 
 
-const urlProductionBigPriceList = 'https://fluffy-eel-waistcoat.cyclic.app/api/v1/bigPersonalPriceList';
-const urlProductionSmallPriceList = 'https://fluffy-eel-waistcoat.cyclic.app/api/v1/smallPersonalPriceList';
+const urlProductionBigPriceList = 'https://good-puce-llama-yoke.cyclic.app/api/v1/bigPersonalPriceList';
+const urlProductionSmallPriceList = 'https://good-puce-llama-yoke.cyclic.app/api/v1/smallPersonalPriceList';
 
 const PricesList = () => {
   const [bigPriceList, setBigPriceList] = useState([]);
