@@ -6,7 +6,7 @@
 }
 .tile-images-container .img1, .tile-images-container .img2{
     width: 100%;
-    height: 91.2vh;
+    height: 91dvh;
     object-fit: cover;
 }
 .img1{
@@ -16,7 +16,7 @@
     flex: 1;
 }
 .hero-section{
-    height: 100vh;
+   
 }
 .contact-link-container{
     display: flex;
@@ -36,13 +36,16 @@
 // ---------- OPENING TEXT SECTION --------- //
 .opening-text-section{
     display: flex;
+    flex-direction: column;
+}
+.opening-text-container-r{
+    display: flex;
     flex-direction: row;
-    height: 100vh;
 }
 .opening-text-image{
     flex: 0.6;
     min-width: 509px;   
-    height: 100%;
+    height: 90%;
     margin-left: 50px;
 }
 .opening-text-image img{
@@ -52,7 +55,7 @@
 }
 .opening-text{
     display: flex;
-    margin: 80px 20px;
+//    margin: 80px 20px;
     flex: 1;
     flex-direction: column; 
     align-items: center;
@@ -88,9 +91,9 @@
 }
 
 // ---------- RECENZE SECTION --------- //
-.review-section{
+.review{
     text-align: center;
-    height: 100vh;
+    height: 780px;
 }
 .review-slider{
     margin: 0 auto;
@@ -107,9 +110,8 @@
     object-fit: cover;
 }
 // ---------- HOME PAGE PORTFOLIO SECTION --------- //
-.homepage-portfolio-section{
+.homepage-portfolio{
     text-align: center;
-    height: 100vh;
 }
 .card-top{
     height: 600px;
@@ -148,6 +150,9 @@
 
 
 // ---------- SOCIAL SITES SECTION --------- //
+// .social-sites-section{
+
+// }
 .social-sites-title{
     display: flex;
     flex-direction: column;
@@ -233,7 +238,7 @@
     .img2{
         flex: 1;
     }
-    .opening-text-section{
+    .opening-text-container-r{
         flex-direction: column-reverse;
         height: auto;
     }

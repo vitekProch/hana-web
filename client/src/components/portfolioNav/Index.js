@@ -15,7 +15,7 @@ const Index = () => {
 
     const fetchCategoryData = async () => {
         try {
-            const categoryResponse = await axios("https://fluffy-eel-waistcoat.cyclic.app/api/v1/category");
+            const categoryResponse = await axios("https://good-puce-llama-yoke.cyclic.app/api/v1/category");
             setPortfolioCategory(categoryResponse.data.categories);
         } catch (error) {
             console.log(error.response);

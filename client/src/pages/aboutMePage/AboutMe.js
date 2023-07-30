@@ -24,13 +24,13 @@ const AboutMe = () => {
                 </Col>
 
                 <Col xs={12} md={12} lg={6} align="end" className="al">
-                    <img className="about-me-photo" src="https://fluffy-eel-waistcoat.cyclic.app/images/o_mne_1.jpg" alt="Hanka" />
+                    <img className="about-me-photo" src="http://vstupni-test.x10.mx./images/o_mne_1.jpg" alt="Hanka" />
                 </Col>
             </Row>
 
             <Row className="flex-column-reverse flex-lg-row">
                 <Col xs={12} md={12} lg={6} align="">
-                    <img className="about-me-photo" src="https://fluffy-eel-waistcoat.cyclic.app/images/o_mne_2.jpg" alt="Hanka" />
+                    <img className="about-me-photo" src="http://vstupni-test.x10.mx./images/o_mne_2.jpg" alt="Hanka" />
                 </Col>
                 <Col xs={12} md={12} lg={6}>
                     <h4>
@@ -76,12 +76,12 @@ const AboutMe = () => {
                 </Col>
 
                 <Col xs={12} md={12} lg={6} align="end" className="al">
-                    <img className="about-me-photo" src="https://fluffy-eel-waistcoat.cyclic.app/images/o_mne_3.jpg" alt="Hanka" />
+                    <img className="about-me-photo" src="http://vstupni-test.x10.mx./images/o_mne_3.jpg" alt="Hanka" />
                 </Col>
             </Row>
             <Row className="flex-column-reverse flex-lg-row">
                 <Col xs={12} md={12} lg={6} align="">
-                    <img className="about-me-photo" src="https://fluffy-eel-waistcoat.cyclic.app/images/o_mne_4.jpeg" alt="Hanka" />
+                    <img className="about-me-photo" src="http://vstupni-test.x10.mx./images/o_mne_4.jpeg" alt="Hanka" />
                 </Col>
                 <Col xs={12} md={12} lg={6}>
                     <h4>
