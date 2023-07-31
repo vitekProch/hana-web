@@ -22,7 +22,7 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              <img src="https://good-puce-llama-yoke.cyclic.app/images/snow.jpg" alt="" />
+              <img src="https://good-puce-llama-yoke.cyclic.app/images/waterfall.jpg" alt="" />
             </div>
           </Col>
         </Row>
@@ -63,7 +63,7 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={5} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-image">
-              <img src="https://good-puce-llama-yoke.cyclic.app/images/waterfall.jpg" alt="" />
+              <img src="https://good-puce-llama-yoke.cyclic.app/images/snow.jpg" alt="" />
             </div>
           </Col>
         </Row>

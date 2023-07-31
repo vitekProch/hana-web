@@ -105,4 +105,8 @@
     .category-picture-menu-extra{
         display: none;
     }
+    .category-picture-menu{
+        opacity: 50%;
+        transition: opacity 0.5s;
+    }
 }

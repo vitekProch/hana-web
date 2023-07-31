@@ -101,7 +101,7 @@ $second_color: #fff5ef;
 
 // ---------- RECENZE SECTION --------- //
 .review-section{
-    background-color: $second_color;
+    background-color: white;
     text-align: center;
     height: 92dvh;
     min-height: 600px;
@@ -277,6 +277,7 @@ $second_color: #fff5ef;
     }
     .opening-text-section{
         height: auto;
+        gap: 20px;
     }
     .social-site-img:nth-child(3){
         display: none;
@@ -316,6 +317,9 @@ $second_color: #fff5ef;
     .review-section{
         height: auto;
         min-height: auto;
+    }
+    .opening-text-container{
+        padding: 0 10px;
     }
 }
 @media only screen and (max-width: 350px) {
