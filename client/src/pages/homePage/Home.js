@@ -2,7 +2,7 @@ import "./Home.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import imageThree from "../../images/uvodni_foto_hanka.jpg";
+//import imageThree from "../../images/uvodni_foto_hanka.jpg";
 import testImg from "../../images/uvodni_foto_vetsi.jpeg"
 
 import axios from "axios";
