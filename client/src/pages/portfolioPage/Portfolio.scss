@@ -1,3 +1,19 @@
+.tst {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 3%;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18vw,1fr));
+    grid-gap: 10px;
+}
+.grid-container img {
+    width: 18vw;
+    height: 18vw;
+    object-fit: cover;
+}
+
 .portfolio-page{
     display: flex;
 
@@ -16,8 +32,8 @@
 }
 .category-picture-box-menu img {
     object-fit: cover;
-    width: 500px;
-    height: 500px;
+    width: 450vw;
+    height: 450vw;
     transform: translate3d(0, 0, 1px);
 }
 .category-picture-box-menu:last-child{
@@ -36,67 +52,16 @@
     font-size: 30px;
     font-weight: 700;
 }
+
 .category-picture-menu-extra{
     width: 500px;
     height: 0;
     overflow: hidden;
 }
 .fixed{
-    width: 290px;
+    min-width: 290px;
 }
-@media only screen and (max-width: 1370px) {
-    .category-picture-box-menu img {
-        width: 350px;
-        height: 350px;
-    }
-    .category-picture-menu-extra{
-        width: 350px;
-        height: 0;
-        overflow: hidden;
-    }
-    .category-label{
-        font-size: 20px;
-    }
-}
-@media only screen and (max-width: 1070px) {
-    .fixed{
-        width: 200px;
-        margin-left: 60px;
-    }
-    
-}
-@media only screen and (max-width: 970px) {
-    .portfolio-page{
-        flex-direction: column;
-    }
-    .fixed{
-        width: 100%;
-        height: auto;
-        margin: 20px 0;
-    }
-    .portfolio-nav{
-        position: relative !important;
-        width: 100%;
-        justify-content: center;
-    }
-    .portfolio-nav-links{
-        width: 100%;
-        flex-direction: row !important;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-@media only screen and (max-width: 726px) {
-    .category-picture-menu-extra{
-        display: none;
-    }
-}
-@media only screen and (max-width: 645px) {
-    // Dve fotky vedle sebe
-}
-@media only screen and (max-width: 645px) {
-    // Jedna fotka
-}
+
 @media only screen and (max-width: 407px) {
     .category-picture-box-menu img {
         width: 100%;
