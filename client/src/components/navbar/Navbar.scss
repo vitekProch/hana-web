@@ -66,25 +66,15 @@ header{
     left: 0;
     bottom: -1px;
 }
-.navbar-link:before {
-    right: 0;
-    top: -1px;
-}
-.navbar-link:hover:after, a:hover:before{
+
+.navbar-link:hover:after{
     width: 100%;
 }
 .navbar-link:hover{
     text-decoration: none;
     color: black;
 }
-nav ul li .active:before{
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: black;
-    transition: .5s;
-}
+
 nav ul li .active:after{
     content: "";
     position: absolute;
@@ -204,4 +194,9 @@ body {
         flex-direction: column;
     }
 
+}
+@media only screen and (max-width:400px) {
+    #brand{
+        font-size: 4vw;
+    }
 }

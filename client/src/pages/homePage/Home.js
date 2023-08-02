@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import imageThree from "../../images/uvodni_foto_hanka.jpg";
+import testImg from "../../images/uvodni_foto_vetsi.jpeg"
 
 import axios from "axios";
 
@@ -10,8 +11,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import sliderSettings from "../../components/sliderSettings/settings";
+import sliderSettings from "../../components/sliderSettings/settings";
 
 const Home = () => {
+  const categoryUrlProduction = 'https://good-puce-llama-yoke.cyclic.app/api/v1/category';
   const categoryUrlProduction = 'https://good-puce-llama-yoke.cyclic.app/api/v1/category';
   const [portfolioCategory, setPortfolioCategory] = useState([]);
   const [peopleReviewCategory, setPeopleReviewCategory] = useState([]);
@@ -20,6 +23,7 @@ const Home = () => {
   const fetchCategoryData = async () => {
     try {
       const categoryResponse = await axios(categoryUrlProduction);
+      const peopleReviewResponse = await axios('https://good-puce-llama-yoke.cyclic.app/api/v1/peopleReview');
       const peopleReviewResponse = await axios('https://good-puce-llama-yoke.cyclic.app/api/v1/peopleReview');
       setPortfolioCategory(categoryResponse.data.categories);
       setPeopleReviewCategory(peopleReviewResponse.data.peopleReview);
@@ -47,7 +51,7 @@ const Home = () => {
         <div className="img1" style={{
           backgroundImage: "url(http://vstupni-test.x10.mx./images/uvodni_foto_mensi.jpg)",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'bottom',
         }}></div>
         <div className="img2" style={{
           backgroundImage: "url(http://vstupni-test.x10.mx./images/uvodni_foto_vetsi.jpeg)",
@@ -74,7 +78,7 @@ const Home = () => {
       </div>
     </section>
     <section className="review-section">
-      <h2 className="home-page-titles">Vaše reakce</h2>
+      <h2 className="home-page-titles title">Vaše reakce</h2>
       <div className="review-slider">
         <Slider  {...reactionSettings}>
           {

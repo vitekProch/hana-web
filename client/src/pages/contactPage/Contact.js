@@ -5,14 +5,14 @@ import { FaInstagram, FaFacebook } from "react-icons/fa";
 const Contact = () => {
 
   return (
-    <section className="contact-page mt-5">
+    <section className="contact-page">
       <div className="map">
         <Mapycz />
       </div>
       <div className="contact-container">
         <div className="contact">
           <div className="contact-title">
-            <h1 className="title text-center">Kontakt</h1>
+            <h1 className="text-center">Kontakt</h1>
           </div>
           <div className="contact-inf-box">
             <div className="adress">
