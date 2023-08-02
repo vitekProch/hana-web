@@ -11,10 +11,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import sliderSettings from "../../components/sliderSettings/settings";
-import sliderSettings from "../../components/sliderSettings/settings";
 
 const Home = () => {
-  const categoryUrlProduction = 'https://good-puce-llama-yoke.cyclic.app/api/v1/category';
   const categoryUrlProduction = 'https://good-puce-llama-yoke.cyclic.app/api/v1/category';
   const [portfolioCategory, setPortfolioCategory] = useState([]);
   const [peopleReviewCategory, setPeopleReviewCategory] = useState([]);
@@ -23,7 +21,6 @@ const Home = () => {
   const fetchCategoryData = async () => {
     try {
       const categoryResponse = await axios(categoryUrlProduction);
-      const peopleReviewResponse = await axios('https://good-puce-llama-yoke.cyclic.app/api/v1/peopleReview');
       const peopleReviewResponse = await axios('https://good-puce-llama-yoke.cyclic.app/api/v1/peopleReview');
       setPortfolioCategory(categoryResponse.data.categories);
       setPeopleReviewCategory(peopleReviewResponse.data.peopleReview);
