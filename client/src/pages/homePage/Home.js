@@ -62,7 +62,7 @@ const Home = () => {
       <h2 className="home-page-titles">O mně</h2>
       <div className="opening-text-container-r">
         <div className="opening-text-image">
-          <img src={imageThree} alt="" />
+          <img src={testImg} alt="" />
         </div>
         <div className="opening-text">
           <div className="opening-text-container">
