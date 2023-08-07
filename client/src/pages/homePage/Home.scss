@@ -44,6 +44,7 @@ $second_color: #fff5ef;
 .opening-text-section{
     display: flex;
     flex-direction: column;
+    background-color: $first_color;
 }
 .opening-text-container-r{
     display: flex;
@@ -116,6 +117,9 @@ $second_color: #fff5ef;
     margin-bottom: 100px;
 }
 // ---------- HOME PAGE PORTFOLIO SECTION --------- //
+.homepage-portfolio-section{
+    background-color: $first_color;
+}
 .homepage-portfolio{
     text-align: center;
 }
@@ -156,11 +160,10 @@ $second_color: #fff5ef;
 
 
 // ---------- SOCIAL SITES SECTION --------- //
-// .social-sites-section{
-
-// }
-.social-sites-title{
+.social-sites-section{
     background-color: $second_color;
+}
+.social-sites-title{
     display: flex;
     flex-direction: column;
     justify-content: center;
