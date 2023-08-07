@@ -50,6 +50,10 @@ $second_color: #fff5ef;
     display: flex;
     flex-direction: row;
 }
+.fotograf-name{
+    font-family: 'DM Serif Display', serif;
+    font-weight: 100;
+}
 .opening-text-image{
     flex: 0.6;
     min-width: 509px;   
@@ -174,8 +178,7 @@ $second_color: #fff5ef;
 .home-page-titles{
     font-size: 70px;
     text-align: center;
-    font-family: 'Forum', cursive;
-    font-weight: 600;
+    font-family: 'League Gothic', sans-serif;
 }
 .social-site{
     display: flex;
