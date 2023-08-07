@@ -2,7 +2,7 @@ import "./Home.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-//import imageThree from "../../images/uvodni_foto_hanka.jpg";
+import imageThree from "../../images/uvodni_foto_hanka.jpg";
 import testImg from "../../images/uvodni_foto_vetsi.jpeg"
 
 import axios from "axios";
@@ -46,12 +46,12 @@ const Home = () => {
     <section className="hero-section">
       <div className="tile-images-container">
         <div className="img1" style={{
-          backgroundImage: "url(http://vstupni-test.x10.mx./images/uvodni_foto_mensi.jpg)",
+          backgroundImage: "url(https://good-puce-llama-yoke.cyclic.app/images/uvodni_foto_mensi.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
         }}></div>
         <div className="img2" style={{
-          backgroundImage: "url(http://vstupni-test.x10.mx./images/uvodni_foto_vetsi.jpeg)",
+          backgroundImage: "url(https://good-puce-llama-yoke.cyclic.app/images/uvodni_foto_vetsi.jpeg)",
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
         }}></div>
@@ -60,7 +60,7 @@ const Home = () => {
 
     <section className="opening-text-section">
       <h2 className="home-page-titles">O mně</h2>
-      <div className="opening-text-container-r">
+      <div className="home-page-text-with-picture">
         <div className="opening-text-image">
           <img src="https://good-puce-llama-yoke.cyclic.app/images/About_me_homepage.jpg" alt="" />
         </div>
@@ -116,7 +116,7 @@ const Home = () => {
       </div>
       <div className="social-site">
         <div className="social-site-img" style={{
-          backgroundImage: "url(http://vstupni-test.x10.mx./images/social_media_1.jpg)",
+          backgroundImage: "url(https://good-puce-llama-yoke.cyclic.app/images/social_media_1.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
@@ -128,19 +128,19 @@ const Home = () => {
           </div>
         </div>
         <div className="social-site-img" style={{
-          backgroundImage: "url(http://vstupni-test.x10.mx./images/social_media_2.jpg)",
+          backgroundImage: "url(https://good-puce-llama-yoke.cyclic.app/images/social_media_2.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
         </div>
         <div className="social-site-img" style={{
-          backgroundImage: "url(http://vstupni-test.x10.mx./images/social_media_3.jpg)",
+          backgroundImage: "url(https://good-puce-llama-yoke.cyclic.app/images/social_media_3.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
         </div>
         <div className="social-site-img" style={{
-          backgroundImage: "url(http://vstupni-test.x10.mx./images/social_media_4.jpg)",
+          backgroundImage: "url(https://good-puce-llama-yoke.cyclic.app/images/social_media_4.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'top',
         }}>

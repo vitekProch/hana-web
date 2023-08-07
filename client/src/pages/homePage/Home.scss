@@ -12,8 +12,8 @@ $second_color: #fff5ef;
 }
 .tile-images-container .img1, .tile-images-container .img2{
     width: 100%;
-    height: 91dvh;
-    min-height: 541px;
+    height: 100dvh;
+    min-height: 600px;
     object-fit: cover;
 }
 .img1{
@@ -22,9 +22,7 @@ $second_color: #fff5ef;
 .img2{
     flex: 1;
 }
-.hero-section{
-   
-}
+
 .contact-link-container{
     display: flex;
     align-items: flex-end;
@@ -42,11 +40,15 @@ $second_color: #fff5ef;
 }
 // ---------- OPENING TEXT SECTION --------- //
 .opening-text-section{
-    display: flex;
-    flex-direction: column;
     background-color: $first_color;
+    height: 92dvh;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
 }
-.opening-text-container-r{
+.home-page-text-with-picture{
     display: flex;
     flex-direction: row;
 }
@@ -57,7 +59,7 @@ $second_color: #fff5ef;
 .opening-text-image{
     flex: 0.6;
     min-width: 509px;   
-    height: 90%;
+    height: 50%;
     margin-left: 50px;
 }
 .opening-text-image img{
@@ -66,7 +68,7 @@ $second_color: #fff5ef;
 }
 .opening-text{
     display: flex;
-//    margin: 80px 20px;
+    margin: 20px;
     flex: 1;
     flex-direction: column; 
     align-items: center;
@@ -102,9 +104,11 @@ $second_color: #fff5ef;
 }
 
 // ---------- RECENZE SECTION --------- //
-.review{
+.review-section{
+    background-color: white;
     text-align: center;
-    height: 780px;
+    height: 92dvh;
+    min-height: 600px;
 }
 .review-slider{
     margin: 0 auto;
@@ -123,9 +127,8 @@ $second_color: #fff5ef;
 // ---------- HOME PAGE PORTFOLIO SECTION --------- //
 .homepage-portfolio-section{
     background-color: $first_color;
-}
-.homepage-portfolio{
     text-align: center;
+    height: 92dvh;
 }
 .card-top{
     height: 600px;
@@ -164,10 +167,8 @@ $second_color: #fff5ef;
 
 
 // ---------- SOCIAL SITES SECTION --------- //
-.social-sites-section{
-    background-color: $second_color;
-}
 .social-sites-title{
+    background-color: $second_color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -262,7 +263,8 @@ $second_color: #fff5ef;
     .img2{
         flex: 1;
     }
-    .opening-text-container-r{
+
+    .home-page-text-with-picture{
         flex-direction: column-reverse;
         height: auto;
     }
