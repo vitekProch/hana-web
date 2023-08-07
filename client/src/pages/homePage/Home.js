@@ -62,11 +62,11 @@ const Home = () => {
       <h2 className="home-page-titles">O mně</h2>
       <div className="home-page-text-with-picture">
         <div className="opening-text-image">
-          <img src={testImg} alt="" />
+          <img src="https://good-puce-llama-yoke.cyclic.app/images/About_me_homepage.jpg" alt="" />
         </div>
         <div className="opening-text">
           <div className="opening-text-container">
-            <p><strong>BcA. Hana Jedličková</strong></p>
+            <p><strong className="fotograf-name">BcA. Hana Jedličková</strong></p>
             <p>Vítám tě na svých stránkách. Líbí se ti moje práce a chceš také takové fotografie? Mrkni na to, kdo tě bude fotit.</p>
             <p><em>Kdo jsem?</em><br />Jmenuji se Hana Jedličková a v oboru fotografie se pohybuji už od dětství. Vše začalo, už když mi bylo 11 let a já dostala svůj první fotoaparát. Od té doby se fotografie stala moji životní cestou. Není to pro mě pouze koníček či práce. Je to dalo by se říci můj životní směr, ve kterém jsem se rozhodla zdokonalovat a vložit do toho kus sebe. Své znalosti v oboru jsem rozvíjela jak na střední, tak i na vysoké škole.</p>
             <p className="home-page-about-me-link"><a href="/o-mne">Čti dále...</a></p>

@@ -9,7 +9,7 @@ const Navbar = () => {
     <header>
 
       <div className="items-align">
-        <Link to="/" id="brand" className="nav-branding">Fotografie od Hanky</Link>
+        <Link to="/" id="brand" className="nav-branding">FOTOGRAFIE OD HANKY</Link>
         <nav className="navbar">
 
           <ul className={toggleMenu ? "nav-menu active" : "nav-menu"} >

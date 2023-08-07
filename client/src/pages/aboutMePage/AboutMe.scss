@@ -20,6 +20,17 @@
     height: 600px;
 }
 
+.about-me-titles{
+    border-bottom: 3px #fdd154 solid;
+    display: inline-block;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 2.5rem;
+}
+.about-me-name{
+    font-family: 'DM Serif Display', serif;
+    font-weight: 100;
+    font-size: 3rem;
+}
 @media only screen and (max-width: 1400px){
     .about-me-photo{
         max-width: 100%;

@@ -2,7 +2,7 @@ header{
     width: 100%;
     z-index: 100;
     position: fixed;
-    background-color: #fff;
+    background-color: transparent;
     width: 100%;
     top: 0;
 }
@@ -35,9 +35,9 @@ header{
 
 .nav-branding {
     text-decoration: none;
-    font-weight: 700;
     font-size: 40px;
     color: black;
+    font-family: 'DM Serif Display', serif;
 }
 
 .hamburger{
@@ -197,6 +197,9 @@ body {
 }
 @media only screen and (max-width:400px) {
     #brand{
-        font-size: 4vw;
+        font-size: 6.5vw;
+    }
+    .items-align{
+        margin: 10px 20px;
     }
 }

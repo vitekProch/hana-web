@@ -10,8 +10,8 @@ const AboutMe = () => {
         <Container className="mt-5">
             <Row>
                 <Col xs={12} md={12} lg={6}>
-                    <h1 className="mb-5">Hana Jedličková</h1>
-                    <h4>
+                    <h1 className="mb-5 about-me-name">BcA. Hana Jedličková</h1>
+                    <h4 className="about-me-titles">
                         Kdo jsem?
                     </h4>
                     <p>
@@ -33,7 +33,7 @@ const AboutMe = () => {
                     <img className="about-me-photo" src="https://good-puce-llama-yoke.cyclic.app/images/o_mne_2.jpg" alt="Hanka" />
                 </Col>
                 <Col xs={12} md={12} lg={6}>
-                    <h4>
+                    <h4 className="about-me-titles">
                         Přístup ke klientům je pro mě to nejdůležitější!
                     </h4>
                     <p>
@@ -52,7 +52,7 @@ const AboutMe = () => {
             </Row>
             <Row>
                 <Col xs={12} md={12} lg={6}>
-                    <h4>
+                    <h4 className="about-me-titles">
                         Co vlastně fotím?
                     </h4>
                     <p>
@@ -84,7 +84,7 @@ const AboutMe = () => {
                     <img className="about-me-photo" src="https://good-puce-llama-yoke.cyclic.app/images/o_mne_4.jpeg" alt="Hanka" />
                 </Col>
                 <Col xs={12} md={12} lg={6}>
-                    <h4>
+                    <h4 className="about-me-titles">
                         Sebevědomí se dá budovat i formou fotografie.
                     </h4>
                     <p>
@@ -102,7 +102,7 @@ const AboutMe = () => {
             </Row>
             <Row>
                 <Col>
-                    <h4>
+                    <h4 className="about-me-titles">
                         Pár slov na závěr.
                     </h4>
                     <p>
