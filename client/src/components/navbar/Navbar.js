@@ -1,12 +1,24 @@
 import { Link, NavLink } from 'react-router-dom'
 import "./Navbar.scss"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
+  const [show, setShow] = useState(false);
+  const controlNavbar = () => {
+    if (window.scrollY > 1){
+      setShow(true)
+    }
+    else{
+      setShow(false)
+    }
+  }
+  useEffect(()=>{
+    window.addEventListener('scroll', controlNavbar)
+  },[])
 
   return (
-    <header>
+    <header className={show ? 'header-active' : ''}>
 
       <div className="items-align">
         <Link to="/" id="brand" className="nav-branding">FOTOGRAFIE OD HANKY</Link>

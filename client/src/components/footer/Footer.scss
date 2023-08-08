@@ -11,3 +11,8 @@ footer {
 .footer-name{
     font-family: 'DM Serif Display', serif;
 }
+@media only screen and (max-width: 470px) {
+    .footer-name{
+        font-size: 6vw;
+    }
+}

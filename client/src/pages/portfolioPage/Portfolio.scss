@@ -61,7 +61,19 @@
 .fixed{
     min-width: 290px;
 }
-
+.portfolio-nav-links li a{
+    color: black;
+    text-decoration: underline #fdd154;
+    font-size: 1.5rem !important;
+    transition: 0.3s linear;
+}
+.portfolio-nav-links li a:hover{
+    color: #ffcb3a;
+    text-decoration: underline black;
+}
+.portfolio-images{
+    object-position: bottom;
+}
 @media only screen and (max-width: 407px) {
     .category-picture-box-menu img {
         width: 100%;

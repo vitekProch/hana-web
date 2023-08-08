@@ -75,40 +75,44 @@ const Home = () => {
       </div>
     </section>
     <section className="review-section">
-      <h2 className="home-page-titles title">Vaše reakce</h2>
-      <div className="review-slider">
-        <Slider  {...reactionSettings}>
+      <div className="home-pe-titles-holder">
+        <h2 className="home-page-titles title">Vaše reakce</h2>
+        <div className="review-slider">
+          <Slider  {...reactionSettings}>
+            {
+              peopleReviewCategory.map((onePeopleReview) => {
+                const { _id, url, alt } = onePeopleReview;
+                return (
+                  <div key={_id} className="review-img">
+                    <img src={url} alt={alt} />
+                  </div>
+                )
+              })
+            }
+          </Slider>
+        </div>
+      </div>
+    </section>
+    <section className="homepage-portfolio-section">
+      <div className="home-page-titles-holder">
+        <h2 className="home-page-titles">Portfolio</h2>
+        <Slider  {...portfolioSettings}>
           {
-            peopleReviewCategory.map((onePeopleReview) => {
-              const { _id, url, alt } = onePeopleReview;
+            portfolioCategory.map((onePortfolioCategory) => {
+              const { _id, categoryName, categoryImage } = onePortfolioCategory;
+              const categoryNorme = updateValues(categoryName);
               return (
-                <div key={_id} className="review-img">
-                  <img src={url} alt={alt} />
+                <div key={_id} className="card">
+                  <div className="card-top">
+                    <img src={categoryImage} alt={categoryNorme} />
+                    <Link to={`/portfolio/${categoryName}`}>{categoryNorme}</Link>
+                  </div>
                 </div>
               )
             })
           }
         </Slider>
       </div>
-    </section>
-    <section className="homepage-portfolio-section">
-      <h2 className="home-page-titles">Portfolio</h2>
-      <Slider  {...portfolioSettings}>
-        {
-          portfolioCategory.map((onePortfolioCategory) => {
-            const { _id, categoryName, categoryImage } = onePortfolioCategory;
-            const categoryNorme = updateValues(categoryName);
-            return (
-              <div key={_id} className="card">
-                <div className="card-top">
-                  <img src={categoryImage} alt={categoryNorme} />
-                  <Link to={`/portfolio/${categoryName}`}>{categoryNorme}</Link>
-                </div>
-              </div>
-            )
-          })
-        }
-      </Slider>
     </section >
     <section className="social-sites-section">
       <div className="social-sites-title">

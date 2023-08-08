@@ -5,6 +5,10 @@ header{
     background-color: transparent;
     width: 100%;
     top: 0;
+    transition: background-color 0.3s;
+}
+.header-active{
+    background-color: white;
 }
 .items-align{
     display: flex;
@@ -38,6 +42,9 @@ header{
     font-size: 40px;
     color: black;
     font-family: 'DM Serif Display', serif;
+}
+.nav-branding:hover {
+    color: #ffcb3a;
 }
 
 .hamburger{

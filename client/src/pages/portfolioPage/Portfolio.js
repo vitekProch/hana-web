@@ -50,7 +50,7 @@ const Portfolio = () => {
                   const categoryNorme = updateValues(categoryName);
                   return <div key={_id} class="category-picture-menus">
                     <Link to={`/portfolio/${categoryName}`}>
-                      <img className="" src={categoryImage} alt={categoryNorme} />
+                      <img className="portfolio-images" src={categoryImage} alt={categoryNorme} />
                     </Link>
                     <div className="category-label">{categoryNorme}</div>
                   </div>
