@@ -336,8 +336,12 @@ $second_color: #fff5ef;
     }
 }
 @media only screen and (max-width: 450px) {
+    .tile-images-container{
+        gap: 5px;
+    }
     .tile-images-container .img1, .tile-images-container .img2{
-        height: 390px;
+        width: 100%;
+        height: auto;
     }
     .img1 {
         display: flex;
