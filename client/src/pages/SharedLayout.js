@@ -7,9 +7,7 @@ import Footer from "../components/footer/Footer";
 const SharedLayout = () => {
   return <>
     <Navbar />
-    <div className="content" >
-      <Outlet />
-    </div>
+    <Outlet />
     <Footer />
   </>
 };
