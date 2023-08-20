@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.dd1ff0b3.css",
-    "main.js": "./static/js/main.c058d919.js",
+    "main.js": "./static/js/main.8e55c823.js",
     "static/media/uvodni_foto_vetsi.jpeg": "./static/media/uvodni_foto_vetsi.3338572ceb73eafcbd0d.jpeg",
     "static/media/uvodni_foto_hanka.jpg": "./static/media/uvodni_foto_hanka.41b7f2e49d49229d06c2.jpg",
     "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,10 +10,10 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
     "main.dd1ff0b3.css.map": "./static/css/main.dd1ff0b3.css.map",
-    "main.c058d919.js.map": "./static/js/main.c058d919.js.map"
+    "main.8e55c823.js.map": "./static/js/main.8e55c823.js.map"
   },
   "entrypoints": [
     "static/css/main.dd1ff0b3.css",
-    "static/js/main.c058d919.js"
+    "static/js/main.8e55c823.js"
   ]
 }
