@@ -49,7 +49,7 @@ const PricesList = () => {
 
   return (
     <>
-      <section className="prices-page">
+      <section className="prices-page page-header-margin">
         <div className="prices-list-and-buttons">
           <div className="add-buttons-group">
             <button onClick={() => setIsSmallOpen(true)}>Přidat standartní balíček</button>

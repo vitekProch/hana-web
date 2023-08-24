@@ -5,7 +5,7 @@ import { FaInstagram, FaFacebook } from "react-icons/fa";
 const Contact = () => {
 
   return (
-    <section className="contact-page">
+    <section className="contact-page page-header-margin">
       <div className="map">
         <Mapycz />
       </div>

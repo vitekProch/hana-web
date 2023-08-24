@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const businessConditions = () => {
   return (
     <>
-      <section className="business-conditions-page">
+      <section className="business-conditions-page page-header-margin">
         <div className="business-conditions-title">
           <h1>Obchodní podmínky</h1>
         </div>

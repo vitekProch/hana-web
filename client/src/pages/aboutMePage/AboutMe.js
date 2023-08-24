@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const AboutMe = () => {
     return (
 
-        <Container className="mt-5">
+        <Container className="page-header-margin">
             <Row>
                 <Col xs={12} md={12} lg={6}>
                     <h1 className="mb-5 about-me-name">BcA. Hana Jedličková</h1>

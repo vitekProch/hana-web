@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const PhotographyInfo = () => {
   return (
-    <section className="photography-info-page">
+    <section className="photography-info-page page-header-margin">
       <Container className="photography-info-container">
         <Row>
           <Col align="center" className="photo-inf-color-bcg-fst">
