@@ -10,6 +10,9 @@ const SpecialOffer = () => {
         <div className="special-offer-pictures-box">
           <img src="http://vstupni-test.x10.mx./images/Special2.jpg" alt="" />
         </div>
+        <div className="special-offer-pictures-box">
+          <img src="http://vstupni-test.x10.mx./images/Special2.jpg" alt="" />
+        </div>
       </div>
     </section>
   );
