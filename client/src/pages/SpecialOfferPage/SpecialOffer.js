@@ -1,16 +1,14 @@
 import "./SpecialOffer.scss";
-import Special1 from "../../images//Special1.jpg"
-import Special2 from "../../images//Special2.jpg"
 
 const SpecialOffer = () => {
   return (
     <section className="news-page page-header-margin">
       <div className="special-offer-pictures">
         <div className="special-offer-pictures-box">
-          <img src={Special1} alt="" />
+          <img src="http://vstupni-test.x10.mx./images/Special1.jpg" alt="" />
         </div>
         <div className="special-offer-pictures-box">
-          <img src={Special2} alt="" />
+          <img src="http://vstupni-test.x10.mx./images/Special2.jpg" alt="" />
         </div>
       </div>
     </section>
