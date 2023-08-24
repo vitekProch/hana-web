@@ -1,6 +1,5 @@
 .portfolio-page{
     display: flex;
-
 }
 .portfolio-fixed-menu{
     min-width: 290px;
@@ -16,8 +15,8 @@
     grid-template-columns: repeat(3, 33.33%);
     gap: 10px;
     padding: 20px;
-    max-width: 1920px; /* Maximální šířka galerie */
-    margin: 0 auto; /* Centrování galerie */
+    max-width: 1920px;
+    margin: 0 auto;
   }
   
   .image {
@@ -26,6 +25,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     padding-top: 100%;
+    white-space: nowrap
   }
   
   .image img {
@@ -37,7 +37,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, filter 0.5s ease;
   }
   
   .image-link {
@@ -45,6 +45,8 @@
   }
   
   .portfolio-overlay {
+    margin: 0 !important;
+    padding: 0 !important;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,20 +54,19 @@
     color: #fdd154;
     padding: 10px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, font-size 1s ease;
     font-family: 'League Gothic', sans-serif;
-    font-size: 1px; /* Základní velikost textu */
-    transition: font-size 1s ease;
+    font-size: 1px;
   }
   
   .image:hover img {
-    filter: brightness(40%)
+    filter: brightness(40%);
   }
   
   .image:hover .portfolio-overlay {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.1); /* Zvětšení textu */
-    font-size: 1.8rem; /* Zvětšený text */
+    transform: translate(-50%, -50%) scale(1.1);
+    font-size: 1.8rem; 
   }
 
 
@@ -89,10 +90,32 @@
     color: #ffcb3a;
     text-decoration: underline black;
 }
-
-// @media only screen and (max-width: 900px) {
-//     .gallery {
-//         grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
-//         max-width: 600px; /* Maximální šířka galerie */
-//     }
-// }
+@media only screen and (max-width: 1070px) {
+  .portfolio-fixed-menu {
+    min-width: 170px;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 675px) {
+  .portfolio-page{
+    flex-direction: column;
+  }
+  .portfolio-gallery-container{
+    padding: 10px 3%;
+  }
+}
+@media only screen and (max-width: 260px) {
+  .gallery{
+    display: block;
+    padding: 0 5px;
+    margin-bottom: 5px;
+  }
+  .image:hover .portfolio-overlay{
+    font-size: 1rem;
+  }
+}

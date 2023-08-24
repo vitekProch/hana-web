@@ -18,7 +18,44 @@
     font-size: 20px;
 }
 @media only screen and (max-width: 1070px) {
+    .portfolio-nav-links{
+        margin-left: 15px;
+    }
     .portfolio-nav{
         min-width: 180px;
+    }
+}
+@media only screen and (max-width: 675px) {
+    .portfolio-nav{
+        position: relative;
+        top: 0;
+    }
+    .portfolio-nav-links{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 10px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .portfolio-nav-links{
+        display: block;
+    }
+    .portfolio-nav-links li{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 260px) {
+    .portfolio-fixed-menu {
+        min-width: 100%;
+    }
+    .portfolio-nav{
+        min-width: 100%;
+    }
+    .portfolio-nav-links{
+        display: block;
+    }
+    .portfolio-nav-links li a{
+        font-size: 9vw !important;
     }
 }
