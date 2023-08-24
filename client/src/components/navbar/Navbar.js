@@ -6,7 +6,6 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
   const [show, setShow] = useState(false);
   const controlNavbar = () => {
-    console.log(toggleMenu);
     if (window.scrollY > 1){
       setShow(true)
     }
