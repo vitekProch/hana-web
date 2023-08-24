@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import imageThree from "../../images/uvodni_foto_hanka.jpg";
-import testImg from "../../images/uvodni_foto_vetsi.jpeg"
+import testImg from "../../images/uvodni_foto_vetsi.jpeg";
 
 import axios from "axios";
 
@@ -53,7 +53,7 @@ const Home = () => {
         <div className="img2" style={{
           backgroundImage: "url(https://good-puce-llama-yoke.cyclic.app/images/uvodni_foto_vetsi.jpeg)",
           backgroundSize: 'cover',
-          backgroundPosition: 'bottom',
+          backgroundPosition: 'center',
         }}></div>
       </div>
     </section>

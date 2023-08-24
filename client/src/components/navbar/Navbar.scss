@@ -192,6 +192,8 @@ body {
 
     .nav-menu.active{
         left: 0;
+        padding: 0;
+        z-index: 9000;
     }
     .menu-wrap{
         display: none;
@@ -202,7 +204,7 @@ body {
     }
 
 }
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:467px) {
     #brand{
         font-size: 6.5vw;
     }
@@ -210,3 +212,4 @@ body {
         margin: 10px 20px;
     }
 }
+

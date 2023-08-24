@@ -6,7 +6,11 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
   const [show, setShow] = useState(false);
   const controlNavbar = () => {
+    console.log(toggleMenu);
     if (window.scrollY > 1){
+      setShow(true)
+    }
+    else if (window.scrollY === 0 && toggleMenu){
       setShow(true)
     }
     else{
@@ -15,7 +19,17 @@ const Navbar = () => {
   }
   useEffect(()=>{
     window.addEventListener('scroll', controlNavbar)
-  },[])
+    return () => {
+      if (!toggleMenu) {
+        setShow(true)
+
+      }
+      else if (window.scrollY === 0 && toggleMenu){
+        setShow(false)
+      }
+      window.removeEventListener('scroll', controlNavbar);
+    }
+  },[toggleMenu])
 
   return (
     <header className={show ? 'header-active' : ''}>
