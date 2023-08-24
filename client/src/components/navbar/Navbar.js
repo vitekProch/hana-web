@@ -35,7 +35,7 @@ const Navbar = () => {
     <header className={show ? 'header-active' : ''}>
 
       <div className="items-align">
-        <Link to="/" id="brand" className="nav-branding">FOTOGRAFIE OD HANKY</Link>
+        <Link to="/" id="brand">FOTOGRAFIE OD HANKY</Link>
         <nav className="navbar">
 
           <ul className={toggleMenu ? "nav-menu active" : "nav-menu"} >
