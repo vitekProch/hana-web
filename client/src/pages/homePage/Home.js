@@ -48,7 +48,7 @@ const Home = () => {
         <div className="img1" style={{
           backgroundImage: "url(https://good-puce-llama-yoke.cyclic.app/images/uvodni_foto_mensi.jpg)",
           backgroundSize: 'cover',
-          backgroundPosition: 'bottom',
+          backgroundPosition: 'center',
         }}></div>
         <div className="img2" style={{
           backgroundImage: "url(https://good-puce-llama-yoke.cyclic.app/images/uvodni_foto_vetsi.jpeg)",

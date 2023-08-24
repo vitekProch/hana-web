@@ -40,7 +40,7 @@ $second_color: #fff5ef;
 // ---------- OPENING TEXT SECTION --------- //
 .opening-text-section{
     background-color: $first_color;
-    height: 100dvh;
+    height: 92.1dvh;
     min-height: 700px;
     display: flex;
     justify-content: center;
@@ -106,7 +106,7 @@ $second_color: #fff5ef;
 .review-section{
     background-color: white;
     text-align: center;
-    height: 100dvh;
+    height: 92.1dvh;
     min-height: 600px;
     display: flex;
     align-items: center;
@@ -130,7 +130,7 @@ $second_color: #fff5ef;
 .homepage-portfolio-section{
     background-color: $first_color;
     text-align: center;
-    height: 100dvh;
+    height: 92.1dvh;
 }
 .home-page-titles-holder{
     display: flex;
@@ -320,7 +320,7 @@ $second_color: #fff5ef;
         height: auto;
     }
     .home-page-titles{
-        font-size: 35px;
+        font-size: 16vw;
     }
     .social-site-img:nth-child(4){
         display: none;
@@ -338,8 +338,3 @@ $second_color: #fff5ef;
     }
 }
 
-@media only screen and (max-width: 350px) {
-    .home-page-titles{
-        font-size: 28px;
-    }
-}
