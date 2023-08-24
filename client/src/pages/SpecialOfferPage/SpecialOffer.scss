@@ -1,0 +1,15 @@
+.special-offer-pictures{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.special-offer-pictures-box{
+    width: 700px;
+    height: 700px;
+}
+.special-offer-pictures-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
