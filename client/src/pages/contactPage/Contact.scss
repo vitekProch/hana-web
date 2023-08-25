@@ -10,21 +10,19 @@
     flex-direction: column;
     flex: 1;
     align-items: center;
-    background-color: #fdd154;
 }
 .contact{
     background-color: white;
     width: 500px;
     margin: 10px;
     padding: 10px;
-    box-shadow: 1px 2px 13px 0px rgba(0,0,0,0.58);
 }
 .contact-inf-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background-color: #fff5ef;
 }
 .adress{
     display: flex;
@@ -32,9 +30,12 @@
     gap: 10px;
     margin-top: 10px;
     text-align: center;
+    padding: 10px;
 }
 .contact-title{
     text-align: center;
+    background-color: #fdd154;
+    border-radius: 10px 10px 0 0;
 }
 .contact-link-with-button{
     display: flex;
@@ -44,6 +45,8 @@
 .contact-form-container{
     width: 100%;
     margin: 0 auto;
+    background-color: #fff5ef;
+    padding: 10px;
 }
 .contact-form-container form{
     display: flex;
@@ -64,6 +67,11 @@
 .contact-social-icon{
     font-size: 40px;
     margin-right: 20px;
+}
+.text-center{
+    margin: 0;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 3.5rem;
 }
 @media only screen and (max-width: 970px){
     .contact-page{
