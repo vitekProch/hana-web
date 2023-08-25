@@ -54,9 +54,9 @@
     color: #fdd154;
     padding: 10px;
     opacity: 0;
-    transition: opacity 0.3s ease, font-size 1s ease;
+    transition: opacity 0.3s ease;
     font-family: 'League Gothic', sans-serif;
-    font-size: 1px;
+    font-size: 1.8rem;
   }
   
   .image:hover img {
@@ -66,7 +66,6 @@
   .image:hover .portfolio-overlay {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.1);
-    font-size: 1.8rem; 
   }
 
 
@@ -107,6 +106,15 @@
   }
   .portfolio-gallery-container{
     padding: 10px 3%;
+  }
+}
+@media only screen and (max-width: 478px) {
+  .image img {
+    filter: brightness(70%);
+  }
+  .image .portfolio-overlay {
+    opacity: 1;
+    font-size: 10vw;
   }
 }
 @media only screen and (max-width: 260px) {
