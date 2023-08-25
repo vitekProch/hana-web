@@ -8,13 +8,13 @@ const PhotographyInfo = () => {
       <Container className="photography-info-container">
         <Row>
           <Col align="center" className="photo-inf-color-bcg-fst">
-            <h1 className="">Informace k focení</h1>
+            <h1 className="photo-info-font">Informace k focení</h1>
           </Col>
         </Row>
         <Row>
           <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-text">
-              <h4>Jak si domluvit focení?</h4>
+              <h4 className="photo-info-font-h4">Jak si domluvit focení?</h4>
               <ul>
                 <li>Objednat si svůj termín na focení můžete zde vyplněním formuláře v kategorii <Link className="" to="/kontakt">kontakt</Link>. Můžete mě ale také kontaktovat do zprávy na sociálních sítích, jako je <a href="https://www.facebook.com/Fotografieodhanky" target="_blank" rel="noopener noreferrer">Facebook</a> nebo <a href="https://www.instagram.com/fotografie_od_hanky/" target="_blank" rel="noopener noreferrer">Instagram</a>.</li>
               </ul>
@@ -34,7 +34,7 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-fst">
             <div className="photography-info-content-text">
-              <h4>Jak takové focení probíhá?</h4>
+              <h4 className="photo-info-font-h4">Jak takové focení probíhá?</h4>
               <ul>
                 <li>Nejprve vždy prostřednictvím zpráv probereme vaši představu o fotografiích. Váš nápad je u mě na prvním místě. Pokud sami představu nemáte, společně ji vymyslíme do detailu. Můžete si najít i nějaké konkrétní inspirace, samozřejmě jen pokud chcete.</li>
                 <li>Následně se sejdeme na domluveném místě a fotíme cca 2 hodiny. Čas se může lišit dle náročnosti realizace.</li>
@@ -49,7 +49,7 @@ const PhotographyInfo = () => {
         <Row>
           <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-text">
-              <h4>Co s sebou?</h4>
+              <h4 className="photo-info-font-h4">Co s sebou?</h4>
               <ul>
                 <li>Vždy říkám, že je důležité vzít si oblečení, ve kterém se cítíte dobře a sami sobě se v něm líbíte. Také samozřejmě odpovídající nápadu, který se bude fotit.</li>
                 <li>Pokud fotíme klasický portrét, vždy se hodí džíny, teplákové soupravy, šaty, sukně, sako, tričko, mikina, košile...</li>
@@ -75,7 +75,7 @@ const PhotographyInfo = () => {
           </Col>
           <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-fst">
             <div className="photography-info-content-text">
-              <h4>Co následuje po focení?</h4>
+              <h4 className="photo-info-font-h4">Co následuje po focení?</h4>
               <ul>
                 <li>Po focení vám zašlu neupravené náhledy snímků, ze kterých si sami online vyberete ty fotografie, které se vám budou líbit. (Vše k výběru vám vysvětlím na místě).</li>
                 <li>Na výběr budete mít dostatek času.</li>
@@ -89,7 +89,7 @@ const PhotographyInfo = () => {
         <Row>
           <Col xs={12} sm={12} md={12} lg={7} className="col photo-inf-color-bcg-second">
             <div className="photography-info-content-text">
-              <h4>Nevíte si rady?</h4>
+              <h4 className="photo-info-font-h4">Nevíte si rady?</h4>
               <ul>
                 <li>Pokud vám něco nebude jasné, <Link className="" to="/kontakt">kontaktujte mě</Link>. Ráda vám s čímkoliv poradím a pomohu.</li>
               </ul>
