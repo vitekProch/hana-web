@@ -23,7 +23,7 @@ const BigPersonalPriceItem = ({ _id, priseTitle, priseCategory }) => {
   return (
     <div className="price-group">
       <div className="price-item">
-        <div className="big-price-title-and-btn">
+        <div className="price-title-and-btn">
           {editTitle ?
             <TitleEditForm
               id={_id} priceTitleUpdate={setPriceTitle}
@@ -49,7 +49,7 @@ const BigPersonalPriceItem = ({ _id, priseTitle, priseCategory }) => {
             priseCategory.map((data, index) => {
               const { price, subTitle, text } = data
               return (
-                <div key={index} className="info-box">
+                <div key={index} className="small-info-box">
                   <h4>{subTitle}</h4>
                   <ul>
                     {

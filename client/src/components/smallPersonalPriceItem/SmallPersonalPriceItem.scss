@@ -1,15 +1,13 @@
 .small-prise-list-container{
     display: flex;
     flex-direction: row;
-    margin-top: 40px;
     gap: 15px;
 }
 .small-info-box{
-    background-color: white;
+    background-color: #fff5ef;
     display: flex;
     flex-direction: column;
     flex:1;
-    box-shadow: 0px 0px 15px rgb(153, 153, 0);
     padding: 15px;
     transition: 0.7s;
 }
@@ -21,7 +19,7 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
-    border-bottom: 0.1px solid black;
+    border-bottom: 3px solid #fdd154;
 }
 .small-info-box ul li p, .small-info-box ul li h4{
     flex:1  
@@ -37,18 +35,19 @@
     height: 400px;
 }
 .price-item{
-    padding: 10px;
-    background-color: #fff5ef;
+    padding: 3px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
+
 }
 .price-title-and-btn{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: #fdd154;
+    border-radius: 10px 10px 0 0;
 }
 .small-price-item-update-pencil{
     color: green;

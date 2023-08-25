@@ -56,6 +56,9 @@ const SmallPersonalPriceItem = ({ _id, priseTitle, pricePackage }) => {
                 <h4>Fotka nad rámec balíčku</h4>
                 <p className="small-price-price">150 Kč</p>
               </li>
+              <li>
+                <h4>Možnost tvorby individuálních balíčků s vícero fotkama.</h4>
+              </li>
             </ul>
           </div>
         </div>
