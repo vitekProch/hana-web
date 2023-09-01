@@ -6,7 +6,7 @@ const businessConditions = () => {
     <>
       <section className="business-conditions-page page-header-margin">
         <div className="business-conditions-title">
-          <h1>Obchodní podmínky</h1>
+          <h1 className="photo-info-font">Obchodní podmínky</h1>
         </div>
         <div className="business-conditions-content">
           <h4>Objednávka termínu:</h4>
